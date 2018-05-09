@@ -1,74 +1,1336 @@
 <!DOCTYPE html>
-<html lang="en"><head>
+<html>
+
+  <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.4.0 -->
-<title>Your awesome title | Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</title>
-<meta name="generator" content="Jekyll v3.8.0" />
-<meta property="og:title" content="Your awesome title" />
-<meta property="og:locale" content="en_US" />
-<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
-<meta property="og:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
-<link rel="canonical" href="http://localhost:4000/" />
-<meta property="og:url" content="http://localhost:4000/" />
-<meta property="og:site_name" content="Your awesome title" />
-<script type="application/ld+json">
-{"url":"http://localhost:4000/","description":"Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.","name":"Your awesome title","headline":"Your awesome title","@type":"WebSite","@context":"http://schema.org"}</script>
-<!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Your awesome title" /></head>
-<body><header class="site-header" role="banner">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <div class="wrapper"><a class="site-title" rel="author" href="/">Your awesome title</a><nav class="site-nav">
-        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
-        <label for="nav-trigger">
-          <span class="menu-icon">
-            <svg viewBox="0 0 18 15" width="18px" height="15px">
-              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
-            </svg>
-          </span>
-        </label>
+  <title>Angzeng's blog</title>
+  <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.">
 
-        <div class="trigger"><a class="page-link" href="/about/">About</a></div>
-      </nav></div>
-</header>
-<main class="page-content" aria-label="Content">
-      <div class="wrapper">
-        <div class="home">
-<h2 class="post-list-heading">Posts</h2>
-    <ul class="post-list"><li><span class="post-meta">May 1, 2018</span>
-        <h3>
-          <a class="post-link" href="/jekyll/update/2018/05/01/welcome-to-jekyll.html">
-            Welcome to Jekyll!
-          </a>
-        </h3></li></ul>
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://localhost:4000/">
+  <link rel="alternate" type="application/rss+xml" title="Angzeng's blog" href="http://localhost:4000/feed.xml" />
+</head>
 
-    <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p></div>
 
-      </div>
-    </main><footer class="site-footer h-card">
-  <data class="u-url" href="/"></data>
+  <body>
+
+    <header class="site-header">
 
   <div class="wrapper">
 
-    <h2 class="footer-heading">Your awesome title</h2>
+    <a class="site-title" href="/">Angzeng's blog</a>
 
-    <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
-        <ul class="contact-list">
-          <li class="p-name">Your awesome title</li><li><a class="u-email" href="mailto:your-email@example.com">your-email@example.com</a></li></ul>
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/about/">关于</a>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
       </div>
-
-      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/jekyll"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">jekyll</span></a></li><li><a href="https://www.twitter.com/jekyllrb"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">jekyllrb</span></a></li></ul>
-</div>
-
-      <div class="footer-col footer-col-3">
-        <p>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</p>
-      </div>
-    </div>
+    </nav>
 
   </div>
 
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="home">
+
+  <h1 class="page-heading">文章</h1>
+
+  <ul class="post-list">
+    
+      <li>
+        <span class="post-meta">Aug 12, 2015</span>
+
+        <h2>
+          <a class="post-link" href="/2015/08/12/about-death.html">关于死亡</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Sep 4, 2014</span>
+
+        <h2>
+          <a class="post-link" href="/2014/09/04/an-interview-as-an-interviewer.html">记面试有感</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Mar 25, 2014</span>
+
+        <h2>
+          <a class="post-link" href="/2014/03/25/why-programming.html">为何编程？</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Aug 27, 2012</span>
+
+        <h2>
+          <a class="post-link" href="/2012/08/27/LAMP-compile-install.html">LAMP编译安装</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Aug 20, 2012</span>
+
+        <h2>
+          <a class="post-link" href="/2012/08/20/sublime-text-2.html">Sublime初用</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Aug 16, 2012</span>
+
+        <h2>
+          <a class="post-link" href="/2012/08/16/use-hostapd-set-up-wireless-ap.html">Linux下的无线AP</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Aug 15, 2012</span>
+
+        <h2>
+          <a class="post-link" href="/2012/08/15/use-git-watch-config.html">使用git管理/etc和用户配置文件</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Aug 13, 2012</span>
+
+        <h2>
+          <a class="post-link" href="/2012/08/13/fingertips.html">指尖 - 这里的第一篇</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Sep 21, 2011</span>
+
+        <h2>
+          <a class="post-link" href="/2011/09/21/2713d25bccbb60cdd3e10ca4.html">忽然间，想要去很远</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Sep 16, 2011</span>
+
+        <h2>
+          <a class="post-link" href="/2011/09/16/974c6bc2864126b90d0a7bbe.html">易怒</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">May 20, 2011</span>
+
+        <h2>
+          <a class="post-link" href="/2011/05/20/6e688f6ce9e8300ba1cf0fa4.html">故事的小黄花</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">May 20, 2011</span>
+
+        <h2>
+          <a class="post-link" href="/2011/05/20/1670c717b4df1558f1090ea4.html">I QUIT</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Jan 9, 2011</span>
+
+        <h2>
+          <a class="post-link" href="/2011/01/09/dba37d7e825b95366dc37cbe.html">遥远</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Oct 19, 2010</span>
+
+        <h2>
+          <a class="post-link" href="/2010/10/19/b935f74387bc0014896d10a4.html">Let&#39;s go travel</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Oct 11, 2010</span>
+
+        <h2>
+          <a class="post-link" href="/2010/10/11/89e1be0d5869ba7dbfe97ebe.html">尘埃</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Sep 11, 2010</span>
+
+        <h2>
+          <a class="post-link" href="/2010/09/11/a2c0154accf07b0cc11613a4.html">上帝</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Jul 10, 2010</span>
+
+        <h2>
+          <a class="post-link" href="/2010/07/10/5f260b0bd58754e9359902be.html">我是金子，我会闪光的！</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Jul 5, 2010</span>
+
+        <h2>
+          <a class="post-link" href="/2010/07/05/be0d234adaeccc08e83504be.html">temp</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Jun 20, 2010</span>
+
+        <h2>
+          <a class="post-link" href="/2010/06/20/4f434295340cd249f14215a4.html">巴黎拜金女</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Jun 10, 2010</span>
+
+        <h2>
+          <a class="post-link" href="/2010/06/10/4a5ca6b412a6c977254b09be.html">6月10日 梦</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Jun 10, 2010</span>
+
+        <h2>
+          <a class="post-link" href="/2010/06/10/3629e03c7926c8bc134b14a4.html">我要去干点我想干的事</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Jun 9, 2010</span>
+
+        <h2>
+          <a class="post-link" href="/2010/06/09/12b7d5e0c29661b72f140bbe.html">The Time Traveler&#39;s Wife</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">May 29, 2010</span>
+
+        <h2>
+          <a class="post-link" href="/2010/05/29/6522f7089c7d12e3ff240dbe.html">毕业生</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">May 29, 2010</span>
+
+        <h2>
+          <a class="post-link" href="/2010/05/29/4171a7ceee533e26a0b50abe.html">情书</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">May 28, 2010</span>
+
+        <h2>
+          <a class="post-link" href="/2010/05/28/f371bf8b3f7c5155e63d19a4.html">告天蝎男人书 [转的]</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">May 17, 2010</span>
+
+        <h2>
+          <a class="post-link" href="/2010/05/17/8971500e8438c3cc905718a4.html">雾都孤儿</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">May 16, 2010</span>
+
+        <h2>
+          <a class="post-link" href="/2010/05/16/b86f2d0e6bbd788802ce1ba4.html">这里的黎明静悄悄</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">May 1, 2010</span>
+
+        <h2>
+          <a class="post-link" href="/2010/05/01/2715d25bccbb60cdd3e10cbe.html">Maybe one day you will know</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Apr 19, 2010</span>
+
+        <h2>
+          <a class="post-link" href="/2010/04/19/b0901d1016bd970db98a1aa4.html">Reach for Me</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Apr 19, 2010</span>
+
+        <h2>
+          <a class="post-link" href="/2010/04/19/7f5c16ef26a3ea0d560f1da4.html">Hear Me</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Apr 18, 2010</span>
+
+        <h2>
+          <a class="post-link" href="/2010/04/18/77f9b11065efe7e99813d6be.html">梦到</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Apr 14, 2010</span>
+
+        <h2>
+          <a class="post-link" href="/2010/04/14/61464ee02e337613585dd8be.html">牛仔裤的夏天</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Apr 11, 2010</span>
+
+        <h2>
+          <a class="post-link" href="/2010/04/11/23bce81107e16c021894eca4.html">Dolls</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Apr 9, 2010</span>
+
+        <h2>
+          <a class="post-link" href="/2010/04/09/7831053f7553d283b711dbbe.html">苍苍</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Apr 5, 2010</span>
+
+        <h2>
+          <a class="post-link" href="/2010/04/05/e6a11d483e8c89e31381dabe.html">san&#39;s world</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Mar 26, 2010</span>
+
+        <h2>
+          <a class="post-link" href="/2010/03/26/df54160f50702f123a53eea4.html">无题</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Mar 24, 2010</span>
+
+        <h2>
+          <a class="post-link" href="/2010/03/24/e236952b2dbcacc0ee10f1a4.html">匹诺曹</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Mar 20, 2010</span>
+
+        <h2>
+          <a class="post-link" href="/2010/03/20/603a2cead924423886d9debe.html">机械决定论</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Mar 15, 2010</span>
+
+        <h2>
+          <a class="post-link" href="/2010/03/15/6dfaa949ae98d10c6dc2f0a4.html">未走过的路滴着我的泪</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Mar 10, 2010</span>
+
+        <h2>
+          <a class="post-link" href="/2010/03/10/30ed200bb30f0c823c42e2be.html">幾米Spa_第7期</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Mar 10, 2010</span>
+
+        <h2>
+          <a class="post-link" href="/2010/03/10/27ad6b145527e7088ebde4be.html">幾米Spa_第6期</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Jan 6, 2010</span>
+
+        <h2>
+          <a class="post-link" href="/2010/01/06/641677d450a7a997260ae7be.html">如梦令</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Dec 9, 2009</span>
+
+        <h2>
+          <a class="post-link" href="/2009/12/09/26573ff71a366e4a932af2a4.html">你在想什么, 为什么不说话..</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Dec 6, 2009</span>
+
+        <h2>
+          <a class="post-link" href="/2009/12/06/d96aca350edcb0d76d15e9be.html">旅途</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Sep 20, 2009</span>
+
+        <h2>
+          <a class="post-link" href="/2009/09/20/88aa0836539bf8f42784f4a4.html">爱情是什么</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Jun 30, 2009</span>
+
+        <h2>
+          <a class="post-link" href="/2009/06/30/6a2bab0125264d10cc34eabe.html">菊次郎の夏</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Jun 21, 2009</span>
+
+        <h2>
+          <a class="post-link" href="/2009/06/21/1c02c8d53385af2b39f6f7a4.html">没感觉的六级</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Jun 21, 2009</span>
+
+        <h2>
+          <a class="post-link" href="/2009/06/21/0ab93f2e66ce0fd60e37f9a4.html">ok,今天开始写日志..</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Jun 8, 2009</span>
+
+        <h2>
+          <a class="post-link" href="/2009/06/08/b19449c6049d9a7eced4f8a4.html">ttylinux安装与使用_安装</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">May 30, 2009</span>
+
+        <h2>
+          <a class="post-link" href="/2009/05/30/5f766bc3d3a2fb51ad00efbe.html">谁给我一个地方让我躲起来...</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">May 22, 2009</span>
+
+        <h2>
+          <a class="post-link" href="/2009/05/22/8ec7653bce588ec5392ffaa4.html">等待-王洛宾</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">May 11, 2009</span>
+
+        <h2>
+          <a class="post-link" href="/2009/05/11/6dfca949ae98d10c6dc2f0be.html">妈妈,我爱你..</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">May 10, 2009</span>
+
+        <h2>
+          <a class="post-link" href="/2009/05/10/6f71c8b85e8832e84fc7fda4.html">幾米Spa_第5期</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">May 9, 2009</span>
+
+        <h2>
+          <a class="post-link" href="/2009/05/09/728e218592fa5228100ef3be.html">关于那些梦..那些事...</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Apr 30, 2009</span>
+
+        <h2>
+          <a class="post-link" href="/2009/04/30/9340bf3013bd0fbb633affa4.html">且听风吟的感觉</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Apr 26, 2009</span>
+
+        <h2>
+          <a class="post-link" href="/2009/04/26/474f68280444e686af48f5be.html">再生缘</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Apr 26, 2009</span>
+
+        <h2>
+          <a class="post-link" href="/2009/04/26/016af834918c78332e0f81a4.html">香尘缘</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Apr 17, 2009</span>
+
+        <h2>
+          <a class="post-link" href="/2009/04/17/6b83736b01a63f37ac3e83a4.html">仓央嘉措</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Mar 30, 2009</span>
+
+        <h2>
+          <a class="post-link" href="/2009/03/30/6569e5f86d4fb4683c1485a4.html">你笑着流出了泪-尹吾</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Mar 14, 2009</span>
+
+        <h2>
+          <a class="post-link" href="/2009/03/14/1c04c8d53385af2b39f6f7be.html">那时花开</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Feb 27, 2009</span>
+
+        <h2>
+          <a class="post-link" href="/2009/02/27/0a67a02861a522fb50fd87a4.html">1976 【努特 Knut 】</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Feb 20, 2009</span>
+
+        <h2>
+          <a class="post-link" href="/2009/02/20/0abf3f2e66ce0fd60e37f9be.html">突然好想飞...</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Jan 10, 2009</span>
+
+        <h2>
+          <a class="post-link" href="/2009/01/10/a3869a7600ab672b5c1789a4.html">幾米Spa _第4期</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Jan 5, 2009</span>
+
+        <h2>
+          <a class="post-link" href="/2009/01/05/8ec1653bce588ec5392ffabe.html">月光倾城-老狼</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Jan 3, 2009</span>
+
+        <h2>
+          <a class="post-link" href="/2009/01/03/e58190f9a1c5fc1ba62988a4.html">玫瑰花蕾-筠子</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Jan 3, 2009</span>
+
+        <h2>
+          <a class="post-link" href="/2009/01/03/9346bf3013bd0fbb633affbe.html">立秋-筠子</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Dec 21, 2008</span>
+
+        <h2>
+          <a class="post-link" href="/2008/12/21/c24daa3f8483ef0dceb9febe.html">下雪了...</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Dec 14, 2008</span>
+
+        <h2>
+          <a class="post-link" href="/2008/12/14/d06ed1feab4a5d753d198ba4.html">在我的冬天里－朴树</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Dec 5, 2008</span>
+
+        <h2>
+          <a class="post-link" href="/2008/12/05/5246e511ea4d57fa9c778aa4.html">春分-筠子</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Dec 5, 2008</span>
+
+        <h2>
+          <a class="post-link" href="/2008/12/05/016cf834918c78332e0f81be.html">青春-筠子</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Nov 28, 2008</span>
+
+        <h2>
+          <a class="post-link" href="/2008/11/28/6492a3c1a3949b2fee4665a3.html">地球，你好吗？</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Nov 23, 2008</span>
+
+        <h2>
+          <a class="post-link" href="/2008/11/23/f931fd56805d64c29e2667a3.html">永恒-朴树</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Nov 15, 2008</span>
+
+        <h2>
+          <a class="post-link" href="/2008/11/15/96be284dc6e57ceda5c066a3.html">幾米Spa _第3期</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Oct 26, 2008</span>
+
+        <h2>
+          <a class="post-link" href="/2008/10/26/864b050b7fd1bd016c9048bd.html">几个法国搜索引擎</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Oct 21, 2008</span>
+
+        <h2>
+          <a class="post-link" href="/2008/10/21/ea6ae6f5e1bd11d442c36aa3.html">sorry seems to be the hardest word-Ray charles</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Oct 15, 2008</span>
+
+        <h2>
+          <a class="post-link" href="/2008/10/15/14e31311906ede403a176ea3.html">假如生活欺骗了你</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Sep 21, 2008</span>
+
+        <h2>
+          <a class="post-link" href="/2008/09/21/59d4c70ce52cd412addc70a3.html">Komm,süsser Tod</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Sep 20, 2008</span>
+
+        <h2>
+          <a class="post-link" href="/2008/09/20/bb9bb5f6ae1b000fd89e72a3.html">田鼠阿佛-李欧．李奥尼</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Sep 19, 2008</span>
+
+        <h2>
+          <a class="post-link" href="/2008/09/19/4da075e78e4552abc10d75a3.html">冬天里的小田鼠</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Sep 7, 2008</span>
+
+        <h2>
+          <a class="post-link" href="/2008/09/07/81a39045d2ace0e0bdf451bd.html">梁山伯与祝英台</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Aug 16, 2008</span>
+
+        <h2>
+          <a class="post-link" href="/2008/08/16/23c60b0bb96045df73e676a3.html">就让这朵云永远陪我..</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Aug 1, 2008</span>
+
+        <h2>
+          <a class="post-link" href="/2008/08/01/60deaac98cc3add6964452bd.html">the end</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Jun 28, 2008</span>
+
+        <h2>
+          <a class="post-link" href="/2008/06/28/2afa8ea8917a70736cd455bd.html">六月，很狼狈..</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Jun 23, 2008</span>
+
+        <h2>
+          <a class="post-link" href="/2008/06/23/97496bc2864126b90d0a7ba3.html">天空的颜色</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Jun 22, 2008</span>
+
+        <h2>
+          <a class="post-link" href="/2008/06/22/41506f116ce2028f88a956bd.html">[EVA][TAKERETAKE]</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Jun 22, 2008</span>
+
+        <h2>
+          <a class="post-link" href="/2008/06/22/12bea32654a29052c38d59bd.html">凡卡</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Jun 15, 2008</span>
+
+        <h2>
+          <a class="post-link" href="/2008/06/15/dba67d7e825b95366dc37ca3.html">失传已久的大海-朴树</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Jun 8, 2008</span>
+
+        <h2>
+          <a class="post-link" href="/2008/06/08/89e4be0d5869ba7dbfe97ea3.html">我的梦里//图片</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Jun 7, 2008</span>
+
+        <h2>
+          <a class="post-link" href="/2008/06/07/7b52f063ca7b642569105bbd.html">明日香&渚 薰//图片</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Jun 3, 2008</span>
+
+        <h2>
+          <a class="post-link" href="/2008/06/03/b9639ac7a5973760f7c95dbd.html">故乡//许巍</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Jun 3, 2008</span>
+
+        <h2>
+          <a class="post-link" href="/2008/06/03/524893ea082b790e65db00a3.html">纯真//许巍</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">May 31, 2008</span>
+
+        <h2>
+          <a class="post-link" href="/2008/05/31/9c36e15f30b8293795eb05a3.html">la_la</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">May 24, 2008</span>
+
+        <h2>
+          <a class="post-link" href="/2008/05/24/24fe5e15a1745927f6625cbd.html">幾米Spa _第2期</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">May 8, 2008</span>
+
+        <h2>
+          <a class="post-link" href="/2008/05/08/be08234adaeccc08e83504a3.html">就像当年他们牵着你一样...</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Apr 25, 2008</span>
+
+        <h2>
+          <a class="post-link" href="/2008/04/25/14c8291535c7e449e75e06a3.html">EVE-online</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Apr 23, 2008</span>
+
+        <h2>
+          <a class="post-link" href="/2008/04/23/333140988a803b8b581461bd.html">一个高级黑客给黑各同胞们的匿名信(转) //贴吧</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Apr 19, 2008</span>
+
+        <h2>
+          <a class="post-link" href="/2008/04/19/7db79827679f2f44469962bd.html">中方再次要求CNN就&#34;恶语辱华&#34;真诚道歉//CCTV.com</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Apr 19, 2008</span>
+
+        <h2>
+          <a class="post-link" href="/2008/04/19/619cf9259d07ee16087508a3.html">伦敦，巴黎圣火传递中感人画面——众多保护圣火的英雄//sina_video</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Apr 19, 2008</span>
+
+        <h2>
+          <a class="post-link" href="/2008/04/19/4174a7ceee533e26a0b50aa3.html">西藏永远是中国的一部分//中国红心//sina_video</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Apr 19, 2008</span>
+
+        <h2>
+          <a class="post-link" href="/2008/04/19/2710d25bccbb60cdd3e10ca3.html">CNN主持卡弗蒂恶言实录 看清西方媒体的拙劣表演//CCTV.com</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Apr 17, 2008</span>
+
+        <h2>
+          <a class="post-link" href="/2008/04/17/6498a3c1a3949b2fee4665bd.html">EVA有趣的视频//挖自非么为</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Apr 16, 2008</span>
+
+        <h2>
+          <a class="post-link" href="/2008/04/16/2d20bbee98725f245a2d64bd.html">堕天使要回到天国</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Apr 12, 2008</span>
+
+        <h2>
+          <a class="post-link" href="/2008/04/12/f93bfd56805d64c29e2667bd.html">云の彼端、约定の地</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Apr 6, 2008</span>
+
+        <h2>
+          <a class="post-link" href="/2008/04/06/6e6b8f6ce9e8300ba1cf0fa3.html">天籁之音-神秘园//再次来到中国</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Apr 5, 2008</span>
+
+        <h2>
+          <a class="post-link" href="/2008/04/05/96b4284dc6e57ceda5c066bd.html">中南海香烟-朴树手中的烟(摘自朴树贴吧)</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Apr 4, 2008</span>
+
+        <h2>
+          <a class="post-link" href="/2008/04/04/0e78d6d77f71ef4efb5768bd.html">我爱你,再见-朴树</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Apr 4, 2008</span>
+
+        <h2>
+          <a class="post-link" href="/2008/04/04/05a144c213fe3a55bdef69bd.html">沸点杂志6</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Apr 1, 2008</span>
+
+        <h2>
+          <a class="post-link" href="/2008/04/01/3383da0eed6483c12e4c6bbd.html">执子之手</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Mar 28, 2008</span>
+
+        <h2>
+          <a class="post-link" href="/2008/03/28/ea60e6f5e1bd11d442c36abd.html">牧笛//转的/有删节</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Mar 25, 2008</span>
+
+        <h2>
+          <a class="post-link" href="/2008/03/25/5c3fbc0ffca4486fd45a11a3.html">水墨动画</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Mar 21, 2008</span>
+
+        <h2>
+          <a class="post-link" href="/2008/03/21/669e1818df513b406926bbba.html">天上有三只风筝</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Mar 17, 2008</span>
+
+        <h2>
+          <a class="post-link" href="/2008/03/17/dd8d63eb23ab23e1fa42baba.html">残酷天使的行动纲领-「新世纪福音战士」片头曲</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Mar 17, 2008</span>
+
+        <h2>
+          <a class="post-link" href="/2008/03/17/5457b4c1133caf2e46d5c0bd.html">EVA//截图</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Mar 16, 2008</span>
+
+        <h2>
+          <a class="post-link" href="/2008/03/16/71462d34139273c22e8ec2bd.html">残酷な天使のテ-ゼ</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Mar 13, 2008</span>
+
+        <h2>
+          <a class="post-link" href="/2008/03/13/93430f301687ef22b2c0c5bd.html">Hey，我在</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Mar 11, 2008</span>
+
+        <h2>
+          <a class="post-link" href="/2008/03/11/a8993bc330632b360931c6bd.html">蓝色-叶蓓</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Mar 11, 2008</span>
+
+        <h2>
+          <a class="post-link" href="/2008/03/11/7ba6ec353483ea372e20c4bd.html">看海//一起</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Mar 11, 2008</span>
+
+        <h2>
+          <a class="post-link" href="/2008/03/11/3bafb9919e6de41d924f41b9.html">我们看海去</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Mar 9, 2008</span>
+
+        <h2>
+          <a class="post-link" href="/2008/03/09/0fa9d7f9e15cfcc00dd1c8bd.html">青春无悔</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Mar 6, 2008</span>
+
+        <h2>
+          <a class="post-link" href="/2008/03/06/4ff04215406c10fadceecabd.html">来自我心-老狼</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Mar 4, 2008</span>
+
+        <h2>
+          <a class="post-link" href="/2008/03/04/9ae3c3d32242e814d90e44b9.html">闷儿</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Mar 1, 2008</span>
+
+        <h2>
+          <a class="post-link" href="/2008/03/01/8b706a91f860def2291647b9.html">时光</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Feb 28, 2008</span>
+
+        <h2>
+          <a class="post-link" href="/2008/02/28/e66ed18fa1d1fe854414cfbd.html">且听风吟</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Feb 27, 2008</span>
+
+        <h2>
+          <a class="post-link" href="/2008/02/27/f679446241b1ad92c5d249b9.html">傻子才悲伤</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Feb 26, 2008</span>
+
+        <h2>
+          <a class="post-link" href="/2008/02/26/93a96524b4ab168c9c63d1bd.html">林荫道</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Jan 10, 2008</span>
+
+        <h2>
+          <a class="post-link" href="/2008/01/10/c181e6a4c36ca2278919d3bd.html">献给那些为了生活放下吉他的人</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Dec 23, 2007</span>
+
+        <h2>
+          <a class="post-link" href="/2007/12/23/f064acf7dd173fdc6325d2bd.html">Q群里的一段话</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Dec 15, 2007</span>
+
+        <h2>
+          <a class="post-link" href="/2007/12/15/4f9c9e12974421a7feded5bd.html">晴天小猪</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Dec 12, 2007</span>
+
+        <h2>
+          <a class="post-link" href="/2007/12/12/cf91bbf5ba1f0e2f743c4cb9.html">照片</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Dec 6, 2007</span>
+
+        <h2>
+          <a class="post-link" href="/2007/12/06/3e2a20eaa5a16bf4e0a5d4bd.html">Harry Potter</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Dec 1, 2007</span>
+
+        <h2>
+          <a class="post-link" href="/2007/12/01/77f6b11065efe7e99813d6bd.html">红丝带</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Nov 23, 2007</span>
+
+        <h2>
+          <a class="post-link" href="/2007/11/23/81a79045d2ace0e0bdf451b9.html">神秘园(Secret Garden)</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Nov 17, 2007</span>
+
+        <h2>
+          <a class="post-link" href="/2007/11/17/61494ee02e337613585dd8bd.html">十渡</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Nov 17, 2007</span>
+
+        <h2>
+          <a class="post-link" href="/2007/11/17/47bbb77051665746ef1e53b9.html">琥珀</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Nov 8, 2007</span>
+
+        <h2>
+          <a class="post-link" href="/2007/11/08/783e053f7553d283b711dbbd.html">佐贺的超级阿嬷［日］岛田洋七</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Nov 8, 2007</span>
+
+        <h2>
+          <a class="post-link" href="/2007/11/08/2afe8ea8917a70736cd455b9.html">今天　立冬</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Nov 3, 2007</span>
+
+        <h2>
+          <a class="post-link" href="/2007/11/03/e24d80d826fbc23c48e1ddbd.html">一部催人泪下的日本动漫</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Nov 3, 2007</span>
+
+        <h2>
+          <a class="post-link" href="/2007/11/03/41546f116ce2028f88a956b9.html">天文家-泰戈尔</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Nov 2, 2007</span>
+
+        <h2>
+          <a class="post-link" href="/2007/11/02/90f73a4317592594833ae1bd.html">恕</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Nov 2, 2007</span>
+
+        <h2>
+          <a class="post-link" href="/2007/11/02/7cb59e24cbd036cba5275ab9.html">六天高考</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Nov 2, 2007</span>
+
+        <h2>
+          <a class="post-link" href="/2007/11/02/759ce297be8847db1b49dfbd.html">经典</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Nov 2, 2007</span>
+
+        <h2>
+          <a class="post-link" href="/2007/11/02/6841fc8865a65dc498255fb9.html">死圣</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Nov 2, 2007</span>
+
+        <h2>
+          <a class="post-link" href="/2007/11/02/1411f1c89895a812515058b9.html">新世纪福音战士</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Oct 21, 2007</span>
+
+        <h2>
+          <a class="post-link" href="/2007/10/21/34626e941bb84fbfcd80e5bd.html">生于八十年代</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Oct 12, 2007</span>
+
+        <h2>
+          <a class="post-link" href="/2007/10/12/641977d450a7a997260ae7bd.html">水墨画</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Oct 12, 2007</span>
+
+        <h2>
+          <a class="post-link" href="/2007/10/12/2d24bbee98725f245a2d64b9.html">在路上</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Oct 12, 2007</span>
+
+        <h2>
+          <a class="post-link" href="/2007/10/12/27a26b145527e7088ebde4bd.html">右侧在东左侧在西</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Oct 7, 2007</span>
+
+        <h2>
+          <a class="post-link" href="/2007/10/07/96b0284dc6e57ceda5c066b9.html">旅途</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Sep 30, 2007</span>
+
+        <h2>
+          <a class="post-link" href="/2007/09/30/fe771e95b1a00d36336eebbd.html">傻子才悲伤</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Sep 30, 2007</span>
+
+        <h2>
+          <a class="post-link" href="/2007/09/30/05a544c213fe3a55bdef69b9.html">《放牛班的春天》</a>
+        </h2>
+      </li>
+    
+  </ul>
+
+  <p class="rss-subscribe">订阅 <a href="/feed.xml">via RSS</a></p>
+
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+    <div class="wrapper">
+        <h2 class="footer-heading">Angzeng's blog</h2>
+        <div class="footer-col-wrapper">
+            <div class="footer-col  footer-col-1">
+                <ul class="contact-list">
+                    <li>Angzeng's blog</li>
+                    <li><a href="mailto:Angzeng@icloud.com">Angzeng@icloud.com</a></li>
+                </ul>
+            </div>
+            <div class="footer-col  footer-col-2">
+                <ul class="social-media-list">
+                    
+                    <li>
+                        <a href="https://github.com/Angzeng">
+                            <span class="icon  icon--github">
+                                <svg viewBox="0 0 16 16">
+                                    <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z" />
+                                </svg>
+                            </span>
+                            <span class="username">Angzeng</span>
+                        </a>
+                    </li>
+                    
+
+                    
+                    <li>
+                        <a href="https://twitter.com/jekyllrb">
+                            <span class="icon  icon--twitter">
+                                <svg viewBox="0 0 16 16">
+                                    <path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809
+                  c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z" />
+                                </svg>
+                            </span>
+                            <span class="username">jekyllrb</span>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+            <div class="footer-col  footer-col-3">
+                <p class="text">Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</p>
+            </div>
+        </div>
+    </div>
 </footer>
-</body>
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?677a6496c3fa599a36743ae696b7bc3e";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+
+  </body>
 
 </html>
