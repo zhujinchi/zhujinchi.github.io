@@ -1,15 +1,13 @@
 # Site settings
-title: San's world
-email: hueidou163@gmail.com
+title: Angzeng's blog
+email: Angzeng@icloud.com
 description: > # this means to ignore newlines until "baseurl:"
   个人博客。
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://san.sanrabbit.com" # the base hostname & protocol for your site
-#twitter_username: jekyllrb
-github_username:  hueidou
-disqus: hueidou
+url: "" # the base hostname & protocol for your site
+github_username:  Angzeng
 
 # Build settings
-markdown: rdiscount
+markdown: markediter
 
 permalink: /:year/:month/:day/:title.html
