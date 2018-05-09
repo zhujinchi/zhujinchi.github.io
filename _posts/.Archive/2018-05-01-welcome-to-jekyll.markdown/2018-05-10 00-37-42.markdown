@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "清净经"
-date:   2018-05-10 22:44:11 +0800
+date:   2018-05-01 22:44:11 +0800
 categories: jekyll update
 ---
 <center>《清静经》</center>
