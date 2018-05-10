@@ -5,4 +5,3 @@ permalink: /about/
 ---
 
 {{ site.description }}
-你好
