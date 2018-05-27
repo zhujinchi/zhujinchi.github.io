@@ -13,6 +13,6 @@ categories: jekyll update
 引用 - 快捷键：control + Q ：>示例
 图片 - 快捷键：control + shift + I ：![](http://)
 链接 - 快捷键：control + shift + L：[](http://)
-代码框 - 两对「 ``` 」包裹；代码前加四个空格键；代码前加一个 tab 键：    NSLog(@"hello"")
+代码框 - 两对「 ``` 」包裹；代码前加四个空格键；代码前加一个 tab 键:
 
 
