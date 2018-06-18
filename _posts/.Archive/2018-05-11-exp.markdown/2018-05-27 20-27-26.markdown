@@ -1,0 +1,22 @@
+---
+layout: post
+title:  "标题"
+date:    10:11:26 +0800
+categories: jekyll update
+---
+>markdown说明。    
+
+
+加粗 - 快捷键：command + B ：**示例**
+斜体 - 快捷键：command + I ：*示例*
+
+![](./images/屏幕快照 2018-05-13 下午6.58.25.png)
+
+删除线 - 快捷键：command + U  ：~~示例~~
+底纹 - 快捷键：command + K ： `示例`
+引用 - 快捷键：control + Q ：>示例
+图片 - 快捷键：control + shift + I ：![](http://)
+链接 - 快捷键：control + shift + L：[](http://)
+代码框 - 两对「 ``` 」包裹；代码前加四个空格键；代码前加一个 tab 键：    NSLog(@"hello"")
+
+

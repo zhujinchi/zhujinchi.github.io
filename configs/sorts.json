@@ -1,0 +1,63 @@
+{
+    "": [
+        "zhujinchi.github.io", 
+        "_site", 
+        "images", 
+        "_posts", 
+        "others", 
+        "_includes", 
+        "css", 
+        "_layouts", 
+        "_sass"
+    ], 
+    "__positions": {
+        "_sass": 9, 
+        "_posts/2018-05-27-ios\u4f20\u503c\u65b9\u5f0f\u6d45\u6790.md": 4003, 
+        "_posts/2018-05-10-\u6e05\u51c0\u7ecf.markdown": 4001, 
+        "_posts": 4, 
+        "others": 5, 
+        "_posts/2018-05-11-\u4e00\u4e9b\u5173\u4e8ejenkins\u7684\u642d\u5efa\u4e8b\u9879.markdown": 4004, 
+        "_site/images": 2001, 
+        "_posts/2018-03-02-md\u4f7f\u7528\u8bf4\u660e.markdown": 4002, 
+        "_site/2018": 2003, 
+        "_site/about": 2004, 
+        "_includes": 6, 
+        "_site": 2, 
+        "images": 3, 
+        "zhujinchi.github.io": 1, 
+        "_site/css": 2002, 
+        "_layouts": 8, 
+        "css": 7
+    }, 
+    "_posts": [
+        "2018-05-10-\u6e05\u51c0\u7ecf.markdown", 
+        "2018-03-02-md\u4f7f\u7528\u8bf4\u660e.markdown", 
+        "2018-05-27-ios\u4f20\u503c\u65b9\u5f0f\u6d45\u6790.md", 
+        "2018-05-11-\u4e00\u4e9b\u5173\u4e8ejenkins\u7684\u642d\u5efa\u4e8b\u9879.markdown"
+    ], 
+    "__raw_positions": {
+        "_sass": 9, 
+        "_posts/2018-05-27-ios\u4f20\u503c\u65b9\u5f0f\u6d45\u6790.md": 3, 
+        "_posts/2018-05-10-\u6e05\u51c0\u7ecf.markdown": 1, 
+        "_layouts": 8, 
+        "_posts": 4, 
+        "_site": 2, 
+        "_posts/2018-05-11-\u4e00\u4e9b\u5173\u4e8ejenkins\u7684\u642d\u5efa\u4e8b\u9879.markdown": 4, 
+        "_site/images": 1, 
+        "_posts/2018-03-02-md\u4f7f\u7528\u8bf4\u660e.markdown": 2, 
+        "_site/2018": 3, 
+        "_site/about": 4, 
+        "_includes": 6, 
+        "others": 5, 
+        "images": 3, 
+        "_site/css": 2, 
+        "zhujinchi.github.io": 1, 
+        "css": 7
+    }, 
+    "_site": [
+        "images", 
+        "css", 
+        "2018", 
+        "about"
+    ]
+}

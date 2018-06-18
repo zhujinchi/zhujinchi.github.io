@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>朱近赤 博客</title>
+    <description>常应常静，常清静矣。
+</description>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Mon, 04 Jun 2018 17:51:01 +0800</pubDate>
+    <lastBuildDate>Mon, 04 Jun 2018 17:51:01 +0800</lastBuildDate>
+    <generator>Jekyll v3.8.2</generator>
+    
+      <item>
+        <title>markdown使用说明</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;markdown说明。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;加粗 - 快捷键：command + B ：&lt;strong&gt;示例&lt;/strong&gt;&lt;br /&gt;
+斜体 - 快捷键：command + I ：&lt;em&gt;示例&lt;/em&gt;&lt;br /&gt;
+删除线 - 快捷键：command + U  ：&lt;del&gt;示例&lt;/del&gt;&lt;br /&gt;
+底纹 - 快捷键：command + K ： &lt;code&gt;示例&lt;/code&gt;&lt;br /&gt;
+引用 - 快捷键：control + Q ：&amp;gt;示例&lt;br /&gt;
+图片 - 快捷键：control + shift + I ：&lt;img src=&quot;http://&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
+链接 - 快捷键：control + shift + L：&lt;a href=&quot;http://&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Mon, 04 Jun 2018 10:11:26 +0800</pubDate>
+        <link>http://localhost:4000/2018/06/04/md%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2018/06/04/md%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E.html</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>update</category>
+        
+      </item>
+    
+      <item>
+        <title>ios传值方式浅析</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;最近在写一些关于页面间传值代码，所以在这里把一些ios传值方式汇总一下。&lt;br /&gt;
+场景控制：A页面传值&lt;code&gt;flag&lt;/code&gt;给B页面。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;属性传值（正向）&lt;/strong&gt;&lt;br /&gt;
+一般来说，属性传值就比较常见了，不过，属性传值只能正向传值。应用场景：A页面跳转到B页面。首先是B页面代码。&lt;br /&gt;
+&lt;code&gt;BViewController.h&lt;/code&gt;中：
+    &lt;pre&gt;&lt;code class=&quot;language-objc&quot;&gt;@property(nonatomic) NSString *flag; 
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;p&gt;&lt;code&gt;AViewController.m&lt;/code&gt;中：&lt;/p&gt;
+    &lt;pre&gt;&lt;code class=&quot;language-objc&quot;&gt;- (void)sendInfo:(NSString *)flag {
+ BViewController *BVC = [[BViewController alloc] init];
+ BVC.flag = flag;
+ [self presentViewController:BVC animated:YES completion:nil];
+}
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;p&gt;这样就通过构建BViewController实例的时候将flag的值传过去了。不过值得注意的是，这种构造实例然后通过属性传值的方法应用的场景很单一。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;通知中心传值（反向）&lt;/strong&gt;&lt;br /&gt;
+通知中心传值使用情况相对比较复杂。通常是一个传给多个，应用场景：B、C页面监听A页面&lt;code&gt;flag&lt;/code&gt;的值（A页面传值给B、C）。  在B、C中代码处理方式一样。
+    &lt;pre&gt;&lt;code class=&quot;language-objc&quot;&gt;- (id)init {
+if (self = [super init]) {
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(setFlag:) name:@&quot;transFlag&quot; object:nil];
+}
+return self;
+}
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;p&gt;接受到通知后B、C的处理方法。&lt;/p&gt;
+    &lt;pre&gt;&lt;code class=&quot;language-objc&quot;&gt;- (void)setFlag:(Notification *)Noti {
+NSDictionary *dict = [Noti userInfo];
+NSString *flag = [dict valueForKey:@&quot;Info&quot;];
+//获取flag数据。
+}
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;p&gt;值得注意的是，Observer之所以放在init方法里面，可以为多个继承于此的页面提供初始化构造Observer的方法。通过这个方式扩展可以完成全局颜色切换，在后面的文章中我会单独研究一下。&lt;br /&gt;
+再看A页面这边传值。&lt;/p&gt;
+    &lt;pre&gt;&lt;code class=&quot;language-objc&quot;&gt;@property(nonatomic) NSString *flag; 
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;pre&gt;&lt;code class=&quot;language-objc&quot;&gt;- (void)viewWillDisappear:(BOOL)animated {
+NSDictionary *dict = [NSDictionary dictionaryWithObject:self.flag forKey:@&quot;Info&quot;];
+[[NSNotificationCenter  defaultCenter] postNotificationName:@&quot;transFlag&quot; object:nil userInfo:dict];
+}
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;p&gt;在A界面消失的时候会由通知中心传播dict内部的数据给所有的观察者，flag映射键值“Info”放置在dict中即可传过去。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;代理传值（反向）&lt;/strong&gt;&lt;br /&gt;
+参照此文对于代理传值的介绍：&lt;a href=&quot;https://blog.csdn.net/qq_34478149/article/details/52498450&quot;&gt;iOS多界面传值之–代理传值&lt;/a&gt;。
+总结下来，大致是这样的情况：&lt;br /&gt;
+&lt;code&gt;代理传值(场景)一般用于逆向传值,即第二个界面传值给第一个界面。&lt;/code&gt;&lt;br /&gt;
+第一步：在第二个页面h文件中：定义协议；设置协议中的方法；声明代理。然后在m文件中：实现协议中的方法。&lt;br /&gt;
+第二部：在第一个页面m文件中：设置协议；服从协议。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;单例传值&lt;/strong&gt;  &lt;br /&gt;
+单例方法，在整个App的生命周期内只会初始化一次，但是会一直存在，持续占有机器内存，可以正向传值和反向传值，但是过多的使用大量占有内存。&lt;br /&gt;
+新建一个继承自&lt;code&gt;NSObject&lt;/code&gt;的类：&lt;br /&gt;
+&lt;img src=&quot;/images/2018-05-28-19-18-41.jpg&quot; alt=&quot;&quot; /&gt; &lt;br /&gt;
+在&lt;code&gt;AppTransFlag.h&lt;/code&gt;中声明一个属性和一个类方法：
+    &lt;pre&gt;&lt;code class=&quot;language-objc&quot;&gt;@interface AppTransFlag : NSObject
+{
+ NSString *_contextStr;
+}
+@property(nonatomic, retain) NSString *contextStr;
++(AppTransFlag *)shareInstance;
+@end
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;p&gt;在&lt;code&gt;AppTransFlag.m&lt;/code&gt;中实现类方法：&lt;/p&gt;
+    &lt;pre&gt;&lt;code class=&quot;language-objc&quot;&gt;#import &quot;AppTransFlag.h&quot;
+@implementation AppTransFlag
+@synthesize contextStr = _contextStr;
+static AppStatus *_instance = nil;
++(AppTransFlag *)shareInstance {
+ if (_instance == nil) {
+     _instance = [[super alloc] init];
+ }
+ return _instance;
+}
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;p&gt;在&lt;code&gt;AViewController.m&lt;/code&gt;中：&lt;/p&gt;
+    &lt;pre&gt;&lt;code class=&quot;language-objc&quot;&gt;[ApptransFlag shareInstance].contextStr = self.flag;
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;p&gt;在&lt;code&gt;BVIewController.m&lt;/code&gt;中，获取到flag的值：&lt;/p&gt;
+    &lt;pre&gt;&lt;code class=&quot;language-objc&quot;&gt;if ([AppTransFlag shareInstance].contextStr) {
+ self.flag = [AppTransFlag shareInstance].contextStr;
+}
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;p&gt;这样就可以通过单例的属性值，将flag从A页面传到B页面。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;block传值（反向）&lt;/strong&gt;&lt;br /&gt;
+虽然有相似之处，但是block传值有别于属性传值，首先block传值不能跨页面传值，其次block传值适用于正向传值和逆向传值，使用起来还是很方便的。&lt;br /&gt;
+这里要将A页面的&lt;code&gt;flag&lt;/code&gt;传给B，我们需要在A中构建block。&lt;br /&gt;
+在&lt;code&gt;AViewController.h&lt;/code&gt;中，声明block：
+    &lt;pre&gt;&lt;code class=&quot;language-objc&quot;&gt;typedef void(^TransBlock)(NSString *data);
+...
+@property (copy, nonatomic) TransBlock choseBlock;
+@property (nonatomic, strong) NSString *flag;
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;p&gt;在&lt;code&gt;AViewController.m&lt;/code&gt;中，取&lt;code&gt;flag&lt;/code&gt;值：&lt;/p&gt;
+    &lt;pre&gt;&lt;code class=&quot;language-objc&quot;&gt;if (_choseBlock) {
+   _chosBlock(flag);
+}
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;p&gt;在&lt;code&gt;BViewController.m&lt;/code&gt;中获取&lt;code&gt;flag&lt;/code&gt;：&lt;/p&gt;
+    &lt;pre&gt;&lt;code class=&quot;language-objc&quot;&gt;AViewController *AVC = [[AViewController alloc] init];
+AVC.choseBlock = ^(NSString *flag) {
+ NSLog(@&quot;%@&quot;,flag);
+}
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;p&gt;这样就可以在关联页面之间进行传值。量级类似于属性传值。&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;其实ios传值本身还有方法传值（本质和属性传值一样）；文件传值（NSUserDefaults）和AppDelegate传值（本质和单例传值一样），在此文中不多赘述。&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+        <pubDate>Sun, 27 May 2018 21:35:38 +0800</pubDate>
+        <link>http://localhost:4000/2018/05/27/ios%E4%BC%A0%E5%80%BC%E6%96%B9%E5%BC%8F%E6%B5%85%E6%9E%90.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2018/05/27/ios%E4%BC%A0%E5%80%BC%E6%96%B9%E5%BC%8F%E6%B5%85%E6%9E%90.html</guid>
+        
+        
+        <category>ios</category>
+        
+      </item>
+    
+      <item>
+        <title>一些关于Jenkins的搭建事项</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;适来，为项目打包构建了jenkins脚本。于此处写下为大家避坑。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;在说明之前，这有一篇比较好的介绍作为背景：&lt;a href=&quot;https://www.jianshu.com/p/ed124917d6c6&quot;&gt;jenkins+Xcode+蒲公英实现ipa自动打包发布全攻略&lt;/a&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;安装jenkins&lt;/strong&gt;&lt;br /&gt;
+ 首先，安装过程如上文所述没有问题 。值得注意的是，在安装过程中由于不同的方式或者是版本。往往会出现两种安装情况。
+    &lt;ul&gt;
+      &lt;li&gt;jenkins安装到了&lt;code&gt;/User/${你的电脑名}&lt;/code&gt;目录下,&lt;code&gt;command+shift+.&lt;/code&gt;可以看到&lt;code&gt;_jenkins&lt;/code&gt;文件夹。那么恭喜你，之后会避开很多坑。&lt;/li&gt;
+      &lt;li&gt;jenkins安装到了&lt;code&gt;/User/Shared&lt;/code&gt;目录下，（我认为是由于jenkins版本原因，在安装pkg包的时候不能选择安装的目录。），因此jenkins在使用时会有诸多限制。主要的是很多文件夹无法访问到（比如&lt;code&gt;/Users/${你的电脑名}/Library/MobileDevice/Provisioning Profiles&lt;/code&gt;文件夹提供的发布证书无法被jenkins访问，再比如/&lt;code&gt;Users/${你的电脑名}/Library/Keychains&lt;/code&gt;文件夹提供的&lt;code&gt;login.keychain-db&lt;/code&gt;用以用户密钥，在jenkins脚本打包过程中会报错，你必须手动复制上述两个文件到&lt;code&gt;/User/Shared&lt;/code&gt;中），大坑一个。&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;从gitlab/github获取源代码&lt;/strong&gt;&lt;br /&gt;
+一般而言，从git中获取源代码有两种方式。
+    &lt;ul&gt;
+      &lt;li&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+        <pubDate>Fri, 11 May 2018 10:11:26 +0800</pubDate>
+        <link>http://localhost:4000/2018/05/11/%E4%B8%80%E4%BA%9B%E5%85%B3%E4%BA%8EJenkins%E7%9A%84%E6%90%AD%E5%BB%BA%E4%BA%8B%E9%A1%B9.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2018/05/11/%E4%B8%80%E4%BA%9B%E5%85%B3%E4%BA%8EJenkins%E7%9A%84%E6%90%AD%E5%BB%BA%E4%BA%8B%E9%A1%B9.html</guid>
+        
+        
+        <category>jenkins</category>
+        
+      </item>
+    
+      <item>
+        <title>清净经</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;正文&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;  老君曰：大道无形，生育天地；大道无情，运行日月；大道无名，长养万物；吾不知其名，强名曰道。夫道者：有清有浊，有动有静；天清地浊，天动地静。男清女浊，男动女静。降本流末，而生万物。清者浊之源，动者静之基。人能常清静，天地悉皆归。 夫人神好清，而心扰之；人心好静，而欲牵之。常能遣其欲，而心自静，澄其心而神自清。自然六欲不生，三毒消灭。所以不能者，为心未澄，欲未遣也。能遣之者，内观其心，心无其心；外观其形，形无其形；远观其物，物无其物。三者既悟，唯见於空；观空亦空，空无所空；所空既无，无无亦无；无无既无，湛然常寂；寂无所寂，欲岂能生？欲既不生，即是真静。真常应物，真常得性；常应常静，常清静矣。如此清静，渐入真道；既入真道，名为得道，虽名得道，实无所得；为化众生，名为得道；能悟之者，可传圣道。&lt;br /&gt;
+  老君曰：上士无争，下士好争；上德不德，下德执德。执著之者，不名道德。众生所以不得真道者，为有妄心。既有妄心，即惊其神；既惊其神，即著万物；既著万物，即生贪求；即生贪求，即是烦恼。烦恼妄想，忧苦身心。但遭浊辱。流浪生死，常沉苦海，永失真道。真常之道，悟者自得，得悟道者，常清静矣。&lt;br /&gt;
+  仙人葛翁曰：吾得真道，曾诵此经万遍。此经是天人所习，不传下士。吾昔受之于东华帝君，东华帝君受之于金阙帝君，金阙帝君受子于西王母。西王母皆口口相传，不记文字。吾今于世，书而录之。上士悟之，升为天官；中士修之，南宫列仙；下士得之，在世长年。游行三界，升入金门。&lt;br /&gt;
+  左玄真人曰：学道之士，持诵此经，即得十天善神，拥护其神。然后玉符保神，金液炼形。形神俱妙，与道合真。&lt;br /&gt;
+  正一真人曰：人家有此经，悟解之者，灾障不干，众圣护门。神升上界，朝拜高尊。功满德就，相感帝君。诵持不退，身腾紫云。&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;译文：&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;  天与地之间，看起来，好像就是空的，本来就没什么形体可言；可是天与地间，虽然是没有形体，却能生出天地之间的一切有生命的动物及植物，与无生命的沙土、 石头，及许许多多的物体。天与地的运转，本来就没有什么感情存在可言；虽然没有什么感情的存在，但是天与地之间，却好像是有感情的存在，才使它们不断的运 转。天与地的空间，它都不知道自己的名字，所以，本来就没什么名字可以去称呼它；可是虽然没有名字，但是它却能养育万物，滋润万物，使它们的生命能够继续 成长。这的确是一个很玄妙的问题，连我（老子）也不知道它的原因，所以也不知道要怎样去称呼它，那么干脆勉强给它取一个名字，叫做「道」吧！这个「道」的 确太玄妙了，包涵也太广阔了，为什么呢？因为这个「道」；有时候，有些地方是清清净净的；有时候，有些地方就显得非常污浊。有时候，有些地方就活动着；有 时候，有些地方就静悄悄的。像天空是一片清净的，大地就显得一片混浊。像天体的运转是属于流动之形，大地的本体是属于静止之物。男人是属于清阳之体，女人 是属于浊阴之身。男人是表现外在的、活动的；女人就表现内在的、静止的。因此，清阳之气是上升的，阴浊之气是下降的。如果万物清阳之气不能保守，那么万物 的本来灵性便容易下降；万物本来的灵性如果下降，便失去了本性的主宰；万物如果失去了本性的主宰，便容易起了情欲之念，思想与行为便自然而然流于下体之末 端；万物的思想与行为如果流于下体之末端，便有阴阳之交合；万物如果有了阴阳之交合，便自然而然生长出种种轮回之万物来。清净是污浊的源头，如水源在上游 是清净的，在下游就显得污浊。活动的事物只是清静的基础，如一切的建筑物，都是由活动而来的，这就表示出——活动的力量只是静止的基础，只有清静才是万物 的根本之道。所以，人如果能够经常保持清清静静，一切天地万物，就全部归纳在人的本性之中了，这就是学道的根本，可是学道的根本，每个人都忽视了。比如 说，人的元神本来是喜好清静的，可是都被后天的识神给扰乱了。人的心性也是一样，本来也喜欢清静的，但是都被贪念的欲望牵引去了。因此，一个人如果能够遣 除这些贪念的欲望，人的心性，自然就能够清静。澄滤这个心性之后，我们的元神，自然能够清醒。这样的话，六种「眼、耳、鼻、舌、身、意」这些所接触的欲 望，自然不会带来干扰，三种「贪妄心，愚痴心，嗔怨心」之毒素也自然而然消灭。但是有些人就是做不到，这就是这个人的心性，还没有澄清的关系，所以尚有一 些欲望还没遣除。如果人能够遣除这些欲望，达到清净的话，你去观察你自己的心，连你自己的心，都会感觉没有了。你再往外看一切形体，这些形体也不是形体 了。就是了望远处的物体，远处的物体，也不是什么物体了。这三种「心、形、物」都能了悟一切都是虚幻的话，心地就唯有一片空旷，毫无一物了。能够这样的 话，看到虚无的天空也是虚幻的，连这个虚幻，都能看破以及看空的话；就是一切都没有了；既然知道一切都没有了，心性之中还有什么可以存在呢？本来都是一切 假相而已。既然知道一切都是假相的，我们就要连这些假相都不要执着，连假相都不执着了，就是一片静止的状态。心性的静止达到连想要静止的心，都没有的时 候，欲望怎么能够生出来呢？能够达到贪念的欲望，完全不生出来的时候，就是达到真静的工夫了。心性达到真静的状态，然后去应用实行一切事物，自然就是自在 自如了。能够自在自如的人，就是能够守住真正——常清常静的人，能够守住真正常清常静的人，也就是已经得到——明自本心，识自本性的人。能够达到明自本 心，识自本性的人，无论在纷扰的场所或是在清静的场所，他都能时时保持清静的心。能够经常保持清静心的人，才是真正清静之人。达到真正清静之人，就是已经 渐渐迈入真正的大道了；既然迈入真正的大道，就是修道人所称的「得道」这个名词。〕虽名得道。实无所得。〔可是虽然称为「得道」，实在是没有得到什么。但 是为了度化天下迷昧的苍生，所以才举个「得道」的名称，作为他人修道已成的名词。现在我（老子）讲到这里，如果你们能够领悟的人，就可以普传这个至真至贵 的圣贤大道了。〕&lt;br /&gt;
+  所以，吾（太上道祖）说：最上等有智慧的人，是没有争夺之心的，只有最下等没有智慧的人，才一天到晚产生贪妄的争夺心。最上等有道德的人，是不说自己有 德行的，只有最下等有道德的人，才说自己有德行，因为他是一位顽固执迷的人呀！所以，一个顽固执迷的人，会常常说自己有德行，但是依我看来反而是一位不知 道什么叫做道德的人。为什么众生不能迈入真正的大道呢？就是因为他常常有一颗虚幻的妄想心；既然有一颗虚幻的妄想心，就已经惊扰了他本身的元神了；既然已 经惊扰到他本身的元神，他的元神就贪着一切有形的万物了；既然贪着一切有形的万物，就会产生一些不必要的贪求；既然心性中产生不必要的贪求，心灵中就有了 邪思妄想的烦恼；既然心灵中有了邪思妄想的烦恼，就会带来忧愁的痛苦，既然带来了忧愁的痛苦，就会扰乱到自己的身心；扰乱自己的身心，自然就会犯下错误的 行为；既然犯下错误的行为，就会污辱自己的灵性，既然污辱了自己的灵性；就要流浪在生死的轮回中，既然流浪在生死的轮回中，便要沉沦于茫茫苦海；既然沉沦 于茫茫苦海，就要永远失去真正的大道了。而真正长久的大道，是领悟的人，才能得到的呀！不是别人能够送给你的；所以，能够真正领悟大道的人，简单一句话来 说，就是经常身心保持清静的人了！&lt;/p&gt;
+</description>
+        <pubDate>Thu, 10 May 2018 22:44:11 +0800</pubDate>
+        <link>http://localhost:4000/2018/05/10/%E6%B8%85%E5%87%80%E7%BB%8F.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2018/05/10/%E6%B8%85%E5%87%80%E7%BB%8F.html</guid>
+        
+        
+        <category>article</category>
+        
+      </item>
+    
+  </channel>
+</rss>

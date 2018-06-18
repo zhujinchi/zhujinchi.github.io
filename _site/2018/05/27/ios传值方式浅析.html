@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>ios传值方式浅析</title>
+  <meta name="description" content="  最近在写一些关于页面间传值代码，所以在这里把一些ios传值方式汇总一下。场景控制：A页面传值flag给B页面。">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://localhost:4000/2018/05/27/ios%E4%BC%A0%E5%80%BC%E6%96%B9%E5%BC%8F%E6%B5%85%E6%9E%90.html">
+  <link rel="alternate" type="application/rss+xml" title="朱近赤 博客" href="http://localhost:4000/feed.xml" />
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">朱近赤 博客</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/about/">关于</a>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="post">
+    <header class="post-header">
+        <h1 class="post-title">ios传值方式浅析</h1>
+        <p class="post-meta">May 27, 2018</p>
+    </header>
+    <article class="post-content">
+        <blockquote>
+  <p>最近在写一些关于页面间传值代码，所以在这里把一些ios传值方式汇总一下。<br />
+场景控制：A页面传值<code>flag</code>给B页面。</p>
+</blockquote>
+
+<ol>
+  <li><strong>属性传值（正向）</strong><br />
+一般来说，属性传值就比较常见了，不过，属性传值只能正向传值。应用场景：A页面跳转到B页面。首先是B页面代码。<br />
+<code>BViewController.h</code>中：
+    <pre><code class="language-objc">@property(nonatomic) NSString *flag; 
+</code></pre>
+    <p><code>AViewController.m</code>中：</p>
+    <pre><code class="language-objc">- (void)sendInfo:(NSString *)flag {
+ BViewController *BVC = [[BViewController alloc] init];
+ BVC.flag = flag;
+ [self presentViewController:BVC animated:YES completion:nil];
+}
+</code></pre>
+    <p>这样就通过构建BViewController实例的时候将flag的值传过去了。不过值得注意的是，这种构造实例然后通过属性传值的方法应用的场景很单一。</p>
+  </li>
+  <li><strong>通知中心传值（反向）</strong><br />
+通知中心传值使用情况相对比较复杂。通常是一个传给多个，应用场景：B、C页面监听A页面<code>flag</code>的值（A页面传值给B、C）。  在B、C中代码处理方式一样。
+    <pre><code class="language-objc">- (id)init {
+if (self = [super init]) {
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(setFlag:) name:@"transFlag" object:nil];
+}
+return self;
+}
+</code></pre>
+    <p>接受到通知后B、C的处理方法。</p>
+    <pre><code class="language-objc">- (void)setFlag:(Notification *)Noti {
+NSDictionary *dict = [Noti userInfo];
+NSString *flag = [dict valueForKey:@"Info"];
+//获取flag数据。
+}
+</code></pre>
+    <p>值得注意的是，Observer之所以放在init方法里面，可以为多个继承于此的页面提供初始化构造Observer的方法。通过这个方式扩展可以完成全局颜色切换，在后面的文章中我会单独研究一下。<br />
+再看A页面这边传值。</p>
+    <pre><code class="language-objc">@property(nonatomic) NSString *flag; 
+</code></pre>
+    <pre><code class="language-objc">- (void)viewWillDisappear:(BOOL)animated {
+NSDictionary *dict = [NSDictionary dictionaryWithObject:self.flag forKey:@"Info"];
+[[NSNotificationCenter  defaultCenter] postNotificationName:@"transFlag" object:nil userInfo:dict];
+}
+</code></pre>
+    <p>在A界面消失的时候会由通知中心传播dict内部的数据给所有的观察者，flag映射键值“Info”放置在dict中即可传过去。</p>
+  </li>
+  <li>
+    <p><strong>代理传值（反向）</strong><br />
+参照此文对于代理传值的介绍：<a href="https://blog.csdn.net/qq_34478149/article/details/52498450">iOS多界面传值之–代理传值</a>。
+总结下来，大致是这样的情况：<br />
+<code>代理传值(场景)一般用于逆向传值,即第二个界面传值给第一个界面。</code><br />
+第一步：在第二个页面h文件中：定义协议；设置协议中的方法；声明代理。然后在m文件中：实现协议中的方法。<br />
+第二部：在第一个页面m文件中：设置协议；服从协议。</p>
+  </li>
+  <li><strong>单例传值</strong>  <br />
+单例方法，在整个App的生命周期内只会初始化一次，但是会一直存在，持续占有机器内存，可以正向传值和反向传值，但是过多的使用大量占有内存。<br />
+新建一个继承自<code>NSObject</code>的类：<br />
+<img src="/images/2018-05-28-19-18-41.jpg" alt="" /> <br />
+在<code>AppTransFlag.h</code>中声明一个属性和一个类方法：
+    <pre><code class="language-objc">@interface AppTransFlag : NSObject
+{
+ NSString *_contextStr;
+}
+@property(nonatomic, retain) NSString *contextStr;
++(AppTransFlag *)shareInstance;
+@end
+</code></pre>
+    <p>在<code>AppTransFlag.m</code>中实现类方法：</p>
+    <pre><code class="language-objc">#import "AppTransFlag.h"
+@implementation AppTransFlag
+@synthesize contextStr = _contextStr;
+static AppStatus *_instance = nil;
++(AppTransFlag *)shareInstance {
+ if (_instance == nil) {
+     _instance = [[super alloc] init];
+ }
+ return _instance;
+}
+</code></pre>
+    <p>在<code>AViewController.m</code>中：</p>
+    <pre><code class="language-objc">[ApptransFlag shareInstance].contextStr = self.flag;
+</code></pre>
+    <p>在<code>BVIewController.m</code>中，获取到flag的值：</p>
+    <pre><code class="language-objc">if ([AppTransFlag shareInstance].contextStr) {
+ self.flag = [AppTransFlag shareInstance].contextStr;
+}
+</code></pre>
+    <p>这样就可以通过单例的属性值，将flag从A页面传到B页面。</p>
+  </li>
+  <li><strong>block传值（反向）</strong><br />
+虽然有相似之处，但是block传值有别于属性传值，首先block传值不能跨页面传值，其次block传值适用于正向传值和逆向传值，使用起来还是很方便的。<br />
+这里要将A页面的<code>flag</code>传给B，我们需要在A中构建block。<br />
+在<code>AViewController.h</code>中，声明block：
+    <pre><code class="language-objc">typedef void(^TransBlock)(NSString *data);
+...
+@property (copy, nonatomic) TransBlock choseBlock;
+@property (nonatomic, strong) NSString *flag;
+</code></pre>
+    <p>在<code>AViewController.m</code>中，取<code>flag</code>值：</p>
+    <pre><code class="language-objc">if (_choseBlock) {
+   _chosBlock(flag);
+}
+</code></pre>
+    <p>在<code>BViewController.m</code>中获取<code>flag</code>：</p>
+    <pre><code class="language-objc">AViewController *AVC = [[AViewController alloc] init];
+AVC.choseBlock = ^(NSString *flag) {
+ NSLog(@"%@",flag);
+}
+</code></pre>
+    <p>这样就可以在关联页面之间进行传值。量级类似于属性传值。</p>
+  </li>
+</ol>
+
+<blockquote>
+  <p>其实ios传值本身还有方法传值（本质和属性传值一样）；文件传值（NSUserDefaults）和AppDelegate传值（本质和单例传值一样），在此文中不多赘述。</p>
+</blockquote>
+
+    </article>
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        var disqus_shortname = '';
+        var disqus_identifier = '/2018/05/27/ios传值方式浅析';
+
+        (function () {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+    <div class="wrapper">
+        <h2 class="footer-heading">朱近赤 博客</h2>
+        <div class="footer-col-wrapper">
+            <div class="footer-col  footer-col-1">
+                <ul class="contact-list">
+                    <li>朱近赤 博客</li>
+                    <li><a href="mailto:Angzeng@icloud.com">Angzeng@icloud.com</a></li>
+                </ul>
+            </div>
+            <div class="footer-col  footer-col-2">
+                <ul class="social-media-list">
+                    
+                    <li>
+                        <a href="https://github.com/zhujinchi">
+                            <span class="icon  icon--github">
+                                <svg viewBox="0 0 16 16">
+                                    <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z" />
+                                </svg>
+                            </span>
+                            <span class="username">zhujinchi</span>
+                        </a>
+                    </li>
+                    
+
+                    
+                </ul>
+            </div>
+            <div class="footer-col  footer-col-3">
+                <p class="text">常应常静，常清静矣。
+</p>
+            </div>
+        </div>
+    </div>
+</footer>
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?677a6496c3fa599a36743ae696b7bc3e";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+
+  </body>
+
+</html>
