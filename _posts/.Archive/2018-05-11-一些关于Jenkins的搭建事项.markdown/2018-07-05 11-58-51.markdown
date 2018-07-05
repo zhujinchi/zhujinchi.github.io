@@ -18,10 +18,7 @@ categories: jenkins
 * 一种是输入用户名和密码登录仓库。
     ![](/images/2018-07-05-11-57-19.png)
 * 另一种是配置SSH公钥认证与Jenkins远程登录。
-    可以参考这里，[Linux配置SSH公钥认证与Jenkins远程登录进行自动发布](https://www.cnblogs.com/jager/p/5986563.html)。
-    这里注意：1、你的目录的位置，要和你jenkins安装的位置匹配，安装的时候jenkins的位置决定了你配置SSH时的文件路径。2、使用命令行创建SSH公钥的时候，填写密码步骤回车跳过。避免在以后jenkins执行阶段有可能输入密码。3、如果你的jenkins目录不在`/User/${你的电脑名}`下，那你在配置SSH环境的时候，需要手动切换当前用户为jenkins，参照[mac终端切换用户](https://blog.csdn.net/huodoubi/article/details/69948483)。
-
-3. 
+    
 
 
 

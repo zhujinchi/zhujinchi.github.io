@@ -6,32 +6,137 @@
 </description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 04 Jun 2018 17:51:01 +0800</pubDate>
-    <lastBuildDate>Mon, 04 Jun 2018 17:51:01 +0800</lastBuildDate>
+    <pubDate>Thu, 05 Jul 2018 20:02:00 +0800</pubDate>
+    <lastBuildDate>Thu, 05 Jul 2018 20:02:00 +0800</lastBuildDate>
     <generator>Jekyll v3.8.2</generator>
     
       <item>
-        <title>markdown使用说明</title>
+        <title>ios代码块block分析 </title>
         <description>&lt;blockquote&gt;
-  &lt;p&gt;markdown说明。&lt;/p&gt;
+  &lt;p&gt;近来，在项目中遇到一些block的问题，所以闲来写一些关于block的事项&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;加粗 - 快捷键：command + B ：&lt;strong&gt;示例&lt;/strong&gt;&lt;br /&gt;
-斜体 - 快捷键：command + I ：&lt;em&gt;示例&lt;/em&gt;&lt;br /&gt;
-删除线 - 快捷键：command + U  ：&lt;del&gt;示例&lt;/del&gt;&lt;br /&gt;
-底纹 - 快捷键：command + K ： &lt;code&gt;示例&lt;/code&gt;&lt;br /&gt;
-引用 - 快捷键：control + Q ：&amp;gt;示例&lt;br /&gt;
-图片 - 快捷键：control + shift + I ：&lt;img src=&quot;http://&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
-链接 - 快捷键：control + shift + L：&lt;a href=&quot;http://&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/2018-07-05-16-08-09.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;代码块Block是苹果在iOS4开始引入的对C语言的扩展,用来实现匿名函数的特性,Block是一种特殊的数据类型,其可以正常定义变量、作为参数、作为返回值,特殊地,Block还可以保存一段代码,在需要的时候调用,目前Block已经广泛应用于iOS开发中,常用于GCD、动画、排序及各类回调&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Block的声明和赋值只是保存了一段代码段，必须调用才能执行代码块。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;关于Block变量的声明、赋值和调用&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Block变量的声明
+    &lt;pre&gt;&lt;code class=&quot;language-objc&quot;&gt;//Block变量的声明各式为：返回值类型(^Block名字)(参数列表)    
+void(^aBlock)(NSString *x, NSString *y);
+void(^aBlock)(NSString *, NSString *);
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Block变量的赋值
+    &lt;pre&gt;&lt;code class=&quot;language-objc&quot;&gt;//Block变量赋值的各式为：Block变量 = ^(参数列表){函数体}    
+aBlock = ^(NSString *x, NSString *y){
+  NSLog(@&quot;%@love%@&quot;,x, y);
+};
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Block变量的声明并赋值
+    &lt;pre&gt;&lt;code class=&quot;language-objc&quot;&gt;int(^myBlock)(int) = ^(int num) {
+  return num*7;
+};
+//如果没有参数列表，在赋值的时候参数列表可以省略
+void(^aVoidBlock)() = ^{
+  NSLog(@&quot;I am a aVoidBlock&quot;);
+};
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Block变量的调用
+    &lt;pre&gt;&lt;code class=&quot;language-objc&quot;&gt;aBlock(@&quot;zhujinchi&quot;, @&quot;zhujinchi&quot;);
+NSLog(@&quot;%d&quot;, myBlock(9));
+aVoidBlock();
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;使用typedef定义Block类型&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;在实际使用Block的过程中,我们可能需要重复地声明多个相同返回值相同参数列表的Block变量,如果总是重复地编写一长串代码来声明变量会非常繁琐,所以我们可以使用typedef来定义Block类型
+    &lt;pre&gt;&lt;code class=&quot;language-objc&quot;&gt;typedef void(^SayHello)();
+SayHello hello = ^(){
+  NSLog(@&quot;hello&quot;);
+};
+hello();
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Block作为函数参数&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Block作为C函数参数
+    &lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;void useBlockForC(int(^aBlock)(int, int)) {
+  printf(&quot;%d&quot;, aBlock(300, 200));
+};
+//调用方法以Block作为函数参数
+int (^addBlock)(int, int) = ^(int x, int y){
+  return x+y;
+};
+useBlockForC(addBlock);
+//效果和上述相同
+useBlockForC(^(int x, int y)) {
+  return x+y;
+};
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Block作为OC函数参数
+    &lt;pre&gt;&lt;code class=&quot;language-objc&quot;&gt;-(void)useBlockForOC:(int (^)(int x, int y))aBlock {
+  NSLog(@&quot;%d&quot;, aBlock(300, 200));
+};
+//调用方法以Block作为函数参数
+int (^addBlock)(int, int) = ^(int x, int y){
+  return x+y;
+};
+[self useBlockForOC:addBlock];
+//效果和上述相同
+[self useBlockForOC:^(int x, int y)] {
+  return x+y;
+};
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;使用typedef简化Block
+    &lt;pre&gt;&lt;code class=&quot;language-objc&quot;&gt;typedef int(^MyBlock)(int x, int y);
+-(void)useBlockForOC:(MyBlock)aBlock {
+  NSLog(@&quot;%@&quot;, aBlock(300, 200));
+};
+//
+MyBlock addBlock = ^(int x, int y) {
+  return x+y;
+}
+[self useBlockForOC:addBlock];
+//
+[self useBlockForOC:^(int x, int y) {
+  return x+y;
+};];
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Block内访问局部变量&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Block内访问__block修饰的局部变量&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Block内访问全局变量&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Block内访问静态变量&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Block在MRC及ARC下的内存管理&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;使用Block进行排序&lt;/strong&gt;&lt;/p&gt;
+
 </description>
-        <pubDate>Mon, 04 Jun 2018 10:11:26 +0800</pubDate>
-        <link>http://localhost:4000/2018/06/04/md%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2018/06/04/md%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E.html</guid>
+        <pubDate>Thu, 05 Jul 2018 16:09:06 +0800</pubDate>
+        <link>http://localhost:4000/2018/07/05/ios%E4%BB%A3%E7%A0%81%E5%9D%97block%E5%88%86%E6%9E%90.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2018/07/05/ios%E4%BB%A3%E7%A0%81%E5%9D%97block%E5%88%86%E6%9E%90.html</guid>
         
         
-        <category>jekyll</category>
-        
-        <category>update</category>
+        <category>none</category>
         
       </item>
     
@@ -90,7 +195,8 @@ NSDictionary *dict = [NSDictionary dictionaryWithObject:self.flag forKey:@&quot;
 总结下来，大致是这样的情况：&lt;br /&gt;
 &lt;code&gt;代理传值(场景)一般用于逆向传值,即第二个界面传值给第一个界面。&lt;/code&gt;&lt;br /&gt;
 第一步：在第二个页面h文件中：定义协议；设置协议中的方法；声明代理。然后在m文件中：实现协议中的方法。&lt;br /&gt;
-第二部：在第一个页面m文件中：设置协议；服从协议。&lt;/p&gt;
+第二步：在第一个页面m文件中：设置协议；服从协议。&lt;br /&gt;
+具体代码参照代理设定教程。&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;&lt;strong&gt;单例传值&lt;/strong&gt;  &lt;br /&gt;
 单例方法，在整个App的生命周期内只会初始化一次，但是会一直存在，持续占有机器内存，可以正向传值和反向传值，但是过多的使用大量占有内存。&lt;br /&gt;
@@ -181,11 +287,16 @@ AVC.choseBlock = ^(NSString *flag) {
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;&lt;strong&gt;从gitlab/github获取源代码&lt;/strong&gt;&lt;br /&gt;
-一般而言，从git中获取源代码有两种方式。
+ 一般而言，从git中获取源代码有两种方式。
     &lt;ul&gt;
-      &lt;li&gt;&lt;/li&gt;
+      &lt;li&gt;一种是输入用户名和密码登录仓库。
+ &lt;img src=&quot;/images/2018-07-05-11-57-19.png&quot; alt=&quot;&quot; /&gt;&lt;/li&gt;
+      &lt;li&gt;另一种是配置SSH公钥认证与Jenkins远程登录。
+ 可以参考这里，&lt;a href=&quot;https://www.cnblogs.com/jager/p/5986563.html&quot;&gt;Linux配置SSH公钥认证与Jenkins远程登录进行自动发布&lt;/a&gt;。
+ 这里注意：1、你的目录的位置，要和你jenkins安装的位置匹配，安装的时候jenkins的位置决定了你配置SSH时的文件路径。2、使用命令行创建SSH公钥的时候，填写密码步骤回车跳过。避免在以后jenkins执行阶段有可能输入密码。3、如果你的jenkins目录不在&lt;code&gt;/User/${你的电脑名}&lt;/code&gt;下，那你在配置SSH环境的时候，需要手动切换当前用户为jenkins，参照&lt;a href=&quot;https://blog.csdn.net/huodoubi/article/details/69948483&quot;&gt;mac终端切换用户&lt;/a&gt;。&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
+  &lt;li&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
 </description>
