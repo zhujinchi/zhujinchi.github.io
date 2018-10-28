@@ -16,14 +16,14 @@
         "_posts": 3, 
         "_site": 5, 
         "_posts/2018-05-11-\u4e00\u4e9b\u5173\u4e8ejenkins\u7684\u642d\u5efa\u4e8b\u9879.markdown": 3004, 
-        "_site/images": 5001, 
+        "_site/images": 5004, 
         "_posts/2018-03-02-md\u4f7f\u7528\u8bf4\u660e.markdown": 3002, 
-        "_site/2018": 5003, 
-        "_site/about": 5004, 
+        "_site/2018": 5001, 
+        "_site/about": 5002, 
         "_includes": 1, 
         "others": 8, 
         "images": 7, 
-        "_site/css": 5002, 
+        "_site/css": 5003, 
         "_posts/2018-05-10-\u6e05\u51c0\u7ecf.markdown": 3001, 
         "css": 6
     }, 
@@ -40,21 +40,21 @@
         "_posts": 3, 
         "others": 8, 
         "_posts/2018-05-11-\u4e00\u4e9b\u5173\u4e8ejenkins\u7684\u642d\u5efa\u4e8b\u9879.markdown": 4, 
-        "_site/images": 1, 
+        "_site/images": 4, 
         "_posts/2018-03-02-md\u4f7f\u7528\u8bf4\u660e.markdown": 2, 
-        "_site/2018": 3, 
-        "_site/about": 4, 
+        "_site/2018": 1, 
+        "_site/about": 2, 
         "_includes": 1, 
         "_site": 5, 
         "images": 7, 
-        "_site/css": 2, 
+        "_site/css": 3, 
         "_layouts": 2, 
         "css": 6
     }, 
     "_site": [
-        "images", 
-        "css", 
         "2018", 
-        "about"
+        "about", 
+        "css", 
+        "images"
     ]
 }
