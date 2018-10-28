@@ -6,9 +6,95 @@
 </description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 28 Oct 2018 12:18:30 +0800</pubDate>
-    <lastBuildDate>Sun, 28 Oct 2018 12:18:30 +0800</lastBuildDate>
+    <pubDate>Sun, 28 Oct 2018 12:23:34 +0800</pubDate>
+    <lastBuildDate>Sun, 28 Oct 2018 12:23:34 +0800</lastBuildDate>
     <generator>Jekyll v3.8.2</generator>
+    
+      <item>
+        <title>ios多线程GCD分析 </title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;多线程是oc的基础，近来有空，我便在此总结一下。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;#1、GCD简介
+Grand Central Dispatch(GCD) 是 Apple 开发的一个多核编程的较新的解决方法。它主要用于优化应用程序以支持多核处理器以及其他对称多处理系统。它是一个在线程池模式的基础上执行的并发任务。在 Mac OS X 10.6 雪豹中首次推出，也可在 iOS 4 及以上版本使用。
+#2、GCD任务和队列
+GCD有两个核心的概念：任务和队列。
+任务：就是执行操作的意思，在GCD中代码是放在block中执行的，执行任务有两种方式：同步执行（sync）和异步执行（async）。&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;同步执行：同步添加任务到指定队列，在添加至队列的任务未完成时，会一直等待，直到队列里面的任务完成之后再继续执行；只能在当前线程中执行任务，不具备开启新线程的能力。&lt;/li&gt;
+  &lt;li&gt;异步执行：异步添加任务到指定的队列，可以继续执行任务；可以在新的线程中执行任务，具备开启新线程的能力。
+&lt;strong&gt;值得注意的是，异步执行（async）虽然具有开启新线程的能力，但并不一定开启新线程。这根任务指定的队列类型有关。&lt;/strong&gt;
+队列：队列是执行任务的等待队列，即用来存放任务的队列。队列是一种特殊的线性表，采用FIFO原则。
+&lt;img src=&quot;/images/2018-07-16-18-13-14.jpg&quot; alt=&quot;&quot; /&gt;
+在GCD中有两种队列：串行队列和并行队列。两者主要区别是：执行顺序不同，以及开启的线程数不同。
+    &lt;ul&gt;
+      &lt;li&gt;串行队列：每次只有一个任务被执行。让任务一个接着一个执行。（只开启一个线程，一个任务执行完毕后，再执行下一个任务）&lt;/li&gt;
+      &lt;li&gt;并发队列：可以让多个任务并发（同时）执行。（可以开启多个线程，并且同时执行任务）
+两者的具体区别如下。
+&lt;img src=&quot;/images/2018-07-16-18-17-10.jpg&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;/images/2018-07-16-18-17-16.jpg&quot; alt=&quot;&quot; /&gt;
+##2.1、GCD任务及其创建
+GCD的使用只有两步。
+        &lt;ol&gt;
+          &lt;li&gt;创建一个队列（串行队列或者并行队列）&lt;/li&gt;
+          &lt;li&gt;将任务追加到任务的等待队列中，然后系统就会根据任务类型执行任务。（同步执行或异步执行）
+##2.2、GCD队列及其创建&lt;/li&gt;
+        &lt;/ol&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;串行队列创建
+    &lt;pre&gt;&lt;code class=&quot;language-objc&quot;&gt;dispatch_queue_t queue = dispatch_queue_create(&quot;net.bujige.testQueue&quot;, DISPATCH_QUEUE_SERIAL);
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;并发队列创建
+    &lt;pre&gt;&lt;code class=&quot;language-objc&quot;&gt;dispatch_queue_t queue = dispatch_queue_create(&quot;net.bujige.testQueue&quot;, DISPATCH_QUEUE_CONCURRENT);
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;主队列
+    &lt;pre&gt;&lt;code class=&quot;language-objc&quot;&gt;dispatch_queue_t queue = dispatch_get_main_queue();
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;全局并发队列
+    &lt;pre&gt;&lt;code class=&quot;language-objc&quot;&gt;dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;p&gt;##2.3、GCD任务的创建
+GCD提供了同步执行任务的创建方法&lt;code&gt;dispatch_sync&lt;/code&gt;和异步执行任务的创建方法&lt;code&gt;dispatch_async&lt;/code&gt;。&lt;/p&gt;
+    &lt;pre&gt;&lt;code class=&quot;language-objc&quot;&gt;// 同步执行任务创建方法
+dispatch_sync(queue, ^{
+  // 这里放同步执行任务代码
+});
+// 异步执行任务创建方法
+dispatch_async(queue, ^{
+  // 这里放异步执行任务代码
+});
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;p&gt;#3、GCD基本使用方法&lt;/p&gt;
+    &lt;pre&gt;&lt;code class=&quot;language-table&quot;&gt;区别    |    并发队列    |    串行队列    |    主队列
+同步（sync）    |    没有开启新任务，串行执行任务    |    没有开启新线程，串行执行任务    |    主线程调用：死锁卡住不执行；其他线程调用：没有开启新线程，串行执行任务    
+异步（async）    |    有开启新线程，并发执行任务    |    有开启新线程(1条)，串行执行任务    |    没有开启新线程，串行执行任务
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;p&gt;##3.1、同步执行&amp;amp;并发队列&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;所有任务都是在当前线程（主线程）中执行的，没有开启新的线程（&lt;code&gt;同步执行&lt;/code&gt;不具备开启新线程的能力）。&lt;/li&gt;
+  &lt;li&gt;##3.2、异步执行&amp;amp;并发队列
+##3.3、同步执行&amp;amp;串行队列
+##3.4、异步执行&amp;amp;串行队列
+##3.5、同步执行&amp;amp;主队列
+##3.6、异步执行&amp;amp;主队列
+#4、GCD进程间通信
+#5、GCD其他方法&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Tue, 10 Jul 2018 10:11:26 +0800</pubDate>
+        <link>http://localhost:4000/2018/07/10/ios%E5%A4%9A%E7%BA%BF%E7%A8%8BGCD%E5%88%86%E6%9E%90.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2018/07/10/ios%E5%A4%9A%E7%BA%BF%E7%A8%8BGCD%E5%88%86%E6%9E%90.html</guid>
+        
+        
+        <category>none</category>
+        
+      </item>
     
       <item>
         <title>ios代码块block分析 </title>
@@ -275,6 +361,32 @@ AVC.choseBlock = ^(NSString *flag) {
       </item>
     
       <item>
+        <title>ios自动释放池底层分析 </title>
+        <description>
+</description>
+        <pubDate>Tue, 15 May 2018 10:11:26 +0800</pubDate>
+        <link>http://localhost:4000/2018/05/15/ios%E8%87%AA%E5%8A%A8%E9%87%8A%E6%94%BE%E6%B1%A0%E5%BA%95%E5%B1%82%E5%88%86%E6%9E%90.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2018/05/15/ios%E8%87%AA%E5%8A%A8%E9%87%8A%E6%94%BE%E6%B1%A0%E5%BA%95%E5%B1%82%E5%88%86%E6%9E%90.html</guid>
+        
+        
+        <category>none</category>
+        
+      </item>
+    
+      <item>
+        <title>ios安全区域分析</title>
+        <description>
+</description>
+        <pubDate>Tue, 15 May 2018 10:11:26 +0800</pubDate>
+        <link>http://localhost:4000/2018/05/15/ios-UI%E5%AE%89%E5%85%A8%E5%8C%BA%E5%9F%9F%E5%88%86%E6%9E%90.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2018/05/15/ios-UI%E5%AE%89%E5%85%A8%E5%8C%BA%E5%9F%9F%E5%88%86%E6%9E%90.html</guid>
+        
+        
+        <category>none</category>
+        
+      </item>
+    
+      <item>
         <title>一些关于Jenkins的搭建事项</title>
         <description>&lt;blockquote&gt;
   &lt;p&gt;适来，为项目打包构建了jenkins脚本。于此处写下为大家避坑。&lt;/p&gt;
@@ -339,118 +451,6 @@ AVC.choseBlock = ^(NSString *flag) {
         
         
         <category>article</category>
-        
-      </item>
-    
-      <item>
-        <title>ios自动释放池底层分析 </title>
-        <description>
-</description>
-        <pubDate>Thu, 10 May 2018 10:11:26 +0800</pubDate>
-        <link>http://localhost:4000/2018/05/10/ios%E8%87%AA%E5%8A%A8%E9%87%8A%E6%94%BE%E6%B1%A0%E5%BA%95%E5%B1%82%E5%88%86%E6%9E%90.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2018/05/10/ios%E8%87%AA%E5%8A%A8%E9%87%8A%E6%94%BE%E6%B1%A0%E5%BA%95%E5%B1%82%E5%88%86%E6%9E%90.html</guid>
-        
-        
-        <category>none</category>
-        
-      </item>
-    
-      <item>
-        <title>ios多线程GCD分析 </title>
-        <description>&lt;blockquote&gt;
-  &lt;p&gt;多线程是oc的基础，近来有空，我便在此总结一下。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;#1、GCD简介
-Grand Central Dispatch(GCD) 是 Apple 开发的一个多核编程的较新的解决方法。它主要用于优化应用程序以支持多核处理器以及其他对称多处理系统。它是一个在线程池模式的基础上执行的并发任务。在 Mac OS X 10.6 雪豹中首次推出，也可在 iOS 4 及以上版本使用。
-#2、GCD任务和队列
-GCD有两个核心的概念：任务和队列。
-任务：就是执行操作的意思，在GCD中代码是放在block中执行的，执行任务有两种方式：同步执行（sync）和异步执行（async）。&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;同步执行：同步添加任务到指定队列，在添加至队列的任务未完成时，会一直等待，直到队列里面的任务完成之后再继续执行；只能在当前线程中执行任务，不具备开启新线程的能力。&lt;/li&gt;
-  &lt;li&gt;异步执行：异步添加任务到指定的队列，可以继续执行任务；可以在新的线程中执行任务，具备开启新线程的能力。
-&lt;strong&gt;值得注意的是，异步执行（async）虽然具有开启新线程的能力，但并不一定开启新线程。这根任务指定的队列类型有关。&lt;/strong&gt;
-队列：队列是执行任务的等待队列，即用来存放任务的队列。队列是一种特殊的线性表，采用FIFO原则。
-&lt;img src=&quot;/images/2018-07-16-18-13-14.jpg&quot; alt=&quot;&quot; /&gt;
-在GCD中有两种队列：串行队列和并行队列。两者主要区别是：执行顺序不同，以及开启的线程数不同。
-    &lt;ul&gt;
-      &lt;li&gt;串行队列：每次只有一个任务被执行。让任务一个接着一个执行。（只开启一个线程，一个任务执行完毕后，再执行下一个任务）&lt;/li&gt;
-      &lt;li&gt;并发队列：可以让多个任务并发（同时）执行。（可以开启多个线程，并且同时执行任务）
-两者的具体区别如下。
-&lt;img src=&quot;/images/2018-07-16-18-17-10.jpg&quot; alt=&quot;&quot; /&gt;
-&lt;img src=&quot;/images/2018-07-16-18-17-16.jpg&quot; alt=&quot;&quot; /&gt;
-##2.1、GCD任务及其创建
-GCD的使用只有两步。
-        &lt;ol&gt;
-          &lt;li&gt;创建一个队列（串行队列或者并行队列）&lt;/li&gt;
-          &lt;li&gt;将任务追加到任务的等待队列中，然后系统就会根据任务类型执行任务。（同步执行或异步执行）
-##2.2、GCD队列及其创建&lt;/li&gt;
-        &lt;/ol&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;串行队列创建
-    &lt;pre&gt;&lt;code class=&quot;language-objc&quot;&gt;dispatch_queue_t queue = dispatch_queue_create(&quot;net.bujige.testQueue&quot;, DISPATCH_QUEUE_SERIAL);
-&lt;/code&gt;&lt;/pre&gt;
-  &lt;/li&gt;
-  &lt;li&gt;并发队列创建
-    &lt;pre&gt;&lt;code class=&quot;language-objc&quot;&gt;dispatch_queue_t queue = dispatch_queue_create(&quot;net.bujige.testQueue&quot;, DISPATCH_QUEUE_CONCURRENT);
-&lt;/code&gt;&lt;/pre&gt;
-  &lt;/li&gt;
-  &lt;li&gt;主队列
-    &lt;pre&gt;&lt;code class=&quot;language-objc&quot;&gt;dispatch_queue_t queue = dispatch_get_main_queue();
-&lt;/code&gt;&lt;/pre&gt;
-  &lt;/li&gt;
-  &lt;li&gt;全局并发队列
-    &lt;pre&gt;&lt;code class=&quot;language-objc&quot;&gt;dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
-&lt;/code&gt;&lt;/pre&gt;
-    &lt;p&gt;##2.3、GCD任务的创建
-GCD提供了同步执行任务的创建方法&lt;code&gt;dispatch_sync&lt;/code&gt;和异步执行任务的创建方法&lt;code&gt;dispatch_async&lt;/code&gt;。&lt;/p&gt;
-    &lt;pre&gt;&lt;code class=&quot;language-objc&quot;&gt;// 同步执行任务创建方法
-dispatch_sync(queue, ^{
-  // 这里放同步执行任务代码
-});
-// 异步执行任务创建方法
-dispatch_async(queue, ^{
-  // 这里放异步执行任务代码
-});
-&lt;/code&gt;&lt;/pre&gt;
-    &lt;p&gt;#3、GCD基本使用方法&lt;/p&gt;
-    &lt;pre&gt;&lt;code class=&quot;language-table&quot;&gt;区别    |    并发队列    |    串行队列    |    主队列
-同步（sync）    |    没有开启新任务，串行执行任务    |    没有开启新线程，串行执行任务    |    主线程调用：死锁卡住不执行；其他线程调用：没有开启新线程，串行执行任务    
-异步（async）    |    有开启新线程，并发执行任务    |    有开启新线程(1条)，串行执行任务    |    没有开启新线程，串行执行任务
-&lt;/code&gt;&lt;/pre&gt;
-    &lt;p&gt;##3.1、同步执行&amp;amp;并发队列&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;所有任务都是在当前线程（主线程）中执行的，没有开启新的线程（&lt;code&gt;同步执行&lt;/code&gt;不具备开启新线程的能力）。&lt;/li&gt;
-  &lt;li&gt;##3.2、异步执行&amp;amp;并发队列
-##3.3、同步执行&amp;amp;串行队列
-##3.4、异步执行&amp;amp;串行队列
-##3.5、同步执行&amp;amp;主队列
-##3.6、异步执行&amp;amp;主队列
-#4、GCD进程间通信
-#5、GCD其他方法&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Thu, 10 May 2018 10:11:26 +0800</pubDate>
-        <link>http://localhost:4000/2018/05/10/ios%E5%A4%9A%E7%BA%BF%E7%A8%8BGCD%E5%88%86%E6%9E%90.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2018/05/10/ios%E5%A4%9A%E7%BA%BF%E7%A8%8BGCD%E5%88%86%E6%9E%90.html</guid>
-        
-        
-        <category>none</category>
-        
-      </item>
-    
-      <item>
-        <title>ios安全区域分析</title>
-        <description>
-</description>
-        <pubDate>Thu, 10 May 2018 10:11:26 +0800</pubDate>
-        <link>http://localhost:4000/2018/05/10/ios-UI%E5%AE%89%E5%85%A8%E5%8C%BA%E5%9F%9F%E5%88%86%E6%9E%90.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2018/05/10/ios-UI%E5%AE%89%E5%85%A8%E5%8C%BA%E5%9F%9F%E5%88%86%E6%9E%90.html</guid>
-        
-        
-        <category>none</category>
         
       </item>
     
