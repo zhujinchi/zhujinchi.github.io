@@ -6,8 +6,8 @@
 </description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 05 Jul 2018 20:02:00 +0800</pubDate>
-    <lastBuildDate>Thu, 05 Jul 2018 20:02:00 +0800</lastBuildDate>
+    <pubDate>Sun, 28 Oct 2018 12:18:30 +0800</pubDate>
+    <lastBuildDate>Sun, 28 Oct 2018 12:18:30 +0800</lastBuildDate>
     <generator>Jekyll v3.8.2</generator>
     
       <item>
@@ -18,45 +18,37 @@
 
 &lt;p&gt;&lt;img src=&quot;/images/2018-07-05-16-08-09.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;代码块Block是苹果在iOS4开始引入的对C语言的扩展,用来实现匿名函数的特性,Block是一种特殊的数据类型,其可以正常定义变量、作为参数、作为返回值,特殊地,Block还可以保存一段代码,在需要的时候调用,目前Block已经广泛应用于iOS开发中,常用于GCD、动画、排序及各类回调&lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;Block的声明和赋值只是保存了一段代码段，必须调用才能执行代码块。&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;代码块Block是苹果在iOS4开始引入的对C语言的扩展,用来实现匿名函数的特性,Block是一种特殊的数据类型,其可以正常定义变量、作为参数、作为返回值,特殊地,Block还可以保存一段代码,在需要的时候调用,目前Block已经广泛应用于iOS开发中,常用于GCD、动画、排序及各类回调
+ Block的声明和赋值只是保存了一段代码段，必须调用才能执行代码块。&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;关于Block变量的声明、赋值和调用&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Block变量的声明
-    &lt;pre&gt;&lt;code class=&quot;language-objc&quot;&gt;//Block变量的声明各式为：返回值类型(^Block名字)(参数列表)    
+&lt;p&gt;#1、关于Block变量的声明、赋值和调用&lt;br /&gt;
+##1.1、Block变量的声明&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-objc&quot;&gt;//Block变量的声明各式为：返回值类型(^Block名字)(参数列表)    
 void(^aBlock)(NSString *x, NSString *y);
 void(^aBlock)(NSString *, NSString *);
 &lt;/code&gt;&lt;/pre&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Block变量的赋值
-    &lt;pre&gt;&lt;code class=&quot;language-objc&quot;&gt;//Block变量赋值的各式为：Block变量 = ^(参数列表){函数体}    
+&lt;p&gt;##1.2、Block变量的赋值&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-objc&quot;&gt;//Block变量赋值的各式为：Block变量 = ^(参数列表){函数体}    
 aBlock = ^(NSString *x, NSString *y){
-  NSLog(@&quot;%@love%@&quot;,x, y);
+    NSLog(@&quot;%@love%@&quot;,x, y);
 };
 &lt;/code&gt;&lt;/pre&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Block变量的声明并赋值
-    &lt;pre&gt;&lt;code class=&quot;language-objc&quot;&gt;int(^myBlock)(int) = ^(int num) {
-  return num*7;
+&lt;p&gt;##1.3、Block变量的声明并赋值&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-objc&quot;&gt;int(^myBlock)(int) = ^(int num) {
+    return num*7;
 };
 //如果没有参数列表，在赋值的时候参数列表可以省略
 void(^aVoidBlock)() = ^{
-  NSLog(@&quot;I am a aVoidBlock&quot;);
+    NSLog(@&quot;I am a aVoidBlock&quot;);
 };
 &lt;/code&gt;&lt;/pre&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Block变量的调用
-    &lt;pre&gt;&lt;code class=&quot;language-objc&quot;&gt;aBlock(@&quot;zhujinchi&quot;, @&quot;zhujinchi&quot;);
+&lt;p&gt;##1.4、Block变量的调用&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-objc&quot;&gt;aBlock(@&quot;zhujinchi&quot;, @&quot;zhujinchi&quot;);
 NSLog(@&quot;%d&quot;, myBlock(9));
 aVoidBlock();
 &lt;/code&gt;&lt;/pre&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
 
-&lt;p&gt;&lt;strong&gt;使用typedef定义Block类型&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;#2、使用typedef定义Block类型&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;在实际使用Block的过程中,我们可能需要重复地声明多个相同返回值相同参数列表的Block变量,如果总是重复地编写一长串代码来声明变量会非常繁琐,所以我们可以使用typedef来定义Block类型
     &lt;pre&gt;&lt;code class=&quot;language-objc&quot;&gt;typedef void(^SayHello)();
@@ -68,67 +60,83 @@ hello();
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;strong&gt;Block作为函数参数&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Block作为C函数参数
-    &lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;void useBlockForC(int(^aBlock)(int, int)) {
-  printf(&quot;%d&quot;, aBlock(300, 200));
+&lt;p&gt;#3、Block作为函数参数 &lt;br /&gt;
+##3.1、Block作为C函数参数&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;void useBlockForC(int(^aBlock)(int, int)) {
+    printf(&quot;%d&quot;, aBlock(300, 200));
 };
 //调用方法以Block作为函数参数
 int (^addBlock)(int, int) = ^(int x, int y){
-  return x+y;
+    return x+y;
 };
 useBlockForC(addBlock);
 //效果和上述相同
 useBlockForC(^(int x, int y)) {
-  return x+y;
+    return x+y;
 };
 &lt;/code&gt;&lt;/pre&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Block作为OC函数参数
-    &lt;pre&gt;&lt;code class=&quot;language-objc&quot;&gt;-(void)useBlockForOC:(int (^)(int x, int y))aBlock {
-  NSLog(@&quot;%d&quot;, aBlock(300, 200));
+&lt;p&gt;##3.2、Block作为OC函数参数&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-objc&quot;&gt;-(void)useBlockForOC:(int (^)(int x, int y))aBlock {
+    NSLog(@&quot;%d&quot;, aBlock(300, 200));
 };
 //调用方法以Block作为函数参数
 int (^addBlock)(int, int) = ^(int x, int y){
-  return x+y;
+    return x+y;
 };
 [self useBlockForOC:addBlock];
 //效果和上述相同
 [self useBlockForOC:^(int x, int y)] {
-  return x+y;
+    return x+y;
 };
 &lt;/code&gt;&lt;/pre&gt;
-  &lt;/li&gt;
-  &lt;li&gt;使用typedef简化Block
-    &lt;pre&gt;&lt;code class=&quot;language-objc&quot;&gt;typedef int(^MyBlock)(int x, int y);
+&lt;p&gt;##3.3、使用typedef简化Block&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-objc&quot;&gt;typedef int(^MyBlock)(int x, int y);
 -(void)useBlockForOC:(MyBlock)aBlock {
-  NSLog(@&quot;%@&quot;, aBlock(300, 200));
+    NSLog(@&quot;%@&quot;, aBlock(300, 200));
 };
 //
 MyBlock addBlock = ^(int x, int y) {
-  return x+y;
+    return x+y;
 }
 [self useBlockForOC:addBlock];
 //
 [self useBlockForOC:^(int x, int y) {
-  return x+y;
+    return x+y;
 };];
 &lt;/code&gt;&lt;/pre&gt;
-  &lt;/li&gt;
+&lt;p&gt;#4、Block内访问局部变量
+&lt;img src=&quot;/images/2018-07-09-09-35-16.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;block中，可以访问局部变量。&lt;/li&gt;
+  &lt;li&gt;执行block的时候，访问到的局部变量的值，是声明block之前局部变量的值。&lt;/li&gt;
+  &lt;li&gt;block中不能修改局部变量。
+我们用clang命令将OC转为C++代码查看一下block底层实现。&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;strong&gt;Block内访问局部变量&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/2018-07-09-10-20-38.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-objc&quot;&gt;struct __main_block_impl_0 {
+  struct __block_impl impl;
+  struct __main_block_desc_0* Desc;
+  int global;
+  __main_block_impl_0(void *fp, struct __main_block_desc_0 *desc, int _global, int flags=0) : global(_global) {
+    impl.isa = &amp;amp;_NSConcreteStackBlock;
+    impl.Flags = flags;
+    impl.FuncPtr = fp;
+    Desc = desc;
+  }
+};
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;main_block_impl_0如上，可见，在声明block的时候，&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Block内访问__block修饰的局部变量&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;#5、Block内访问__block修饰的局部变量&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Block内访问全局变量&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;#6、Block内访问全局变量&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Block内访问静态变量&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;#7、Block内访问静态变量&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Block在MRC及ARC下的内存管理&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;#8、Block在MRC及ARC下的内存管理&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;使用Block进行排序&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;#9、使用Block进行排序&lt;/p&gt;
 
 </description>
         <pubDate>Thu, 05 Jul 2018 16:09:06 +0800</pubDate>
@@ -147,115 +155,111 @@ MyBlock addBlock = ^(int x, int y) {
 场景控制：A页面传值&lt;code&gt;flag&lt;/code&gt;给B页面。&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;ol&gt;
-  &lt;li&gt;&lt;strong&gt;属性传值（正向）&lt;/strong&gt;&lt;br /&gt;
+&lt;p&gt;#1、属性传值（正向）
 一般来说，属性传值就比较常见了，不过，属性传值只能正向传值。应用场景：A页面跳转到B页面。首先是B页面代码。&lt;br /&gt;
-&lt;code&gt;BViewController.h&lt;/code&gt;中：
-    &lt;pre&gt;&lt;code class=&quot;language-objc&quot;&gt;@property(nonatomic) NSString *flag; 
+&lt;code&gt;BViewController.h&lt;/code&gt;中：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-objc&quot;&gt;@property(nonatomic) NSString *flag; 
 &lt;/code&gt;&lt;/pre&gt;
-    &lt;p&gt;&lt;code&gt;AViewController.m&lt;/code&gt;中：&lt;/p&gt;
-    &lt;pre&gt;&lt;code class=&quot;language-objc&quot;&gt;- (void)sendInfo:(NSString *)flag {
- BViewController *BVC = [[BViewController alloc] init];
- BVC.flag = flag;
- [self presentViewController:BVC animated:YES completion:nil];
+&lt;p&gt;&lt;code&gt;AViewController.m&lt;/code&gt;中：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-objc&quot;&gt;- (void)sendInfo:(NSString *)flag {
+    BViewController *BVC = [[BViewController alloc] init];
+    BVC.flag = flag;
+    [self presentViewController:BVC animated:YES completion:nil];
 }
 &lt;/code&gt;&lt;/pre&gt;
-    &lt;p&gt;这样就通过构建BViewController实例的时候将flag的值传过去了。不过值得注意的是，这种构造实例然后通过属性传值的方法应用的场景很单一。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;通知中心传值（反向）&lt;/strong&gt;&lt;br /&gt;
-通知中心传值使用情况相对比较复杂。通常是一个传给多个，应用场景：B、C页面监听A页面&lt;code&gt;flag&lt;/code&gt;的值（A页面传值给B、C）。  在B、C中代码处理方式一样。
-    &lt;pre&gt;&lt;code class=&quot;language-objc&quot;&gt;- (id)init {
-if (self = [super init]) {
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(setFlag:) name:@&quot;transFlag&quot; object:nil];
-}
-return self;
-}
-&lt;/code&gt;&lt;/pre&gt;
-    &lt;p&gt;接受到通知后B、C的处理方法。&lt;/p&gt;
-    &lt;pre&gt;&lt;code class=&quot;language-objc&quot;&gt;- (void)setFlag:(Notification *)Noti {
-NSDictionary *dict = [Noti userInfo];
-NSString *flag = [dict valueForKey:@&quot;Info&quot;];
-//获取flag数据。
+&lt;p&gt;这样就通过构建BViewController实例的时候将flag的值传过去了。不过值得注意的是，这种构造实例然后通过属性传值的方法应用的场景很单一。&lt;/p&gt;
+
+&lt;p&gt;#2 、通知中心传值（反向）
+通知中心传值使用情况相对比较复杂。通常是一个传给多个，应用场景：B、C页面监听A页面&lt;code&gt;flag&lt;/code&gt;的值（A页面传值给B、C）。  在B、C中代码处理方式一样。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-objc&quot;&gt;- (id)init {
+    if (self = [super init]) {
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(setFlag:) name:@&quot;transFlag&quot; object:nil];
+    }
+    return self;
 }
 &lt;/code&gt;&lt;/pre&gt;
-    &lt;p&gt;值得注意的是，Observer之所以放在init方法里面，可以为多个继承于此的页面提供初始化构造Observer的方法。通过这个方式扩展可以完成全局颜色切换，在后面的文章中我会单独研究一下。&lt;br /&gt;
+&lt;p&gt;接受到通知后B、C的处理方法。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-objc&quot;&gt;- (void)setFlag:(Notification *)Noti {
+    NSDictionary *dict = [Noti userInfo];
+    NSString *flag = [dict valueForKey:@&quot;Info&quot;];
+    //获取flag数据。
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;值得注意的是，Observer之所以放在init方法里面，可以为多个继承于此的页面提供初始化构造Observer的方法。通过这个方式扩展可以完成全局颜色切换，在后面的文章中我会单独研究一下。&lt;br /&gt;
 再看A页面这边传值。&lt;/p&gt;
-    &lt;pre&gt;&lt;code class=&quot;language-objc&quot;&gt;@property(nonatomic) NSString *flag; 
+&lt;pre&gt;&lt;code class=&quot;language-objc&quot;&gt;@property(nonatomic) NSString *flag; 
 &lt;/code&gt;&lt;/pre&gt;
-    &lt;pre&gt;&lt;code class=&quot;language-objc&quot;&gt;- (void)viewWillDisappear:(BOOL)animated {
-NSDictionary *dict = [NSDictionary dictionaryWithObject:self.flag forKey:@&quot;Info&quot;];
-[[NSNotificationCenter  defaultCenter] postNotificationName:@&quot;transFlag&quot; object:nil userInfo:dict];
+&lt;pre&gt;&lt;code class=&quot;language-objc&quot;&gt;- (void)viewWillDisappear:(BOOL)animated {
+    NSDictionary *dict = [NSDictionary dictionaryWithObject:self.flag forKey:@&quot;Info&quot;];
+    [[NSNotificationCenter  defaultCenter] postNotificationName:@&quot;transFlag&quot; object:nil userInfo:dict];
 }
 &lt;/code&gt;&lt;/pre&gt;
-    &lt;p&gt;在A界面消失的时候会由通知中心传播dict内部的数据给所有的观察者，flag映射键值“Info”放置在dict中即可传过去。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;代理传值（反向）&lt;/strong&gt;&lt;br /&gt;
+&lt;p&gt;在A界面消失的时候会由通知中心传播dict内部的数据给所有的观察者，flag映射键值“Info”放置在dict中即可传过去。&lt;/p&gt;
+
+&lt;p&gt;#3、代理传值（反向）&lt;br /&gt;
 参照此文对于代理传值的介绍：&lt;a href=&quot;https://blog.csdn.net/qq_34478149/article/details/52498450&quot;&gt;iOS多界面传值之–代理传值&lt;/a&gt;。
 总结下来，大致是这样的情况：&lt;br /&gt;
 &lt;code&gt;代理传值(场景)一般用于逆向传值,即第二个界面传值给第一个界面。&lt;/code&gt;&lt;br /&gt;
 第一步：在第二个页面h文件中：定义协议；设置协议中的方法；声明代理。然后在m文件中：实现协议中的方法。&lt;br /&gt;
 第二步：在第一个页面m文件中：设置协议；服从协议。&lt;br /&gt;
 具体代码参照代理设定教程。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;单例传值&lt;/strong&gt;  &lt;br /&gt;
+
+&lt;p&gt;#4、单例传值  &lt;br /&gt;
 单例方法，在整个App的生命周期内只会初始化一次，但是会一直存在，持续占有机器内存，可以正向传值和反向传值，但是过多的使用大量占有内存。&lt;br /&gt;
 新建一个继承自&lt;code&gt;NSObject&lt;/code&gt;的类：&lt;br /&gt;
 &lt;img src=&quot;/images/2018-05-28-19-18-41.jpg&quot; alt=&quot;&quot; /&gt; &lt;br /&gt;
-在&lt;code&gt;AppTransFlag.h&lt;/code&gt;中声明一个属性和一个类方法：
-    &lt;pre&gt;&lt;code class=&quot;language-objc&quot;&gt;@interface AppTransFlag : NSObject
+在&lt;code&gt;AppTransFlag.h&lt;/code&gt;中声明一个属性和一个类方法：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-objc&quot;&gt;@interface AppTransFlag : NSObject
 {
- NSString *_contextStr;
+    NSString *_contextStr;
 }
 @property(nonatomic, retain) NSString *contextStr;
 +(AppTransFlag *)shareInstance;
 @end
 &lt;/code&gt;&lt;/pre&gt;
-    &lt;p&gt;在&lt;code&gt;AppTransFlag.m&lt;/code&gt;中实现类方法：&lt;/p&gt;
-    &lt;pre&gt;&lt;code class=&quot;language-objc&quot;&gt;#import &quot;AppTransFlag.h&quot;
+&lt;p&gt;在&lt;code&gt;AppTransFlag.m&lt;/code&gt;中实现类方法：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-objc&quot;&gt;#import &quot;AppTransFlag.h&quot;
 @implementation AppTransFlag
 @synthesize contextStr = _contextStr;
 static AppStatus *_instance = nil;
 +(AppTransFlag *)shareInstance {
- if (_instance == nil) {
-     _instance = [[super alloc] init];
- }
- return _instance;
+    if (_instance == nil) {
+        _instance = [[super alloc] init];
+    }
+    return _instance;
 }
 &lt;/code&gt;&lt;/pre&gt;
-    &lt;p&gt;在&lt;code&gt;AViewController.m&lt;/code&gt;中：&lt;/p&gt;
-    &lt;pre&gt;&lt;code class=&quot;language-objc&quot;&gt;[ApptransFlag shareInstance].contextStr = self.flag;
+&lt;p&gt;在&lt;code&gt;AViewController.m&lt;/code&gt;中：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-objc&quot;&gt;[ApptransFlag shareInstance].contextStr = self.flag;
 &lt;/code&gt;&lt;/pre&gt;
-    &lt;p&gt;在&lt;code&gt;BVIewController.m&lt;/code&gt;中，获取到flag的值：&lt;/p&gt;
-    &lt;pre&gt;&lt;code class=&quot;language-objc&quot;&gt;if ([AppTransFlag shareInstance].contextStr) {
- self.flag = [AppTransFlag shareInstance].contextStr;
+&lt;p&gt;在&lt;code&gt;BVIewController.m&lt;/code&gt;中，获取到flag的值：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-objc&quot;&gt;if ([AppTransFlag shareInstance].contextStr) {
+    self.flag = [AppTransFlag shareInstance].contextStr;
 }
 &lt;/code&gt;&lt;/pre&gt;
-    &lt;p&gt;这样就可以通过单例的属性值，将flag从A页面传到B页面。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;block传值（反向）&lt;/strong&gt;&lt;br /&gt;
+&lt;p&gt;这样就可以通过单例的属性值，将flag从A页面传到B页面。&lt;/p&gt;
+
+&lt;p&gt;#5、block传值（反向） 
 虽然有相似之处，但是block传值有别于属性传值，首先block传值不能跨页面传值，其次block传值适用于正向传值和逆向传值，使用起来还是很方便的。&lt;br /&gt;
 这里要将A页面的&lt;code&gt;flag&lt;/code&gt;传给B，我们需要在A中构建block。&lt;br /&gt;
-在&lt;code&gt;AViewController.h&lt;/code&gt;中，声明block：
-    &lt;pre&gt;&lt;code class=&quot;language-objc&quot;&gt;typedef void(^TransBlock)(NSString *data);
+在&lt;code&gt;AViewController.h&lt;/code&gt;中，声明block：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-objc&quot;&gt;typedef void(^TransBlock)(NSString *data);
 ...
 @property (copy, nonatomic) TransBlock choseBlock;
 @property (nonatomic, strong) NSString *flag;
 &lt;/code&gt;&lt;/pre&gt;
-    &lt;p&gt;在&lt;code&gt;AViewController.m&lt;/code&gt;中，取&lt;code&gt;flag&lt;/code&gt;值：&lt;/p&gt;
-    &lt;pre&gt;&lt;code class=&quot;language-objc&quot;&gt;if (_choseBlock) {
-   _chosBlock(flag);
+&lt;p&gt;在&lt;code&gt;AViewController.m&lt;/code&gt;中，取&lt;code&gt;flag&lt;/code&gt;值：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-objc&quot;&gt;if (_choseBlock) {
+      _chosBlock(flag);
 }
 &lt;/code&gt;&lt;/pre&gt;
-    &lt;p&gt;在&lt;code&gt;BViewController.m&lt;/code&gt;中获取&lt;code&gt;flag&lt;/code&gt;：&lt;/p&gt;
-    &lt;pre&gt;&lt;code class=&quot;language-objc&quot;&gt;AViewController *AVC = [[AViewController alloc] init];
+&lt;p&gt;在&lt;code&gt;BViewController.m&lt;/code&gt;中获取&lt;code&gt;flag&lt;/code&gt;：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-objc&quot;&gt;AViewController *AVC = [[AViewController alloc] init];
 AVC.choseBlock = ^(NSString *flag) {
- NSLog(@&quot;%@&quot;,flag);
+    NSLog(@&quot;%@&quot;,flag);
 }
 &lt;/code&gt;&lt;/pre&gt;
-    &lt;p&gt;这样就可以在关联页面之间进行传值。量级类似于属性传值。&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
+&lt;p&gt;这样就可以在关联页面之间进行传值。量级类似于属性传值。&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;其实ios传值本身还有方法传值（本质和属性传值一样）；文件传值（NSUserDefaults）和AppDelegate传值（本质和单例传值一样），在此文中不多赘述。&lt;/p&gt;
@@ -278,26 +282,28 @@ AVC.choseBlock = ^(NSString *flag) {
 
 &lt;p&gt;在说明之前，这有一篇比较好的介绍作为背景：&lt;a href=&quot;https://www.jianshu.com/p/ed124917d6c6&quot;&gt;jenkins+Xcode+蒲公英实现ipa自动打包发布全攻略&lt;/a&gt;&lt;/p&gt;
 
-&lt;ol&gt;
-  &lt;li&gt;&lt;strong&gt;安装jenkins&lt;/strong&gt;&lt;br /&gt;
- 首先，安装过程如上文所述没有问题 。值得注意的是，在安装过程中由于不同的方式或者是版本。往往会出现两种安装情况。
-    &lt;ul&gt;
-      &lt;li&gt;jenkins安装到了&lt;code&gt;/User/${你的电脑名}&lt;/code&gt;目录下,&lt;code&gt;command+shift+.&lt;/code&gt;可以看到&lt;code&gt;_jenkins&lt;/code&gt;文件夹。那么恭喜你，之后会避开很多坑。&lt;/li&gt;
-      &lt;li&gt;jenkins安装到了&lt;code&gt;/User/Shared&lt;/code&gt;目录下，（我认为是由于jenkins版本原因，在安装pkg包的时候不能选择安装的目录。），因此jenkins在使用时会有诸多限制。主要的是很多文件夹无法访问到（比如&lt;code&gt;/Users/${你的电脑名}/Library/MobileDevice/Provisioning Profiles&lt;/code&gt;文件夹提供的发布证书无法被jenkins访问，再比如/&lt;code&gt;Users/${你的电脑名}/Library/Keychains&lt;/code&gt;文件夹提供的&lt;code&gt;login.keychain-db&lt;/code&gt;用以用户密钥，在jenkins脚本打包过程中会报错，你必须手动复制上述两个文件到&lt;code&gt;/User/Shared&lt;/code&gt;中），大坑一个。&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;从gitlab/github获取源代码&lt;/strong&gt;&lt;br /&gt;
- 一般而言，从git中获取源代码有两种方式。
-    &lt;ul&gt;
-      &lt;li&gt;一种是输入用户名和密码登录仓库。
- &lt;img src=&quot;/images/2018-07-05-11-57-19.png&quot; alt=&quot;&quot; /&gt;&lt;/li&gt;
-      &lt;li&gt;另一种是配置SSH公钥认证与Jenkins远程登录。
- 可以参考这里，&lt;a href=&quot;https://www.cnblogs.com/jager/p/5986563.html&quot;&gt;Linux配置SSH公钥认证与Jenkins远程登录进行自动发布&lt;/a&gt;。
- 这里注意：1、你的目录的位置，要和你jenkins安装的位置匹配，安装的时候jenkins的位置决定了你配置SSH时的文件路径。2、使用命令行创建SSH公钥的时候，填写密码步骤回车跳过。避免在以后jenkins执行阶段有可能输入密码。3、如果你的jenkins目录不在&lt;code&gt;/User/${你的电脑名}&lt;/code&gt;下，那你在配置SSH环境的时候，需要手动切换当前用户为jenkins，参照&lt;a href=&quot;https://blog.csdn.net/huodoubi/article/details/69948483&quot;&gt;mac终端切换用户&lt;/a&gt;。&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;/li&gt;
-&lt;/ol&gt;
+&lt;p&gt;#1、安装jenkins&lt;br /&gt;
+首先，安装过程如上文所述没有问题 。值得注意的是，在安装过程中由于不同的方式或者是版本。往往会出现两种安装情况。&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;jenkins安装到了&lt;code&gt;/User/${你的电脑名}&lt;/code&gt;目录下,&lt;code&gt;command+shift+.&lt;/code&gt;可以看到&lt;code&gt;_jenkins&lt;/code&gt;文件夹。那么恭喜你，之后会避开很多坑。&lt;/li&gt;
+  &lt;li&gt;jenkins安装到了&lt;code&gt;/User/Shared&lt;/code&gt;目录下，（我认为是由于jenkins版本原因，在安装pkg包的时候不能选择安装的目录。），因此jenkins在使用时会有诸多限制。主要的是很多文件夹无法访问到（比如&lt;code&gt;/Users/${你的电脑名}/Library/MobileDevice/Provisioning Profiles&lt;/code&gt;文件夹提供的发布证书无法被jenkins访问，再比如/&lt;code&gt;Users/${你的电脑名}/Library/Keychains&lt;/code&gt;文件夹提供的&lt;code&gt;login.keychain-db&lt;/code&gt;用以用户密钥，在jenkins脚本打包过程中会报错，你必须手动复制上述两个文件到&lt;code&gt;/User/Shared&lt;/code&gt;中），大坑一个。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;#2、从gitlab/github获取源代码
+一般而言，从git中获取源代码有两种方式。 
+##2.1、用户名登录 
+输入用户名和密码登录仓库。
+    &lt;img src=&quot;/images/2018-07-05-11-57-19.png&quot; alt=&quot;&quot; /&gt;
+##2.2、配置SSH公钥认证与Jenkins远程登录。
+可以参考这里，&lt;a href=&quot;https://www.cnblogs.com/jager/p/5986563.html&quot;&gt;Linux配置SSH公钥认证与Jenkins远程登录进行自动发布&lt;/a&gt;。
+这里注意：1、你的目录的位置，要和你jenkins安装的位置匹配，安装的时候jenkins的位置决定了你配置SSH时的文件路径。2、使用命令行创建SSH公钥的时候，填写密码步骤回车跳过。避免在以后jenkins执行阶段有可能输入密码。3、如果你的jenkins目录不在&lt;code&gt;/User/${你的电脑名}&lt;/code&gt;下，那你在配置SSH环境的时候，需要手动切换当前用户为jenkins，参照&lt;a href=&quot;https://blog.csdn.net/huodoubi/article/details/69948483&quot;&gt;mac终端切换用户&lt;/a&gt;。&lt;/p&gt;
+
+&lt;p&gt;#3、获取子仓库权限
+获取子仓库的权限，有两种方式。&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;第一种方式是通过ssh配置权限进入子仓库，前提是子仓库和父仓库同属于一个管理仓库内并且你事先已经配置好了ssh认证。&lt;/li&gt;
+  &lt;li&gt;第二种方式是用jenkins自带的设置里面让子仓库认证使用和父仓库相同的配置。&lt;/li&gt;
+&lt;/ul&gt;
 
 </description>
         <pubDate>Fri, 11 May 2018 10:11:26 +0800</pubDate>
@@ -333,6 +339,118 @@ AVC.choseBlock = ^(NSString *flag) {
         
         
         <category>article</category>
+        
+      </item>
+    
+      <item>
+        <title>ios自动释放池底层分析 </title>
+        <description>
+</description>
+        <pubDate>Thu, 10 May 2018 10:11:26 +0800</pubDate>
+        <link>http://localhost:4000/2018/05/10/ios%E8%87%AA%E5%8A%A8%E9%87%8A%E6%94%BE%E6%B1%A0%E5%BA%95%E5%B1%82%E5%88%86%E6%9E%90.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2018/05/10/ios%E8%87%AA%E5%8A%A8%E9%87%8A%E6%94%BE%E6%B1%A0%E5%BA%95%E5%B1%82%E5%88%86%E6%9E%90.html</guid>
+        
+        
+        <category>none</category>
+        
+      </item>
+    
+      <item>
+        <title>ios多线程GCD分析 </title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;多线程是oc的基础，近来有空，我便在此总结一下。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;#1、GCD简介
+Grand Central Dispatch(GCD) 是 Apple 开发的一个多核编程的较新的解决方法。它主要用于优化应用程序以支持多核处理器以及其他对称多处理系统。它是一个在线程池模式的基础上执行的并发任务。在 Mac OS X 10.6 雪豹中首次推出，也可在 iOS 4 及以上版本使用。
+#2、GCD任务和队列
+GCD有两个核心的概念：任务和队列。
+任务：就是执行操作的意思，在GCD中代码是放在block中执行的，执行任务有两种方式：同步执行（sync）和异步执行（async）。&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;同步执行：同步添加任务到指定队列，在添加至队列的任务未完成时，会一直等待，直到队列里面的任务完成之后再继续执行；只能在当前线程中执行任务，不具备开启新线程的能力。&lt;/li&gt;
+  &lt;li&gt;异步执行：异步添加任务到指定的队列，可以继续执行任务；可以在新的线程中执行任务，具备开启新线程的能力。
+&lt;strong&gt;值得注意的是，异步执行（async）虽然具有开启新线程的能力，但并不一定开启新线程。这根任务指定的队列类型有关。&lt;/strong&gt;
+队列：队列是执行任务的等待队列，即用来存放任务的队列。队列是一种特殊的线性表，采用FIFO原则。
+&lt;img src=&quot;/images/2018-07-16-18-13-14.jpg&quot; alt=&quot;&quot; /&gt;
+在GCD中有两种队列：串行队列和并行队列。两者主要区别是：执行顺序不同，以及开启的线程数不同。
+    &lt;ul&gt;
+      &lt;li&gt;串行队列：每次只有一个任务被执行。让任务一个接着一个执行。（只开启一个线程，一个任务执行完毕后，再执行下一个任务）&lt;/li&gt;
+      &lt;li&gt;并发队列：可以让多个任务并发（同时）执行。（可以开启多个线程，并且同时执行任务）
+两者的具体区别如下。
+&lt;img src=&quot;/images/2018-07-16-18-17-10.jpg&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;/images/2018-07-16-18-17-16.jpg&quot; alt=&quot;&quot; /&gt;
+##2.1、GCD任务及其创建
+GCD的使用只有两步。
+        &lt;ol&gt;
+          &lt;li&gt;创建一个队列（串行队列或者并行队列）&lt;/li&gt;
+          &lt;li&gt;将任务追加到任务的等待队列中，然后系统就会根据任务类型执行任务。（同步执行或异步执行）
+##2.2、GCD队列及其创建&lt;/li&gt;
+        &lt;/ol&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;串行队列创建
+    &lt;pre&gt;&lt;code class=&quot;language-objc&quot;&gt;dispatch_queue_t queue = dispatch_queue_create(&quot;net.bujige.testQueue&quot;, DISPATCH_QUEUE_SERIAL);
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;并发队列创建
+    &lt;pre&gt;&lt;code class=&quot;language-objc&quot;&gt;dispatch_queue_t queue = dispatch_queue_create(&quot;net.bujige.testQueue&quot;, DISPATCH_QUEUE_CONCURRENT);
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;主队列
+    &lt;pre&gt;&lt;code class=&quot;language-objc&quot;&gt;dispatch_queue_t queue = dispatch_get_main_queue();
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;全局并发队列
+    &lt;pre&gt;&lt;code class=&quot;language-objc&quot;&gt;dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;p&gt;##2.3、GCD任务的创建
+GCD提供了同步执行任务的创建方法&lt;code&gt;dispatch_sync&lt;/code&gt;和异步执行任务的创建方法&lt;code&gt;dispatch_async&lt;/code&gt;。&lt;/p&gt;
+    &lt;pre&gt;&lt;code class=&quot;language-objc&quot;&gt;// 同步执行任务创建方法
+dispatch_sync(queue, ^{
+  // 这里放同步执行任务代码
+});
+// 异步执行任务创建方法
+dispatch_async(queue, ^{
+  // 这里放异步执行任务代码
+});
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;p&gt;#3、GCD基本使用方法&lt;/p&gt;
+    &lt;pre&gt;&lt;code class=&quot;language-table&quot;&gt;区别    |    并发队列    |    串行队列    |    主队列
+同步（sync）    |    没有开启新任务，串行执行任务    |    没有开启新线程，串行执行任务    |    主线程调用：死锁卡住不执行；其他线程调用：没有开启新线程，串行执行任务    
+异步（async）    |    有开启新线程，并发执行任务    |    有开启新线程(1条)，串行执行任务    |    没有开启新线程，串行执行任务
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;p&gt;##3.1、同步执行&amp;amp;并发队列&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;所有任务都是在当前线程（主线程）中执行的，没有开启新的线程（&lt;code&gt;同步执行&lt;/code&gt;不具备开启新线程的能力）。&lt;/li&gt;
+  &lt;li&gt;##3.2、异步执行&amp;amp;并发队列
+##3.3、同步执行&amp;amp;串行队列
+##3.4、异步执行&amp;amp;串行队列
+##3.5、同步执行&amp;amp;主队列
+##3.6、异步执行&amp;amp;主队列
+#4、GCD进程间通信
+#5、GCD其他方法&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Thu, 10 May 2018 10:11:26 +0800</pubDate>
+        <link>http://localhost:4000/2018/05/10/ios%E5%A4%9A%E7%BA%BF%E7%A8%8BGCD%E5%88%86%E6%9E%90.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2018/05/10/ios%E5%A4%9A%E7%BA%BF%E7%A8%8BGCD%E5%88%86%E6%9E%90.html</guid>
+        
+        
+        <category>none</category>
+        
+      </item>
+    
+      <item>
+        <title>ios安全区域分析</title>
+        <description>
+</description>
+        <pubDate>Thu, 10 May 2018 10:11:26 +0800</pubDate>
+        <link>http://localhost:4000/2018/05/10/ios-UI%E5%AE%89%E5%85%A8%E5%8C%BA%E5%9F%9F%E5%88%86%E6%9E%90.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2018/05/10/ios-UI%E5%AE%89%E5%85%A8%E5%8C%BA%E5%9F%9F%E5%88%86%E6%9E%90.html</guid>
+        
+        
+        <category>none</category>
         
       </item>
     

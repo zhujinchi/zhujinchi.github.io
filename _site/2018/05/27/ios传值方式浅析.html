@@ -67,115 +67,111 @@
 场景控制：A页面传值<code>flag</code>给B页面。</p>
 </blockquote>
 
-<ol>
-  <li><strong>属性传值（正向）</strong><br />
+<p>#1、属性传值（正向）
 一般来说，属性传值就比较常见了，不过，属性传值只能正向传值。应用场景：A页面跳转到B页面。首先是B页面代码。<br />
-<code>BViewController.h</code>中：
-    <pre><code class="language-objc">@property(nonatomic) NSString *flag; 
+<code>BViewController.h</code>中：</p>
+<pre><code class="language-objc">@property(nonatomic) NSString *flag; 
 </code></pre>
-    <p><code>AViewController.m</code>中：</p>
-    <pre><code class="language-objc">- (void)sendInfo:(NSString *)flag {
- BViewController *BVC = [[BViewController alloc] init];
- BVC.flag = flag;
- [self presentViewController:BVC animated:YES completion:nil];
+<p><code>AViewController.m</code>中：</p>
+<pre><code class="language-objc">- (void)sendInfo:(NSString *)flag {
+    BViewController *BVC = [[BViewController alloc] init];
+    BVC.flag = flag;
+    [self presentViewController:BVC animated:YES completion:nil];
 }
 </code></pre>
-    <p>这样就通过构建BViewController实例的时候将flag的值传过去了。不过值得注意的是，这种构造实例然后通过属性传值的方法应用的场景很单一。</p>
-  </li>
-  <li><strong>通知中心传值（反向）</strong><br />
-通知中心传值使用情况相对比较复杂。通常是一个传给多个，应用场景：B、C页面监听A页面<code>flag</code>的值（A页面传值给B、C）。  在B、C中代码处理方式一样。
-    <pre><code class="language-objc">- (id)init {
-if (self = [super init]) {
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(setFlag:) name:@"transFlag" object:nil];
-}
-return self;
-}
-</code></pre>
-    <p>接受到通知后B、C的处理方法。</p>
-    <pre><code class="language-objc">- (void)setFlag:(Notification *)Noti {
-NSDictionary *dict = [Noti userInfo];
-NSString *flag = [dict valueForKey:@"Info"];
-//获取flag数据。
+<p>这样就通过构建BViewController实例的时候将flag的值传过去了。不过值得注意的是，这种构造实例然后通过属性传值的方法应用的场景很单一。</p>
+
+<p>#2 、通知中心传值（反向）
+通知中心传值使用情况相对比较复杂。通常是一个传给多个，应用场景：B、C页面监听A页面<code>flag</code>的值（A页面传值给B、C）。  在B、C中代码处理方式一样。</p>
+<pre><code class="language-objc">- (id)init {
+    if (self = [super init]) {
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(setFlag:) name:@"transFlag" object:nil];
+    }
+    return self;
 }
 </code></pre>
-    <p>值得注意的是，Observer之所以放在init方法里面，可以为多个继承于此的页面提供初始化构造Observer的方法。通过这个方式扩展可以完成全局颜色切换，在后面的文章中我会单独研究一下。<br />
+<p>接受到通知后B、C的处理方法。</p>
+<pre><code class="language-objc">- (void)setFlag:(Notification *)Noti {
+    NSDictionary *dict = [Noti userInfo];
+    NSString *flag = [dict valueForKey:@"Info"];
+    //获取flag数据。
+}
+</code></pre>
+<p>值得注意的是，Observer之所以放在init方法里面，可以为多个继承于此的页面提供初始化构造Observer的方法。通过这个方式扩展可以完成全局颜色切换，在后面的文章中我会单独研究一下。<br />
 再看A页面这边传值。</p>
-    <pre><code class="language-objc">@property(nonatomic) NSString *flag; 
+<pre><code class="language-objc">@property(nonatomic) NSString *flag; 
 </code></pre>
-    <pre><code class="language-objc">- (void)viewWillDisappear:(BOOL)animated {
-NSDictionary *dict = [NSDictionary dictionaryWithObject:self.flag forKey:@"Info"];
-[[NSNotificationCenter  defaultCenter] postNotificationName:@"transFlag" object:nil userInfo:dict];
+<pre><code class="language-objc">- (void)viewWillDisappear:(BOOL)animated {
+    NSDictionary *dict = [NSDictionary dictionaryWithObject:self.flag forKey:@"Info"];
+    [[NSNotificationCenter  defaultCenter] postNotificationName:@"transFlag" object:nil userInfo:dict];
 }
 </code></pre>
-    <p>在A界面消失的时候会由通知中心传播dict内部的数据给所有的观察者，flag映射键值“Info”放置在dict中即可传过去。</p>
-  </li>
-  <li>
-    <p><strong>代理传值（反向）</strong><br />
+<p>在A界面消失的时候会由通知中心传播dict内部的数据给所有的观察者，flag映射键值“Info”放置在dict中即可传过去。</p>
+
+<p>#3、代理传值（反向）<br />
 参照此文对于代理传值的介绍：<a href="https://blog.csdn.net/qq_34478149/article/details/52498450">iOS多界面传值之–代理传值</a>。
 总结下来，大致是这样的情况：<br />
 <code>代理传值(场景)一般用于逆向传值,即第二个界面传值给第一个界面。</code><br />
 第一步：在第二个页面h文件中：定义协议；设置协议中的方法；声明代理。然后在m文件中：实现协议中的方法。<br />
 第二步：在第一个页面m文件中：设置协议；服从协议。<br />
 具体代码参照代理设定教程。</p>
-  </li>
-  <li><strong>单例传值</strong>  <br />
+
+<p>#4、单例传值  <br />
 单例方法，在整个App的生命周期内只会初始化一次，但是会一直存在，持续占有机器内存，可以正向传值和反向传值，但是过多的使用大量占有内存。<br />
 新建一个继承自<code>NSObject</code>的类：<br />
 <img src="/images/2018-05-28-19-18-41.jpg" alt="" /> <br />
-在<code>AppTransFlag.h</code>中声明一个属性和一个类方法：
-    <pre><code class="language-objc">@interface AppTransFlag : NSObject
+在<code>AppTransFlag.h</code>中声明一个属性和一个类方法：</p>
+<pre><code class="language-objc">@interface AppTransFlag : NSObject
 {
- NSString *_contextStr;
+    NSString *_contextStr;
 }
 @property(nonatomic, retain) NSString *contextStr;
 +(AppTransFlag *)shareInstance;
 @end
 </code></pre>
-    <p>在<code>AppTransFlag.m</code>中实现类方法：</p>
-    <pre><code class="language-objc">#import "AppTransFlag.h"
+<p>在<code>AppTransFlag.m</code>中实现类方法：</p>
+<pre><code class="language-objc">#import "AppTransFlag.h"
 @implementation AppTransFlag
 @synthesize contextStr = _contextStr;
 static AppStatus *_instance = nil;
 +(AppTransFlag *)shareInstance {
- if (_instance == nil) {
-     _instance = [[super alloc] init];
- }
- return _instance;
+    if (_instance == nil) {
+        _instance = [[super alloc] init];
+    }
+    return _instance;
 }
 </code></pre>
-    <p>在<code>AViewController.m</code>中：</p>
-    <pre><code class="language-objc">[ApptransFlag shareInstance].contextStr = self.flag;
+<p>在<code>AViewController.m</code>中：</p>
+<pre><code class="language-objc">[ApptransFlag shareInstance].contextStr = self.flag;
 </code></pre>
-    <p>在<code>BVIewController.m</code>中，获取到flag的值：</p>
-    <pre><code class="language-objc">if ([AppTransFlag shareInstance].contextStr) {
- self.flag = [AppTransFlag shareInstance].contextStr;
+<p>在<code>BVIewController.m</code>中，获取到flag的值：</p>
+<pre><code class="language-objc">if ([AppTransFlag shareInstance].contextStr) {
+    self.flag = [AppTransFlag shareInstance].contextStr;
 }
 </code></pre>
-    <p>这样就可以通过单例的属性值，将flag从A页面传到B页面。</p>
-  </li>
-  <li><strong>block传值（反向）</strong><br />
+<p>这样就可以通过单例的属性值，将flag从A页面传到B页面。</p>
+
+<p>#5、block传值（反向） 
 虽然有相似之处，但是block传值有别于属性传值，首先block传值不能跨页面传值，其次block传值适用于正向传值和逆向传值，使用起来还是很方便的。<br />
 这里要将A页面的<code>flag</code>传给B，我们需要在A中构建block。<br />
-在<code>AViewController.h</code>中，声明block：
-    <pre><code class="language-objc">typedef void(^TransBlock)(NSString *data);
+在<code>AViewController.h</code>中，声明block：</p>
+<pre><code class="language-objc">typedef void(^TransBlock)(NSString *data);
 ...
 @property (copy, nonatomic) TransBlock choseBlock;
 @property (nonatomic, strong) NSString *flag;
 </code></pre>
-    <p>在<code>AViewController.m</code>中，取<code>flag</code>值：</p>
-    <pre><code class="language-objc">if (_choseBlock) {
-   _chosBlock(flag);
+<p>在<code>AViewController.m</code>中，取<code>flag</code>值：</p>
+<pre><code class="language-objc">if (_choseBlock) {
+      _chosBlock(flag);
 }
 </code></pre>
-    <p>在<code>BViewController.m</code>中获取<code>flag</code>：</p>
-    <pre><code class="language-objc">AViewController *AVC = [[AViewController alloc] init];
+<p>在<code>BViewController.m</code>中获取<code>flag</code>：</p>
+<pre><code class="language-objc">AViewController *AVC = [[AViewController alloc] init];
 AVC.choseBlock = ^(NSString *flag) {
- NSLog(@"%@",flag);
+    NSLog(@"%@",flag);
 }
 </code></pre>
-    <p>这样就可以在关联页面之间进行传值。量级类似于属性传值。</p>
-  </li>
-</ol>
+<p>这样就可以在关联页面之间进行传值。量级类似于属性传值。</p>
 
 <blockquote>
   <p>其实ios传值本身还有方法传值（本质和属性传值一样）；文件传值（NSUserDefaults）和AppDelegate传值（本质和单例传值一样），在此文中不多赘述。</p>

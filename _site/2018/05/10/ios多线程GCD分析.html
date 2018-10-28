@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>ios多线程GCD分析 </title>
+  <meta name="description" content="  多线程是oc的基础，近来有空，我便在此总结一下。">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://localhost:4000/2018/05/10/ios%E5%A4%9A%E7%BA%BF%E7%A8%8BGCD%E5%88%86%E6%9E%90.html">
+  <link rel="alternate" type="application/rss+xml" title="朱近赤 博客" href="http://localhost:4000/feed.xml" />
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">朱近赤 博客</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/about/">关于</a>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="post">
+    <header class="post-header">
+        <h1 class="post-title">ios多线程GCD分析 </h1>
+        <p class="post-meta">May 10, 2018</p>
+    </header>
+    <article class="post-content">
+        <blockquote>
+  <p>多线程是oc的基础，近来有空，我便在此总结一下。</p>
+</blockquote>
+
+<p>#1、GCD简介
+Grand Central Dispatch(GCD) 是 Apple 开发的一个多核编程的较新的解决方法。它主要用于优化应用程序以支持多核处理器以及其他对称多处理系统。它是一个在线程池模式的基础上执行的并发任务。在 Mac OS X 10.6 雪豹中首次推出，也可在 iOS 4 及以上版本使用。
+#2、GCD任务和队列
+GCD有两个核心的概念：任务和队列。
+任务：就是执行操作的意思，在GCD中代码是放在block中执行的，执行任务有两种方式：同步执行（sync）和异步执行（async）。</p>
+<ul>
+  <li>同步执行：同步添加任务到指定队列，在添加至队列的任务未完成时，会一直等待，直到队列里面的任务完成之后再继续执行；只能在当前线程中执行任务，不具备开启新线程的能力。</li>
+  <li>异步执行：异步添加任务到指定的队列，可以继续执行任务；可以在新的线程中执行任务，具备开启新线程的能力。
+<strong>值得注意的是，异步执行（async）虽然具有开启新线程的能力，但并不一定开启新线程。这根任务指定的队列类型有关。</strong>
+队列：队列是执行任务的等待队列，即用来存放任务的队列。队列是一种特殊的线性表，采用FIFO原则。
+<img src="/images/2018-07-16-18-13-14.jpg" alt="" />
+在GCD中有两种队列：串行队列和并行队列。两者主要区别是：执行顺序不同，以及开启的线程数不同。
+    <ul>
+      <li>串行队列：每次只有一个任务被执行。让任务一个接着一个执行。（只开启一个线程，一个任务执行完毕后，再执行下一个任务）</li>
+      <li>并发队列：可以让多个任务并发（同时）执行。（可以开启多个线程，并且同时执行任务）
+两者的具体区别如下。
+<img src="/images/2018-07-16-18-17-10.jpg" alt="" />
+<img src="/images/2018-07-16-18-17-16.jpg" alt="" />
+##2.1、GCD任务及其创建
+GCD的使用只有两步。
+        <ol>
+          <li>创建一个队列（串行队列或者并行队列）</li>
+          <li>将任务追加到任务的等待队列中，然后系统就会根据任务类型执行任务。（同步执行或异步执行）
+##2.2、GCD队列及其创建</li>
+        </ol>
+      </li>
+    </ul>
+  </li>
+  <li>串行队列创建
+    <pre><code class="language-objc">dispatch_queue_t queue = dispatch_queue_create("net.bujige.testQueue", DISPATCH_QUEUE_SERIAL);
+</code></pre>
+  </li>
+  <li>并发队列创建
+    <pre><code class="language-objc">dispatch_queue_t queue = dispatch_queue_create("net.bujige.testQueue", DISPATCH_QUEUE_CONCURRENT);
+</code></pre>
+  </li>
+  <li>主队列
+    <pre><code class="language-objc">dispatch_queue_t queue = dispatch_get_main_queue();
+</code></pre>
+  </li>
+  <li>全局并发队列
+    <pre><code class="language-objc">dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+</code></pre>
+    <p>##2.3、GCD任务的创建
+GCD提供了同步执行任务的创建方法<code>dispatch_sync</code>和异步执行任务的创建方法<code>dispatch_async</code>。</p>
+    <pre><code class="language-objc">// 同步执行任务创建方法
+dispatch_sync(queue, ^{
+  // 这里放同步执行任务代码
+});
+// 异步执行任务创建方法
+dispatch_async(queue, ^{
+  // 这里放异步执行任务代码
+});
+</code></pre>
+    <p>#3、GCD基本使用方法</p>
+    <pre><code class="language-table">区别    |    并发队列    |    串行队列    |    主队列
+同步（sync）    |    没有开启新任务，串行执行任务    |    没有开启新线程，串行执行任务    |    主线程调用：死锁卡住不执行；其他线程调用：没有开启新线程，串行执行任务    
+异步（async）    |    有开启新线程，并发执行任务    |    有开启新线程(1条)，串行执行任务    |    没有开启新线程，串行执行任务
+</code></pre>
+    <p>##3.1、同步执行&amp;并发队列</p>
+  </li>
+  <li>所有任务都是在当前线程（主线程）中执行的，没有开启新的线程（<code>同步执行</code>不具备开启新线程的能力）。</li>
+  <li>##3.2、异步执行&amp;并发队列
+##3.3、同步执行&amp;串行队列
+##3.4、异步执行&amp;串行队列
+##3.5、同步执行&amp;主队列
+##3.6、异步执行&amp;主队列
+#4、GCD进程间通信
+#5、GCD其他方法</li>
+</ul>
+
+    </article>
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        var disqus_shortname = '';
+        var disqus_identifier = '/2018/05/10/ios多线程GCD分析';
+
+        (function () {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+    <div class="wrapper">
+        <h2 class="footer-heading">朱近赤 博客</h2>
+        <div class="footer-col-wrapper">
+            <div class="footer-col  footer-col-1">
+                <ul class="contact-list">
+                    <li>朱近赤 博客</li>
+                    <li><a href="mailto:Angzeng@icloud.com">Angzeng@icloud.com</a></li>
+                </ul>
+            </div>
+            <div class="footer-col  footer-col-2">
+                <ul class="social-media-list">
+                    
+                    <li>
+                        <a href="https://github.com/zhujinchi">
+                            <span class="icon  icon--github">
+                                <svg viewBox="0 0 16 16">
+                                    <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z" />
+                                </svg>
+                            </span>
+                            <span class="username">zhujinchi</span>
+                        </a>
+                    </li>
+                    
+
+                    
+                </ul>
+            </div>
+            <div class="footer-col  footer-col-3">
+                <p class="text">常应常静，常清静矣。
+</p>
+            </div>
+        </div>
+    </div>
+</footer>
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?677a6496c3fa599a36743ae696b7bc3e";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+
+  </body>
+
+</html>
