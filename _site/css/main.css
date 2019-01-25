@@ -1,3 +1,6 @@
+@font-face {
+  font-family: WyueFont;
+  src: url("../others/Wyue-GutiFangsong-NC.otf"); }
 /**
  * Reset some basic elements
  */
@@ -11,12 +14,12 @@ dl, dd, ol, ul, figure {
  * Basic styling
  */
 body {
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: WyueFont;
   font-size: 16px;
   line-height: 1.5;
   font-weight: 300;
   color: #111;
-  background-color: #fdfdfd;
+  background-color: #fff;
   -webkit-text-size-adjust: 100%; }
 
 /**
@@ -64,13 +67,13 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-  color: #2a7ae2;
+  color: #841a1c;
   text-decoration: none; }
   a:visited {
-    color: #1756a9; }
+    color: #841a1c; }
   a:hover {
     color: #111;
-    text-decoration: underline; }
+    text-decoration: none; }
 
 /**
  * Blockquotes
@@ -146,12 +149,22 @@ pre {
  * Site header
  */
 .site-header {
-  border-top: 5px solid #424242;
   border-bottom: 1px solid #e8e8e8;
   min-height: 56px;
+  background-color: #f8f4ed;
   position: relative; }
 
+.site-img {
+  margin-top: 5px;
+  width: 46px;
+  height: 46px;
+  border-radius: 23px;
+  letter-spacing: -1px;
+  margin-bottom: 0;
+  float: left; }
+
 .site-title {
+  padding-left: 18px;
   font-size: 26px;
   line-height: 56px;
   letter-spacing: -1px;
@@ -175,7 +188,7 @@ pre {
       position: absolute;
       top: 9px;
       right: 30px;
-      background-color: #fdfdfd;
+      background-color: #fff;
       border: 1px solid #e8e8e8;
       border-radius: 5px;
       text-align: right; }
@@ -215,6 +228,7 @@ pre {
 
 .contact-list,
 .social-media-list {
+  font-family: FangSong, sans-serif, Arial, Helvetica;
   list-style: none;
   margin-left: 0; }
 
@@ -270,6 +284,7 @@ pre {
     margin-bottom: 30px; }
 
 .post-meta {
+  font-family: FangSong, sans-serif, Arial, Helvetica;
   font-size: 14px;
   color: #828282; }
 
@@ -284,12 +299,12 @@ pre {
   margin-bottom: 30px; }
 
 .post-title {
-  font-size: 42px;
+  font-size: 36px;
   letter-spacing: -1px;
   line-height: 1; }
   @media screen and (max-width: 800px) {
     .post-title {
-      font-size: 36px; } }
+      font-size: 32px; } }
 
 .post-content {
   margin-bottom: 30px; }

@@ -3,10 +3,15 @@
 ---
 @charset "utf-8";
 
-
+@font-face
+{
+font-family: WyueFont;
+src: url('../others/Wyue-GutiFangsong-NC.otf'),
+}
 
 // Our variables
-$base-font-family: Helvetica, Arial, sans-serif;
+$base-WyueFont-family: WyueFont;
+$base-font-family: FangSong, sans-serif, Arial, Helvetica;
 $base-font-size:   16px;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.5;
@@ -14,8 +19,8 @@ $base-line-height: 1.5;
 $spacing-unit:     30px;
 
 $text-color:       #111;
-$background-color: #fdfdfd;
-$brand-color:      #2a7ae2;
+$background-color: #fff;
+$brand-color:      #841a1c;
 
 $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 40%);

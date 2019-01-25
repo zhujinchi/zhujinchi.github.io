@@ -14,7 +14,7 @@ dl, dd, ol, ul, figure {
  * Basic styling
  */
 body {
-    font-family: $base-font-family;
+    font-family: $base-WyueFont-family;
     font-size: $base-font-size;
     line-height: $base-line-height;
     font-weight: 300;
@@ -93,12 +93,13 @@ a {
     text-decoration: none;
 
     &:visited {
-        color: darken($brand-color, 15%);
+        //color: darken($brand-color, 15%);
+        color: $brand-color;
     }
 
     &:hover {
         color: $text-color;
-        text-decoration: underline;
+        text-decoration: none;
     }
 }
 
