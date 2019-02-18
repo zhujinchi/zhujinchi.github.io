@@ -6,14 +6,14 @@
 </description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 18 Feb 2019 15:55:09 +0800</pubDate>
-    <lastBuildDate>Mon, 18 Feb 2019 15:55:09 +0800</lastBuildDate>
+    <pubDate>Mon, 18 Feb 2019 16:01:23 +0800</pubDate>
+    <lastBuildDate>Mon, 18 Feb 2019 16:01:23 +0800</lastBuildDate>
     <generator>Jekyll v3.8.2</generator>
     
       <item>
         <title>「棋典」攻略进阶篇——布阵</title>
         <description>&lt;blockquote&gt;
-  &lt;p&gt;自走棋中，站位布阵的重要性容易被很多人忽略，好的站位往往能令关键棋子打出恐怖的成效，低费低人口以弱胜强。这一期我们重点讲解一下如何合理布阵。&lt;/p&gt;
+  &lt;p&gt;自走棋中，站位布阵的重要性容易被很多人忽略，好的站位往往能令关键棋子打出恐怖的成效，低费低人口完美团战以弱胜强。这一期我们重点讲解一下如何合理布阵。&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;h1 id=&quot;1特殊棋子站位&quot;&gt;1.特殊棋子站位&lt;/h1&gt;
@@ -59,7 +59,7 @@
 &lt;h2 id=&quot;3后期前排棋子摆放&quot;&gt;3.后期前排棋子摆放&lt;/h2&gt;
 &lt;p&gt;  主T：任何星敌法，2星萨尔，2星潮汐，2星谜团，缺前排阵容的2星TA。&lt;br /&gt;
   副T：2星电棍，2星大娜迦，2星doom，2星船长，2星NEC，2星炼金，1星2星炸弹人，1星谜团。&lt;br /&gt;
-  之所以只说紫卡橙卡第一是因为前中期对手随机性太大，第二是蓝卡以下主副T区别并不是很大。
+  之所以只说紫卡橙卡第一是因为前中期对手随机性太大，第二是蓝卡以下主副T区别并不是很大。&lt;br /&gt;
   后排就不用说了，有刺客就抱团，AOE多就分开站。&lt;br /&gt;
   &lt;strong&gt;任何阵容2星萨尔优先级大于天，除了现版本存在生命回复BUG的3星小鱼（那是神仙）。&lt;/strong&gt;&lt;br /&gt;
   &lt;strong&gt;在2月15日版本更新后人类BUFF从3秒缴械变成4秒沉默，带人类的阵容把人类放在前排针对萨尔、潮汐、大娜迦等有奇效（龙骑史诗性加强）。&lt;/strong&gt;&lt;br /&gt;
