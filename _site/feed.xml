@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>「 棋典」自走棋</title>
-    <description>常应常静，常清静矣。
+    <description>出棋不懿，必自闭。
 </description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 22 Feb 2019 13:15:02 +0800</pubDate>
-    <lastBuildDate>Fri, 22 Feb 2019 13:15:02 +0800</lastBuildDate>
+    <pubDate>Fri, 22 Feb 2019 13:54:17 +0800</pubDate>
+    <lastBuildDate>Fri, 22 Feb 2019 13:54:17 +0800</lastBuildDate>
     <generator>Jekyll v3.8.2</generator>
     
       <item>
@@ -121,7 +121,14 @@
   &lt;strong&gt;小黑并不是亡灵猎人的挂件，因为小黑是纯平A输出，不需要浪费放技能的时间，打前排更快（这也是月骑和龙骑的强势点）。如果你没有3星的火枪，你会发现2星小黑带输出装比2星火枪带输出装厉害。&lt;/strong&gt;&lt;br /&gt;
   &lt;strong&gt;不要在10本前和发牌员作对，6猎人4亡灵有一个就行了，如果你觉得你运气真的不好，那就4兽人吧，也足够支持你进决赛圈了。&lt;/strong&gt;&lt;/p&gt;
 
-&lt;h1 id=&quot;6六刺客&quot;&gt;6.六刺客：&lt;/h1&gt;
+&lt;h1 id=&quot;8法师&quot;&gt;8.法师：&lt;/h1&gt;
+&lt;p&gt;  &lt;code&gt;冰女+电棍+光法+大娜迦+其他2星橙卡或6法师（最好是巫妖）+大娜迦+潮汐&lt;/code&gt;。法师阵容的关键在于站位和控血，在中期转型的弱势期以低掉血保持连败，电棍和影魔这两张混合魔法和物理输出的高质单卡是法师阵容前中期的核心，1星2星的SF是前期的主要物理输出，2星的电棍即使到10本之后打团也能有不俗的输出（仅次于2星的飞机和2星潮汐）。由于6法师需要莉娜（劣质卡）或者巫妖（橙卡）来凑齐6法师套装，成型期比较的晚，并且6法师阵容容错率相对较低，对前排放出技能的要求很高，在大后期有比较多的挂件（蓝胖，帕克，火女），所以通常考虑3法师搭配其他橙卡搭配阵容。&lt;br /&gt;
+  &lt;code&gt;核心&lt;/code&gt;：冰女，电棍，光法，中前期的SF。&lt;br /&gt;
+  &lt;code&gt;挂件&lt;/code&gt;：6法师阵容的2星帕克，2星蓝胖，123星的莉娜。&lt;br /&gt;
+  &lt;strong&gt;法师阵容中火女3星比2星高了250点伤害，3星电棍比2星电棍高了75点外圈伤害但更难打到外圈，且它们都是三费的卡，不值得追求3星。&lt;/strong&gt;&lt;br /&gt;
+  &lt;strong&gt;法师阵容紫卡以下配3星的只有冰女和6法阵容的帕克。&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;7六刺客&quot;&gt;7.六刺客：&lt;/h1&gt;
 &lt;p&gt;  &lt;code&gt;TA、PA、小鱼+三个其他刺客+潮汐美杜莎船长等带控前排&lt;/code&gt;。六刺客真的很看脸，如果你前期顺不推荐玩刺客，决赛圈对手龟缩站位你的刺客也没什么办法。六刺客不依赖任何橙卡，星级对于刺客的提升都是质变，卡的星级大于卡的数量，一局游戏8本或者9本就可以结束战斗，在8本甚至7本就可以开始搜卡。&lt;br /&gt;
   &lt;code&gt;核心&lt;/code&gt;：TA，PA，小鱼。&lt;br /&gt;
   &lt;code&gt;挂件&lt;/code&gt;：脸好都是核心，脸黑都是挂件。&lt;br /&gt;
