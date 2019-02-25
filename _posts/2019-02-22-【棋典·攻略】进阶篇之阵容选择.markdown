@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  " 「棋典」攻略进阶篇之阵容选择"
+title:  " 【棋典·攻略】进阶篇之阵容选择"
 date:  2018-05-10 10:11:26 +0800
 categories: article
 ---
