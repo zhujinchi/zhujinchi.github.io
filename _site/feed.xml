@@ -1,17 +1,98 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>「 棋典」自走棋</title>
+    <title>棋典自走棋</title>
     <description>出棋不懿，必自闭。
 </description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 22 Feb 2019 13:54:17 +0800</pubDate>
-    <lastBuildDate>Fri, 22 Feb 2019 13:54:17 +0800</lastBuildDate>
+    <pubDate>Thu, 28 Feb 2019 16:21:14 +0800</pubDate>
+    <lastBuildDate>Thu, 28 Feb 2019 16:21:14 +0800</lastBuildDate>
     <generator>Jekyll v3.8.2</generator>
     
       <item>
-        <title>「棋典」攻略进阶篇之站位布阵</title>
+        <title>【棋典·资讯】27日自走棋全明星邀请赛赛事汇报</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;由IMBA联合斗鱼、自走棋官方的《IMBA自走棋全明星邀请赛》已由昨天正式开始。截止今天中午，A组的比赛已经结束，各选手排名以及积分如下：&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;center&gt;&lt;img src=&quot;/images/2019-02-28-16-08-46.jpg&quot; /&gt;&lt;/center&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2019-02-28-16-14-11.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;  棋待诏和不二分别以小组第一、第二的成绩进入3月3日的决赛，YYF位居小组第三，而小刘以一分的差距位居第四。&lt;br /&gt;
+  目前的决赛名单：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2019-02-28-16-14-23.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;  昨天的比赛中，棋待诏发挥稳定，以两胜场拿到小组第一；而不二在第一局最后一名的情况下，在第二、三局拿到两连鸡，以及最后一把第三的成绩成为小组第二；而YYF最后一局运气不佳，位居第三，很遗憾未能晋级决赛。&lt;br /&gt;
+  在今晚七点将会继续进行《IMBA自走棋全明星邀请赛》B组的比赛，有兴趣的观众可以去斗鱼  IMBATV的官方直播间收看。以下是今晚的明星选手：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2019-02-28-16-14-35.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;  本来预定今天参加比赛的王校长，由于一些原因改为后天参加，王校长B组的名额将有原来C组的选手驴鸽替代，喜欢王校长的朋友不要错过明晚的比赛哟~&lt;/p&gt;
+</description>
+        <pubDate>Thu, 28 Feb 2019 16:13:38 +0800</pubDate>
+        <link>http://localhost:4000/2019/02/28/%E6%A3%8B%E5%85%B8-%E8%B5%84%E8%AE%AF-27%E6%97%A5%E8%87%AA%E8%B5%B0%E6%A3%8B%E5%85%A8%E6%98%8E%E6%98%9F%E9%82%80%E8%AF%B7%E8%B5%9B%E8%B5%9B%E4%BA%8B%E6%B1%87%E6%8A%A5.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2019/02/28/%E6%A3%8B%E5%85%B8-%E8%B5%84%E8%AE%AF-27%E6%97%A5%E8%87%AA%E8%B5%B0%E6%A3%8B%E5%85%A8%E6%98%8E%E6%98%9F%E9%82%80%E8%AF%B7%E8%B5%9B%E8%B5%9B%E4%BA%8B%E6%B1%87%E6%8A%A5.html</guid>
+        
+        
+        <category>news</category>
+        
+      </item>
+    
+      <item>
+        <title>【棋典·资讯】斗鱼自走棋全明星邀请赛 </title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;由IMBATV联合斗鱼、AUTOCHESS官方举办的《IMBA自走棋全明星邀请赛》将于2月27日正式开始，直接邀请了32位各个直播平台的明星选手前来参加，有你喜欢的明星一定不要错过！&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;center&gt;&lt;img src=&quot;/images/2019-02-28-16-08-46.jpg&quot; /&gt;&lt;/center&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;  本次比赛共分为A、B、C、D四组，采用小组淘汰制，每个小组8人，比赛四场，每天进行一个小组的比赛，各小组积分排行第一、第二的选手将进入3月3日的决赛。&lt;br /&gt;
+  本次比赛的冠军将获得30000元的现金奖励、极限量自走棋信使以及冠军称号；亚军将获得10000元的现金奖励、极限量自走棋信使以及亚军称号；季军将获得5000元的现金奖励、极限量自走棋信使以及季军称号。而剩下进入决赛的选手将获得珍稀自走棋信使以及IMBA全明星惜败王的称号。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2019-02-28-16-09-45.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;比赛各小组成员如下：&lt;br /&gt;
+  A组：YYF、小刘、XBG、狗贼、不二、DC、棋待诏、小圆&lt;br /&gt;
+  比赛时间：2月27日 19:00-22:00&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2019-02-28-16-09-57.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;  B组：王思聪、820、谢彬DD、sol君、瓦莉拉、衣锦夜行、鼠大王、小谷芷&lt;br /&gt;
+  比赛时间：2月28日 19:00-22:00&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2019-02-28-16-10-09.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;  C组：2009、悠云叶月、宝哥、囚徒、啦啦啦、驴鸽、海涛、易老师&lt;br /&gt;
+  比赛时间：3月1日 19:00-22:00&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2019-02-28-16-10-19.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;  D组：MU、小黑、逍遥、熊大、秋日、白泽、风行云、灭神&lt;br /&gt;
+  比赛时间：3月2日 19:00-22:00&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2019-02-28-16-10-42.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;  决赛&lt;br /&gt;
+  比赛时间：3月3日 19：00-22:00&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2019-02-28-16-10-57.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+</description>
+        <pubDate>Wed, 27 Feb 2019 16:13:31 +0800</pubDate>
+        <link>http://localhost:4000/2019/02/27/%E6%A3%8B%E5%85%B8-%E8%B5%84%E8%AE%AF-%E6%96%97%E9%B1%BC%E8%87%AA%E8%B5%B0%E6%A3%8B%E5%85%A8%E6%98%8E%E6%98%9F%E9%82%80%E8%AF%B7%E8%B5%9B.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2019/02/27/%E6%A3%8B%E5%85%B8-%E8%B5%84%E8%AE%AF-%E6%96%97%E9%B1%BC%E8%87%AA%E8%B5%B0%E6%A3%8B%E5%85%A8%E6%98%8E%E6%98%9F%E9%82%80%E8%AF%B7%E8%B5%9B.html</guid>
+        
+        
+        <category>news</category>
+        
+      </item>
+    
+      <item>
+        <title>【棋典·攻略】进阶篇之站位布阵</title>
         <description>&lt;blockquote&gt;
   &lt;p&gt;自走棋中，站位布阵的重要性容易被很多人忽略，好的站位往往能令关键棋子打出恐怖的成效，低费低人口完美团战以弱胜强。这一期我们重点讲解一下如何合理布阵。&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -68,8 +149,8 @@
 
 </description>
         <pubDate>Mon, 18 Feb 2019 11:32:36 +0800</pubDate>
-        <link>http://localhost:4000/2019/02/18/%E6%A3%8B%E5%85%B8-%E6%94%BB%E7%95%A5%E8%BF%9B%E9%98%B6%E7%AF%87%E4%B9%8B%E7%AB%99%E4%BD%8D%E5%B8%83%E9%98%B5.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2019/02/18/%E6%A3%8B%E5%85%B8-%E6%94%BB%E7%95%A5%E8%BF%9B%E9%98%B6%E7%AF%87%E4%B9%8B%E7%AB%99%E4%BD%8D%E5%B8%83%E9%98%B5.html</guid>
+        <link>http://localhost:4000/2019/02/18/%E6%A3%8B%E5%85%B8-%E6%94%BB%E7%95%A5-%E8%BF%9B%E9%98%B6%E7%AF%87%E4%B9%8B%E7%AB%99%E4%BD%8D%E5%B8%83%E9%98%B5.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2019/02/18/%E6%A3%8B%E5%85%B8-%E6%94%BB%E7%95%A5-%E8%BF%9B%E9%98%B6%E7%AF%87%E4%B9%8B%E7%AB%99%E4%BD%8D%E5%B8%83%E9%98%B5.html</guid>
         
         
         <category>article</category>
@@ -77,7 +158,7 @@
       </item>
     
       <item>
-        <title> 「棋典」攻略进阶篇之阵容选择</title>
+        <title> 【棋典·攻略】进阶篇之阵容选择</title>
         <description>&lt;blockquote&gt;
   &lt;p&gt;自走棋中，机会转瞬即逝，随时随地根据发牌员的发牌意图变换和调整阵容，调整战略思路，是一个高玩所必备的核心实战技能，这一期中，我们重点讲解一下常规阵容选择，为整体战略思路布局。&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -137,8 +218,8 @@
   &lt;strong&gt;空城流和大招流严格上不能算一种阵容，这两种流派在经济发育篇中有详细介绍。&lt;/strong&gt;&lt;/p&gt;
 </description>
         <pubDate>Thu, 10 May 2018 10:11:26 +0800</pubDate>
-        <link>http://localhost:4000/2018/05/10/%E6%A3%8B%E5%85%B8-%E6%94%BB%E7%95%A5%E8%BF%9B%E9%98%B6%E7%AF%87%E4%B9%8B%E9%98%B5%E5%AE%B9%E9%80%89%E6%8B%A9.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2018/05/10/%E6%A3%8B%E5%85%B8-%E6%94%BB%E7%95%A5%E8%BF%9B%E9%98%B6%E7%AF%87%E4%B9%8B%E9%98%B5%E5%AE%B9%E9%80%89%E6%8B%A9.html</guid>
+        <link>http://localhost:4000/2018/05/10/%E6%A3%8B%E5%85%B8-%E6%94%BB%E7%95%A5-%E8%BF%9B%E9%98%B6%E7%AF%87%E4%B9%8B%E9%98%B5%E5%AE%B9%E9%80%89%E6%8B%A9.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2018/05/10/%E6%A3%8B%E5%85%B8-%E6%94%BB%E7%95%A5-%E8%BF%9B%E9%98%B6%E7%AF%87%E4%B9%8B%E9%98%B5%E5%AE%B9%E9%80%89%E6%8B%A9.html</guid>
         
         
         <category>article</category>
@@ -146,7 +227,7 @@
       </item>
     
       <item>
-        <title>「棋典」攻略进阶篇之经济发育 </title>
+        <title>【棋典·攻略】进阶篇之经济发育 </title>
         <description>&lt;blockquote&gt;
   &lt;p&gt;自走棋中，如何保证自身的经济发育，在不浪费过多钱去找棋子的情况下维持阵容并保持对其它玩家的经济压制，是后期留存雄厚资本打决赛圈的必备条件，本期我们来细数一下如何来保证经济发育。&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -196,8 +277,8 @@
   &lt;strong&gt;这个游戏关键不在于你是输还是赢，而在于你能不能一直输或者一直赢。&lt;/strong&gt;&lt;/p&gt;
 </description>
         <pubDate>Thu, 10 May 2018 10:11:26 +0800</pubDate>
-        <link>http://localhost:4000/2018/05/10/%E6%A3%8B%E5%85%B8-%E6%94%BB%E7%95%A5%E8%BF%9B%E9%98%B6%E7%AF%87%E4%B9%8B%E7%BB%8F%E6%B5%8E%E5%8F%91%E8%82%B2.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2018/05/10/%E6%A3%8B%E5%85%B8-%E6%94%BB%E7%95%A5%E8%BF%9B%E9%98%B6%E7%AF%87%E4%B9%8B%E7%BB%8F%E6%B5%8E%E5%8F%91%E8%82%B2.html</guid>
+        <link>http://localhost:4000/2018/05/10/%E6%A3%8B%E5%85%B8-%E6%94%BB%E7%95%A5-%E8%BF%9B%E9%98%B6%E7%AF%87%E4%B9%8B%E7%BB%8F%E6%B5%8E%E5%8F%91%E8%82%B2.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2018/05/10/%E6%A3%8B%E5%85%B8-%E6%94%BB%E7%95%A5-%E8%BF%9B%E9%98%B6%E7%AF%87%E4%B9%8B%E7%BB%8F%E6%B5%8E%E5%8F%91%E8%82%B2.html</guid>
         
         
         <category>article</category>
