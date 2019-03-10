@@ -6,9 +6,224 @@
 </description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 02 Mar 2019 09:57:45 +0800</pubDate>
-    <lastBuildDate>Sat, 02 Mar 2019 09:57:45 +0800</lastBuildDate>
+    <pubDate>Sun, 10 Mar 2019 22:11:44 +0800</pubDate>
+    <lastBuildDate>Sun, 10 Mar 2019 22:11:44 +0800</lastBuildDate>
     <generator>Jekyll v3.8.2</generator>
+    
+      <item>
+        <title>【棋典·攻略】入门篇之野怪及物品介绍</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;自走棋中前3波以及之后5的倍数关卡（第5波除外）玩家都要迎战一些野怪，野怪都有几率掉落一些装备，下面就为大家带来野怪及物品的介绍。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;center&gt;&lt;img src=&quot;/images/2019-02-22-12-19-54.jpg&quot; /&gt;&lt;/center&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;1野怪&quot;&gt;1.野怪：&lt;/h1&gt;
+&lt;p&gt;具体波数所对应的野怪：&lt;br /&gt;
+&lt;code&gt;Wave1&lt;/code&gt;  天辉小兵(LV1)&lt;em&gt;2&lt;br /&gt;
+&lt;code&gt;Wave2&lt;/code&gt;  天辉小兵(LV1)&lt;/em&gt;2，天辉大兵(LV2)&lt;em&gt;1&lt;br /&gt;
+&lt;code&gt;Wave3&lt;/code&gt;  天辉小兵(LV1)&lt;/em&gt;4，天辉大兵(LV2)&lt;em&gt;2&lt;br /&gt;
+&lt;code&gt;Wave10&lt;/code&gt;  小石头人(LV3)&lt;/em&gt;2，大石头人(LV4)&lt;em&gt;1&lt;br /&gt;
+&lt;code&gt;Wave15&lt;/code&gt;  小狼(LV3)&lt;/em&gt;4，大狼(LV5)&lt;em&gt;1&lt;br /&gt;
+&lt;code&gt;Wave20&lt;/code&gt;   夺命双熊(LV5)&lt;/em&gt;2&lt;br /&gt;
+&lt;code&gt;Wave25&lt;/code&gt;  愤怒的枭兽(LV6)&lt;em&gt;2&lt;br /&gt;
+&lt;code&gt;Wave30&lt;/code&gt;  小雷霆蜥蜴(LV6)&lt;/em&gt;2，大雷霆蜥蜴(LV7)&lt;em&gt;1&lt;br /&gt;
+&lt;code&gt;Wave35&lt;/code&gt;   黑龙王(LV8)&lt;/em&gt;1&lt;br /&gt;
+&lt;code&gt;Wave40&lt;/code&gt;  小巨魔(LV5)&lt;em&gt;4，大巨魔(LV7)&lt;/em&gt;2&lt;br /&gt;
+&lt;code&gt;Wave45&lt;/code&gt;  年兽(LV9)&lt;em&gt;1&lt;br /&gt;
+&lt;code&gt;Wave50&lt;/code&gt;   肉山(LV9)&lt;/em&gt;1&lt;/p&gt;
+
+&lt;h1 id=&quot;2物品&quot;&gt;2.物品：&lt;/h1&gt;
+&lt;p&gt;野怪掉落的物品共分为4级：&lt;br /&gt;
+&lt;code&gt;LV1&lt;/code&gt;  锁子甲，圆盾，回复戒指，攻击之爪，枯萎之石，短棍，吸血面具，恢复指环，抗魔斗篷，虚无宝石，法师长袍，王冠&lt;br /&gt;
+&lt;code&gt;LV2&lt;/code&gt;   板甲，活力之球，阔剑，秘银锤，标枪，魔力法杖&lt;br /&gt;
+&lt;code&gt;LV3&lt;/code&gt;  恶魔刀锋，振奋宝石，极限法球&lt;br /&gt;
+&lt;code&gt;LV4&lt;/code&gt;  圣者遗物，掠夺者之斧，神秘法杖&lt;/p&gt;
+
+&lt;h1 id=&quot;3野怪等级对应的物品爆率&quot;&gt;3.野怪等级对应的物品爆率：&lt;/h1&gt;
+&lt;p&gt;&lt;code&gt;LV1野怪（天辉小兵）&lt;/code&gt;  不掉物品80%，1级物品20%&lt;br /&gt;
+&lt;code&gt;LV2野怪（天辉大兵）&lt;/code&gt;  不掉物品60%，1级物品40%&lt;br /&gt;
+&lt;code&gt;LV3野怪（小石头人，小狼）&lt;/code&gt;  不掉物品50%，1级物品50%&lt;br /&gt;
+&lt;code&gt;LV4野怪（大石头人）&lt;/code&gt;  不掉物品40%，1级物品40%，2级物品20%&lt;br /&gt;
+&lt;code&gt;LV5野怪（大狼，夺命双熊，小巨魔）&lt;/code&gt;  不掉物品40%，1级物品20%，2级物品40%&lt;br /&gt;
+&lt;code&gt;LV6野怪（愤怒的枭兽，小雷霆蜥蜴）&lt;/code&gt;  不掉物品30%，1级物品30%，2级物品30%，3级物品10%&lt;br /&gt;
+&lt;code&gt;LV7野怪（大雷霆蜥蜴，大巨魔）&lt;/code&gt;  不掉物品20%，1级物品30%，2级物品30%，3级物品20%&lt;br /&gt;
+&lt;code&gt;LV8野怪（黑龙王）&lt;/code&gt;  不掉物品0%，1级物品20%，2级物品40%，3级物品30%，4级物品10%&lt;br /&gt;
+&lt;code&gt;LV9野怪（年兽，肉山）&lt;/code&gt;  不掉物品0%，1级物品10%，2级物品40%，3级物品30%，4级物品20%&lt;/p&gt;
+
+&lt;h1 id=&quot;4物品合成装备&quot;&gt;4.物品合成装备：&lt;/h1&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2019-03-10-22-05-42.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sun, 10 Mar 2019 10:11:26 +0800</pubDate>
+        <link>http://localhost:4000/2019/03/10/%E6%A3%8B%E5%85%B8-%E6%94%BB%E7%95%A5-%E5%85%A5%E9%97%A8%E7%AF%87%E4%B9%8B%E9%87%8E%E6%80%AA%E5%8F%8A%E7%89%A9%E5%93%81%E4%BB%8B%E7%BB%8D.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2019/03/10/%E6%A3%8B%E5%85%B8-%E6%94%BB%E7%95%A5-%E5%85%A5%E9%97%A8%E7%AF%87%E4%B9%8B%E9%87%8E%E6%80%AA%E5%8F%8A%E7%89%A9%E5%93%81%E4%BB%8B%E7%BB%8D.html</guid>
+        
+        
+        <category>article</category>
+        
+      </item>
+    
+      <item>
+        <title>【棋典·攻略】入门篇之各阵容关键棋子介绍(上）</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;我们在每局游戏中，想要取得最后的胜利都要去构建各种成型的阵容，但是每局游戏开头我们并不能确定最后所选择的阵容是什么，这个时候我们就要根据发牌员所给的关键棋子来决定我们的最终阵容。相反如果你一直没法获得这些关键棋子，那就需要考虑尽快转型了。并且该关键棋子在多少人口时出现的概率大，也决定了该阵容的节奏快慢。例如地精的关键棋子是橙卡炸弹人，在高人口时才出现的几率大，就决定了地精阵容的玩家需要尽快提升人口。因此了解各阵容成型的关键棋子对你使用该阵容取得胜利就至关重要。下面为大家带来各阵容成型的关键棋子介绍：&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;center&gt;&lt;img src=&quot;/images/2019-02-22-12-19-54.jpg&quot; /&gt;&lt;/center&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;1地精地精工程师&quot;&gt;1.地精—地精工程师：&lt;/h1&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2019-03-10-22-00-10.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;  地精工程师，也就是我们俗称的炸弹人，是最终6地精成型的关键棋子。它的技能是自爆炸药桶，一个超大范围超高伤害的aoe技能。地精阵容本身就缺乏伤害，地精工程师的技能就能有效的弥补这一点，甚至其它阵容后期也爱拿这一个棋子去补充伤害。有非常多的前期天胡地精，却在8—9人口时无法找到这个棋子导致最终无法成型而遗憾落败。 
+   如开头所说，它是一张橙卡，只有在8人口以上时才有可能出现，并且人口越高出现的概率越大。因此决定使用地精阵容的玩家，前期应该尽量避免花过多的经济在搜索棋子上，而应该把经济用在人口的提升上。快速提升至8人口甚至9人口能让我们有更大概率去获得这个关键棋子。地精阵容前期强势，中期乏力，如何在找到地精工程师凑到6地精前尽量避免掉血过多就是各玩家需要思考的问题了。&lt;/p&gt;
+
+&lt;h1 id=&quot;2巨魔巨魔战将&quot;&gt;2.巨魔—巨魔战将：&lt;/h1&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2019-03-10-22-00-19.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;  巨魔战将是4巨魔成型的关键棋子。它的技能是热血战魂，当巨魔战将攻击同一个目标时，会攻击的越来越快。与其它紫卡相比技能不算强力，但拿这个棋子就是为了能凑齐4巨魔的羁绊，棋子本身的技能效果只是附带。巨魔阵容的其他棋子，蝙蝠、暗影萨满和巫医并不具备什么输出能力，而且身板较脆，这3个棋子本身也比较好获得。巨魔战将本身是一张紫卡，前期获得不太容易，在5人口以上有几率出现。只有在获得巨魔战将这个关键棋子凑齐4巨魔后，才能触发巨魔的最终羁绊—为所有棋子提供攻速加成。这个羁绊效果配合着其它物理输出的阵容，就非常强力了，而且暗影萨满和巫医也能提供不错的控制效果。如何围绕4巨魔去搭配其它的阵容就是各玩家需要思考的问题。&lt;/p&gt;
+
+&lt;h1 id=&quot;3骑士龙骑士&quot;&gt;3.骑士—龙骑士：&lt;/h1&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2019-03-10-22-00-26.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;  骑士阵容比较特殊，分为不拿龙骑士的4骑士阵容和拿龙骑士的6骑士阵容。因为4骑士还要搭配其它的棋子组合阵容并不算完全的骑士阵容，在此就不予讨论。龙骑士的技能是古龙形态，变身成为一条龙，同时将龙骑士变为远程攻击，在2星龙骑时攻击还附带aoe效果，输出非常高。骑士阵容因为本身的羁绊效果就非常肉，而输出只有月骑一个点是远远不足的，因此龙骑士的输出至关重要。不变身的龙骑是没有输出的，因此在选择龙骑士这个棋子的同时，我们往往还要选择精灵龙和冥界亚龙从而凑齐3龙羁绊，让龙骑士在开局时就能变身发挥出它的最大效果。龙骑士和巨魔战将一样也是紫卡，前期获得比较难，而且1星的龙骑攻击并没有aoe效果，输出很低，只有在龙骑士升为2星时上场才比较强力，而升级到2星龙骑就需要很多的经济支撑。在此建议如果实在没法获得龙骑时，可以往4骑士转去搭配其它棋子，同样也能取得不错的效果。&lt;/p&gt;
+
+&lt;h1 id=&quot;4德鲁伊利爪德鲁伊&quot;&gt;4.德鲁伊—利爪德鲁伊：&lt;/h1&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2019-03-10-22-00-33.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;  利爪德鲁伊就是我们俗称的熊德。利爪德鲁伊的技能是召唤一只熊，熊本身比利爪德鲁伊更加厉害，攻击高而且很肉。因为德鲁伊的特殊羁绊野性成长—需要己方场上至少有2/4个不同的德鲁伊来触发效果，而其它3个德鲁伊大树、先知、小鹿都比较好获得，因此能否找到利爪德鲁伊就是德鲁伊们快速利用羁绊升到3星棋子的关键。德鲁伊的棋子大多都是精灵，因此许多成型的德鲁伊后期都是与精灵搭配。玩家也可以利用德鲁伊棋子升星较快的特点，来使用2星德鲁伊棋子作为其它阵容过度前中期的配件。&lt;/p&gt;
+
+&lt;h1 id=&quot;5战士海军上将末日使者&quot;&gt;5.战士—海军上将、末日使者：&lt;/h1&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2019-03-10-22-00-40.jpg&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;/images/2019-03-10-22-00-44.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;  船长和末日是战士阵容中非常强力的2个棋子，它们技能本身在紫卡中都属于很强的那一类，因此其它阵容也往往喜欢拿这2个棋子去搭配。海军上将就是我们俗称的船长，它的技能是放出一条幽灵船，能提供大范围的控制和不少的伤害效果。末日使者的技能是对一个敌方棋子施加末日，使其无法使用技能同时造成持续的高伤害，该技能CD也短，在一个回合中甚至能放出2次末日。战士阵容本身就比较肉，这2个棋子能为6战士阵容提供很高的伤害和控制效果，因此也是战士阵容成型的关键棋子。&lt;/p&gt;
+</description>
+        <pubDate>Sat, 09 Mar 2019 10:11:26 +0800</pubDate>
+        <link>http://localhost:4000/2019/03/09/%E6%A3%8B%E5%85%B8-%E6%94%BB%E7%95%A5-%E5%85%A5%E9%97%A8%E7%AF%87%E4%B9%8B%E5%90%84%E9%98%B5%E5%AE%B9%E5%85%B3%E9%94%AE%E6%A3%8B%E5%AD%90%E4%BB%8B%E7%BB%8D(%E4%B8%8A.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2019/03/09/%E6%A3%8B%E5%85%B8-%E6%94%BB%E7%95%A5-%E5%85%A5%E9%97%A8%E7%AF%87%E4%B9%8B%E5%90%84%E9%98%B5%E5%AE%B9%E5%85%B3%E9%94%AE%E6%A3%8B%E5%AD%90%E4%BB%8B%E7%BB%8D(%E4%B8%8A.html</guid>
+        
+        
+        <category>article</category>
+        
+      </item>
+    
+      <item>
+        <title>【棋典·资讯】自走棋赛事预告</title>
+        <description>&lt;center&gt;&lt;img src=&quot;/images/2019-02-22-12-19-54.jpg&quot; /&gt;&lt;/center&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;  相信细心的朋友们已经发现了，在自走棋游戏读取界面已经发布了新的比赛讯息。《2019斗鱼自走棋大师赛》将于3月8日开始接受报名，比赛方式如下图，希望有兴趣的小伙伴们踊跃参加这次比赛！&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2019-03-10-21-57-26.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+</description>
+        <pubDate>Thu, 07 Mar 2019 10:11:26 +0800</pubDate>
+        <link>http://localhost:4000/2019/03/07/%E6%A3%8B%E5%85%B8-%E8%B5%84%E8%AE%AF-%E8%87%AA%E8%B5%B0%E6%A3%8B%E8%B5%9B%E4%BA%8B%E9%A2%84%E5%91%8A.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2019/03/07/%E6%A3%8B%E5%85%B8-%E8%B5%84%E8%AE%AF-%E8%87%AA%E8%B5%B0%E6%A3%8B%E8%B5%9B%E4%BA%8B%E9%A2%84%E5%91%8A.html</guid>
+        
+        
+        <category>news</category>
+        
+      </item>
+    
+      <item>
+        <title>【棋典·资讯】3日自走棋全明星邀请赛决赛结果</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;由IMBA联合斗鱼、自走棋官方的IMBA自走棋全明星邀请赛比赛已经全部结束了。决赛最终成绩如下：&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;center&gt;&lt;img src=&quot;/images/2019-02-28-16-08-46.jpg&quot; /&gt;&lt;/center&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2019-03-10-21-54-28.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;  最终孙博文（悠云叶月）以18分的成绩夺得本次比赛的冠军，将会获得3万元的奖金以及极限量自走棋信使和冠军称号；谢彬DD则以17分排在第二，夺得亚军，获得1万元奖金、极限量自走棋信使以及亚军称号；不二和小黑同为16分，根据赛事规则，同分的情况下计算胜场，所以不二排在第三，为本次比赛的季军，获得季军称号、5000元奖金以及极限量自走棋信使，小黑则是第四；秋日排在第五，易老师第六，瓦莉拉第七，棋待诏第八。&lt;br /&gt;
+  本次比赛的奖品如下：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2019-03-10-21-54-45.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;  本次决赛的比赛可谓是非常精彩，选手都实力强劲，没把各位选手的血量差距都不太大。在第一局中，谢彬DD用战士流搭配大娜迦炸弹人的阵容，以一血成功击败秋日，夺得第一局比赛的第一；在第二局中，易老师则使用上版本的强势阵容兽人法，成功击败孙博文的亡灵猎，拿下第二局比赛的第一；在第三局中，秋日则使用了巨魔骑阵容，击败了不二的精灵三刺，拿下了第三局比赛的第一；而在最后一局中，决赛圈中，谢彬的兽人法，不二的精灵德鲁伊刺客以及孙博文的骑士三龙都有非常强的竞争力，最终是以孙博文第一，谢彬第二，不二第三的顺序结束了战斗。孙博文夺得整场比赛的冠军。&lt;br /&gt;
+  本次比赛也已经圆满结束了，相信这次都是明星选手前来参赛，虽然水平可能参差不齐，但是总体而言实力都还是不错的，打出了非常精彩的比赛，相信大家看的也很过瘾。相信在以后的比赛中，会出现更多高手，比赛也会更加精彩！&lt;/p&gt;
+</description>
+        <pubDate>Tue, 05 Mar 2019 10:11:26 +0800</pubDate>
+        <link>http://localhost:4000/2019/03/05/%E6%A3%8B%E5%85%B8-%E8%B5%84%E8%AE%AF-3%E6%97%A5%E8%87%AA%E8%B5%B0%E6%A3%8B%E5%85%A8%E6%98%8E%E6%98%9F%E9%82%80%E8%AF%B7%E8%B5%9B%E5%86%B3%E8%B5%9B%E7%BB%93%E6%9E%9C.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2019/03/05/%E6%A3%8B%E5%85%B8-%E8%B5%84%E8%AE%AF-3%E6%97%A5%E8%87%AA%E8%B5%B0%E6%A3%8B%E5%85%A8%E6%98%8E%E6%98%9F%E9%82%80%E8%AF%B7%E8%B5%9B%E5%86%B3%E8%B5%9B%E7%BB%93%E6%9E%9C.html</guid>
+        
+        
+        <category>news</category>
+        
+      </item>
+    
+      <item>
+        <title>【棋典·资讯】2日自走棋全明星邀请赛D组结果</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;由IMBA联合斗鱼、自走棋官方的IMBA自走棋全明星邀请赛比赛已经接近尾声了。D组的比赛也于昨晚结束，各选手排名如下：&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;center&gt;&lt;img src=&quot;/images/2019-02-28-16-08-46.jpg&quot; /&gt;&lt;/center&gt;
+&lt;p&gt;&lt;br /&gt;
+&lt;img src=&quot;/images/2019-03-10-21-51-47.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;  小黑以27分的绝对优势，成功晋级了今天下午将会举办的决赛；而秋日则是以21分的成绩成为小组第二，晋级决赛；Mu神在最后一把吃鸡，但是由于第一局的成绩不理想，导致以一分的差距成为小组第三，未能晋级。&lt;br /&gt;
+  目前晋级决赛的名单如下：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2019-03-10-21-51-55.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;  在昨日的比赛十分的精彩，相较于前几天的比赛，今天的比赛中选手们的表现几乎都是势均力敌的，血量和阵容的差距并不大。其中小黑以两把第一、一把第二的成绩成功卫冕小组第一。在第三局中以八人口的战士流，成功打败了秋日十人口的亡灵骑士流派，成功拿下第一，是一位实力非常强的选手；秋日则是一把第一、一把第二、一把第三的成绩位于小组第二。而第三名的Mu神，虽然在最后一把拿下第一，但是由于第一把发挥不佳，位于第七，所以最终以一分的差距未能晋级决赛。&lt;br /&gt;
+  今日决赛最终名单如下：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2019-03-10-21-52-08.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;  截止昨晚，本次明星邀请赛的小组赛已经进行完毕了。通过四天紧张精彩的角逐，八位明星选手将于今天下午四点进行本次《IMBA自走棋全明星邀请赛》的决赛，各位选手都是实力强劲的选手，绝对是一场高质量的比赛，希望大家不要错过这个精彩的对决。&lt;/p&gt;
+</description>
+        <pubDate>Mon, 04 Mar 2019 10:11:26 +0800</pubDate>
+        <link>http://localhost:4000/2019/03/04/%E6%A3%8B%E5%85%B8-%E8%B5%84%E8%AE%AF-2%E6%97%A5%E8%87%AA%E8%B5%B0%E6%A3%8B%E5%85%A8%E6%98%8E%E6%98%9F%E9%82%80%E8%AF%B7%E8%B5%9BD%E7%BB%84%E7%BB%93%E6%9E%9C.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2019/03/04/%E6%A3%8B%E5%85%B8-%E8%B5%84%E8%AE%AF-2%E6%97%A5%E8%87%AA%E8%B5%B0%E6%A3%8B%E5%85%A8%E6%98%8E%E6%98%9F%E9%82%80%E8%AF%B7%E8%B5%9BD%E7%BB%84%E7%BB%93%E6%9E%9C.html</guid>
+        
+        
+        <category>news</category>
+        
+      </item>
+    
+      <item>
+        <title>【棋典·资讯】1日自走棋全明星邀请赛C组结果</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;由IMBA联合斗鱼、自走棋官方的《IMBA自走棋全明星邀请赛》比赛已经进行三天了。C组的比赛也于昨晚结束，昨晚备受瞩目的王校长也参加了比赛：&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;center&gt;&lt;img src=&quot;/images/2019-02-28-16-08-46.jpg&quot; /&gt;&lt;/center&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2019-03-10-21-45-58.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;  本组明星选手实力都十分强劲，悠云叶月和易老师分别以小组第一、第二的成绩进入决赛；海涛以一分的差距排在第三，未能晋级决赛；王校长则排与小组最后，实力还是与其他明星选手有一些差距，但是王校长虽然输了比赛，但是在段位上却是处于领先地位的。&lt;br /&gt;
+  目前的决赛名单如下：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2019-03-10-21-46-17.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;  昨天的比赛中，悠云叶月以两把第一的成绩稳坐小组第一；而易老师虽然没有拿到第一，但是没把成绩都十分不错，最终位于小组第二，晋级决赛。&lt;br /&gt;
+  而在今日会举行D组的比赛，D组成员名单如下：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2019-03-10-21-46-28.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;  D组中有炉石大佬秋日和熊大，并且还有RNG职业选手白泽，以及MU神同台竞技，希望喜欢这些明星选手以及自走棋游戏的玩家不要错过！&lt;/p&gt;
+
+</description>
+        <pubDate>Sun, 03 Mar 2019 10:11:26 +0800</pubDate>
+        <link>http://localhost:4000/2019/03/03/%E6%A3%8B%E5%85%B8-%E8%B5%84%E8%AE%AF-1%E6%97%A5%E8%87%AA%E8%B5%B0%E6%A3%8B%E5%85%A8%E6%98%8E%E6%98%9F%E9%82%80%E8%AF%B7%E8%B5%9BC%E7%BB%84%E7%BB%93%E6%9E%9C.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2019/03/03/%E6%A3%8B%E5%85%B8-%E8%B5%84%E8%AE%AF-1%E6%97%A5%E8%87%AA%E8%B5%B0%E6%A3%8B%E5%85%A8%E6%98%8E%E6%98%9F%E9%82%80%E8%AF%B7%E8%B5%9BC%E7%BB%84%E7%BB%93%E6%9E%9C.html</guid>
+        
+        
+        <category>news</category>
+        
+      </item>
     
       <item>
         <title>【棋典·攻略】进阶篇之前期抓牌技巧</title>
@@ -183,232 +398,6 @@ A：严格来说 两张质量还可以的1费卡&amp;gt;恶魔&amp;gt;质量还�
         
         
         <category>news</category>
-        
-      </item>
-    
-      <item>
-        <title> 【棋典·攻略】进阶篇之阵容选择</title>
-        <description>&lt;blockquote&gt;
-  &lt;p&gt;自走棋中，机会转瞬即逝，随时随地根据发牌员的发牌意图变换和调整阵容，调整战略思路，是一个高玩所必备的核心实战技能，这一期中，我们重点讲解一下常规阵容选择，为整体战略思路布局。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;center&gt;&lt;img src=&quot;/images/2019-02-22-12-19-54.jpg&quot; /&gt;&lt;/center&gt;
-&lt;p&gt;&lt;br /&gt;
-&lt;strong&gt;弄清楚各阵容的核心和挂件非常重要，不要为了一张卡而去抓一套阵容，当你前期比较迷茫时，这或许能帮助到你。由于橙卡基本上是除了谜团见到就拿，核心卡和挂件卡都不涉及橙卡。&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;1兽人战士&quot;&gt;1.兽人战士：&lt;/h1&gt;
-&lt;p&gt;  &lt;code&gt;兽王，剑圣，斧王，萨尔&lt;/code&gt;，除了小小外的四个战士，后期最好搭配潮汐+大娜迦，决赛圈对阵地精/战士/精灵德鲁伊等一些持续输出阵容时，可以拿巫妖+NEC补充魔法伤害和持续作战能力，在对阵骑士的双减BUFF时，二星谜团是一个无解的存在。兽人战士由于阵容本身AOE输出比较有限（紫卡就一张船长，还是延时输出），阵容本身也是零单体爆发，在8人口以后打团很容易先行减员，所以如果你决定一条路走到黑，就直接8人口留40经济，9人口留30甚至20经济给对手压力争取在37~38回合结束比赛，后期被任何同练度阵容吊打。&lt;br /&gt;
-  &lt;code&gt;核心&lt;/code&gt;：船长，兽王，狼人，萨尔，对抗法师阵容的剑圣，对抗法师和刺客阵容的doom。&lt;br /&gt;
-  &lt;code&gt;挂件&lt;/code&gt;：斧王（凑4兽人BUFF），海民（和狼人凑双野兽BUFF），对抗物理持续作战阵容的剑圣（砍不动也转不动）。&lt;br /&gt;
-  &lt;strong&gt;很容易进决赛圈的阵容，很容易决赛圈谁也打不过的阵容，谨慎选择。&lt;/strong&gt;&lt;br /&gt;
-  &lt;strong&gt;在对阵持续作战阵容的时候，不要浪费经济卡自己了，把没两个二星以上听牌的斧王剑圣卖了吧，换两张能补充AOE和控制的卡。在你能合成二星利爪德鲁伊（野兽）的时候，把你的二星海民卖了吧。战士本身输出低，在后期矛还是比盾要厉害，战士羁绊带来的护甲在团战中并不关键，它并不能帮助你勇敢的把裸装一星潮汐放最前面。&lt;/strong&gt;&lt;br /&gt;
-  &lt;strong&gt;很多人玩战士喜欢把物理输出装都放剑圣身上，把剑圣放在安全的位置进行输出，这实际上是一个误区。由于剑圣技能的原因，反而应该给剑圣一定的法穿装备（法师长袍，减少对面魔抗），把他放到最前面制造AOE的魔法伤害，物理装备在剑圣身上完全没有在露娜/飞机等输出身上的性价比。&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;2巨魔术士&quot;&gt;2.巨魔术士：&lt;/h1&gt;
-&lt;p&gt;  &lt;code&gt;巨魔一家+NEC+SF/GA+死骑+萨尔&lt;/code&gt;，后期最好搭配潮汐+大娜迦，同样练度对阵持续输出阵容时有不可逆的明显优势，对阵法师阵容有开场羊，散开站位，萨尔能先于对面前排放出技能就能赢。四巨魔产生质变的阵容，前期在有NEC、死骑之一，或者有2张以上SF时候看到巨魔战将可以拿，非常不建议前期拿三个小弟然后找巨魔（请尊重发牌员）。&lt;br /&gt;
-  由于这套阵容不依赖任何橙卡，在8、9人口的时候可以慢慢搜不着急攀科技，需要上怪时候再考虑损失一些经济升本。&lt;br /&gt;
-  &lt;code&gt;核心&lt;/code&gt;：死骑、NEC、萨尔、巨魔战将。&lt;br /&gt;
-  &lt;code&gt;挂件&lt;/code&gt;：巨魔一家凑齐后没有明显的挂件，凑齐前小Y和蝙蝠都是弟弟。&lt;br /&gt;
-  &lt;strong&gt;适合翻盘的后期阵容，除了抓卡比较看脸外没有明显的短板，这也是为什么很多空城流最后都要转巨魔。&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;3精灵德鲁伊&quot;&gt;3.精灵德鲁伊：&lt;/h1&gt;
-&lt;p&gt;  &lt;code&gt;大树+先知+熊德+月骑+狼人/小鹿/剧毒+PA+TA+敌法女王/PUCK毒龙龙骑&lt;/code&gt;，后期可以不要双野兽BUFF搭配萨尔+潮汐+大娜迦。三星大树是德鲁伊的开始，精灵德鲁伊的强势在于成型期早，召唤物多，成形之后能给对手带来很大压力，后期在对阵兽人战士有优势，三星月骑后不虚骑士，稍劣于成型巨魔阵容，被4亡灵或者6猎人的猎人阵容吊打，被任何套路的法师阵容吊打。精灵德鲁伊不依赖任何橙卡，优势期比兽人战士长，8人口时尽快搜到2星熊德+3星先知+2星狼人/2星剧毒给对手血线压力是主要任务，如果你不是天胡，你想获胜后期要卖掉刺客和双野兽转大招流，如果你决定一条路走到黑，你至少需要3星月骑。&lt;br /&gt;
-  &lt;code&gt;核心&lt;/code&gt;：月骑月骑月骑（重要的事情说三遍），TA，PA，选择PUCK毒龙龙骑时候的二星龙骑。&lt;br /&gt;
-  &lt;code&gt;挂件&lt;/code&gt;：先知，小鹿，剧毒/狼人，敌法。&lt;br /&gt;
-  &lt;strong&gt;先知小鹿和剧毒狼人是优势期给对手压力的，劣势时候完全不会给你提供翻盘机会，该放弃他们的时候要果断放弃。&lt;/strong&gt;&lt;br /&gt;
-  &lt;strong&gt;小鹿慎重3星。&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;4骑士&quot;&gt;4.骑士：&lt;/h1&gt;
-&lt;p&gt;  &lt;code&gt;6骑士+巨魔一家或者4骑士3龙+巨魔一家+NEC/巫妖&lt;/code&gt;，现在的6骑士带3龙见的很少，后期真的打不过同练度的战士之外的阵容。骑士其实不好拿，因为除了蝙蝠骑士这张弟弟卡之外其他卡都是2费以上，前期抓不好容易中期崩盘。另外骑士核心在4巨魔或者3龙，2星龙骑又是一个巨大的质变，对抓卡运气的要求比较高，不建议一开始就拿骑士，一般可能巨魔转骑士，或者前期有带龙骑的4骑士再考虑走骑士。&lt;br /&gt;
-  &lt;code&gt;核心&lt;/code&gt;：龙骑，月骑。&lt;br /&gt;
-  &lt;code&gt;挂件&lt;/code&gt;：骑士阵容输出平滑，没有明显的挂件，不带巨魔的4骑士可以不要蝙蝠和混沌，亡灵骑士也是不错的选择。&lt;br /&gt;
-  &lt;strong&gt;三星冰龙带电锤=黑龙王，每个骑士的梦想。&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;5亡灵猎人&quot;&gt;5.亡灵猎人：&lt;/h1&gt;
-&lt;p&gt;  &lt;code&gt;6猎人+4亡灵+萨尔&lt;/code&gt;，亡灵猎人前中期3猎人2亡灵成型平滑，在前中期或许不能帮你入对手，但总是能帮你守住/不被血入。由于亡灵猎人所有的卡单卡质量都比较高，而且平A阵容后期并不怕萨尔，打团的时候很容易开局把对手1星的潮汐炸弹蛇女秒掉，所以在成型后（4亡灵或者6猎人）到决赛圈对手2星潮汐炸弹人美杜莎之前都是阵容的强势期。由于后排卡都是3费以下，前排兽王也是值得三星的卡牌，在8本就可以开始抽卡，阵容基本全2星后开始升本找潮汐巫妖。阵容缺陷第一是需要两张橙卡（潮汐和巫妖），第二是面对后期对手2星潮汐和炸弹人的时候，你的高输出可能反过来是一种负担，站位上尽量不要让后排开局去A对手的潮汐炸弹人。&lt;br /&gt;
-  &lt;code&gt;核心&lt;/code&gt;：每张都是核心除了NEC之外能3星就3星。&lt;br /&gt;
-  &lt;code&gt;挂件&lt;/code&gt;：无。&lt;br /&gt;
-  &lt;strong&gt;小黑并不是亡灵猎人的挂件，因为小黑是纯平A输出，不需要浪费放技能的时间，打前排更快（这也是月骑和龙骑的强势点）。如果你没有3星的火枪，你会发现2星小黑带输出装比2星火枪带输出装厉害。&lt;/strong&gt;&lt;br /&gt;
-  &lt;strong&gt;不要在10本前和发牌员作对，6猎人4亡灵有一个就行了，如果你觉得你运气真的不好，那就4兽人吧，也足够支持你进决赛圈了。&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;6法师&quot;&gt;6.法师：&lt;/h1&gt;
-&lt;p&gt;  &lt;code&gt;冰女+电棍+光法+大娜迦+其他2星橙卡或6法师（最好是巫妖）+大娜迦+潮汐&lt;/code&gt;。法师阵容的关键在于站位和控血，在中期转型的弱势期以低掉血保持连败，电棍和影魔这两张混合魔法和物理输出的高质单卡是法师阵容前中期的核心，1星2星的SF是前期的主要物理输出，2星的电棍即使到10本之后打团也能有不俗的输出（仅次于2星的飞机和2星潮汐）。由于6法师需要莉娜（劣质卡）或者巫妖（橙卡）来凑齐6法师套装，成型期比较的晚，并且6法师阵容容错率相对较低，对前排放出技能的要求很高，在大后期有比较多的挂件（蓝胖，帕克，火女），所以通常考虑3法师搭配其他橙卡搭配阵容。&lt;br /&gt;
-  &lt;code&gt;核心&lt;/code&gt;：冰女，电棍，光法，中前期的SF。&lt;br /&gt;
-  &lt;code&gt;挂件&lt;/code&gt;：6法师阵容的2星帕克，2星蓝胖，123星的莉娜。&lt;br /&gt;
-  &lt;strong&gt;法师阵容中火女3星比2星高了250点伤害，3星电棍比2星电棍高了75点外圈伤害但更难打到外圈，且它们都是三费的卡，不值得追求3星。&lt;/strong&gt;&lt;br /&gt;
-  &lt;strong&gt;法师阵容紫卡以下配3星的只有冰女和6法阵容的帕克。&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;7六刺客&quot;&gt;7.六刺客：&lt;/h1&gt;
-&lt;p&gt;  &lt;code&gt;TA、PA、小鱼+三个其他刺客+潮汐美杜莎船长等带控前排&lt;/code&gt;。六刺客真的很看脸，如果你前期顺不推荐玩刺客，决赛圈对手龟缩站位你的刺客也没什么办法。六刺客不依赖任何橙卡，星级对于刺客的提升都是质变，卡的星级大于卡的数量，一局游戏8本或者9本就可以结束战斗，在8本甚至7本就可以开始搜卡。&lt;br /&gt;
-  &lt;code&gt;核心&lt;/code&gt;：TA，PA，小鱼。&lt;br /&gt;
-  &lt;code&gt;挂件&lt;/code&gt;：脸好都是核心，脸黑都是挂件。&lt;br /&gt;
-  &lt;strong&gt;3星小鱼在这个版本在没开技能情况下也能有200每秒的生命恢复，最变态的是这个生命回复不会被doom影响，在BUG没修复之前，六刺客的三星小鱼高于一切，谁用谁知道。&lt;/strong&gt;&lt;br /&gt;
-&lt;br /&gt;
-  &lt;strong&gt;空城流和大招流严格上不能算一种阵容，这两种流派在经济发育篇中有详细介绍。&lt;/strong&gt;&lt;/p&gt;
-</description>
-        <pubDate>Fri, 22 Feb 2019 10:11:26 +0800</pubDate>
-        <link>http://localhost:4000/2019/02/22/%E6%A3%8B%E5%85%B8-%E6%94%BB%E7%95%A5-%E8%BF%9B%E9%98%B6%E7%AF%87%E4%B9%8B%E9%98%B5%E5%AE%B9%E9%80%89%E6%8B%A9.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2019/02/22/%E6%A3%8B%E5%85%B8-%E6%94%BB%E7%95%A5-%E8%BF%9B%E9%98%B6%E7%AF%87%E4%B9%8B%E9%98%B5%E5%AE%B9%E9%80%89%E6%8B%A9.html</guid>
-        
-        
-        <category>article</category>
-        
-      </item>
-    
-      <item>
-        <title>【棋典·攻略】进阶篇之经济发育 </title>
-        <description>&lt;blockquote&gt;
-  &lt;p&gt;自走棋中，如何保证自身的经济发育，在不浪费过多钱去找棋子的情况下维持阵容并保持对其它玩家的经济压制，是后期留存雄厚资本打决赛圈的必备条件，本期我们来细数一下如何来保证经济发育。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;center&gt;&lt;img src=&quot;/images/2019-02-22-12-19-54.jpg&quot; /&gt;&lt;/center&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;h1 id=&quot;1关于升级&quot;&gt;1.关于升级&lt;/h1&gt;
-&lt;p&gt;  &lt;code&gt;升5&lt;/code&gt;：round 4 结束点一次升级升5，以下情况可以选择不升：&lt;br /&gt;
-   ① 你要拿强卡，拿完了没钱升。&lt;br /&gt;
-   ② round 4你输了，多一个人也打不赢，不如增加听牌的数量。&lt;br /&gt;
-   ③ round 4你赢了，你已经胡到遇到5人口也不太可能输，不如增加听牌的数量。&lt;br /&gt;
-  &lt;strong&gt;round 5结束后无论如何要升5，否则每轮都损失看紫卡的概率。&lt;/strong&gt;   &lt;br /&gt;
-  &lt;code&gt;升6&lt;/code&gt;：round 8结束点一次升级升6，不升的情况参照升5。&lt;br /&gt;
-  &lt;code&gt;升7&lt;/code&gt;：三种情况：&lt;br /&gt;
-   ① 4/16点三次：你是前期不是很胡但是能险胜的地精/战士/刺客，多上一个可以凑成一些套路（单卡利爪德，双野兽，三刺客，带2星大树的三精灵，刺客阵容的六刺客），你因为升级损失的经济和连胜获得经济差不多，并且你7本后每轮都比对手多了看紫卡的概率。&lt;br /&gt;
-   ② 8/16点两次：你胡到6人口能碾压连胜到16轮结束，升人口多扔一个上去保连胜。&lt;br /&gt;
-   ③ 12/16点一次：天崩开局，多上一个打赢了怎么办？不如连败攒经济。&lt;br /&gt;
-  &lt;strong&gt;不推荐吃每轮一点经验自动升7。&lt;/strong&gt;&lt;br /&gt;
-  &lt;code&gt;升7、8、9&lt;/code&gt;：连胜的经济达到50后跟着经济走，有卡拿卡拿完多于50的钱升本。连败的血量小于50后跟着血量走，血量50你留40用来抽卡升本，血量40你留30经济，以下同理。升7、8、9跟着关键牌走。&lt;br /&gt;
-  &lt;code&gt;升10&lt;/code&gt;：除了大招流外的其他绝大部分阵容不需要10本，除非你真的很顺，或者你血量小于25场下有个2星紫卡直接爆经济丢上去苟名次。&lt;/p&gt;
-
-&lt;h1 id=&quot;2关于搜卡&quot;&gt;2.关于搜卡&lt;/h1&gt;
-&lt;p&gt;  &lt;code&gt;7人口50经济前&lt;/code&gt;还是别搜卡吧。&lt;br /&gt;
-  &lt;code&gt;7人口50经济后&lt;/code&gt;开始搜卡：地精各种（发条、修补匠、赏金、伐木机）、兽人战士（斧王、海民、剑圣、兽王等），紫卡自然是需要就拿着。&lt;br /&gt;
-  &lt;code&gt;8人口50经济后&lt;/code&gt;开始搜卡：亡灵猎人（兽王、风行、火枪、死骑等）、精灵刺客（女王、PA）、六刺客（沙王、PA、女王、水人等）、各种骑士（puck、毒龙、死骑等）、没有巨魔的巨魔流、巨魔骑士流、巨魔各种流。需要的紫卡以及除了谜团外的橙卡自然看到就拿着。&lt;br /&gt;
-  &lt;code&gt;9人口50经济后&lt;/code&gt;开始搜卡：大招流（蛇女、萨尔、doom、船长）。&lt;br /&gt;
-  &lt;strong&gt;你场上加上等候区卡了4张及以上听牌，任何等级10经济之内搜卡。&lt;/strong&gt;&lt;br /&gt;
-  &lt;strong&gt;推荐兽人战士和地精阵容打压制留40经济就可以了，推荐没有2星龙骑的骑士流和没有巨魔的巨魔流看心情留经济。&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;3贪&quot;&gt;3.贪&lt;/h1&gt;
-&lt;p&gt;  当你凑不到整10吃利息的时候，可以卖的卡：&lt;br /&gt;
-   ① 任何2费以下的单卡&lt;br /&gt;
-   ② 除了兽王、斧王、剑圣、伐木机、月骑外的所有2费以下听牌&lt;br /&gt;
-   ③ 不可能符合你未来阵容的听牌：战士地精阵容的法师卡，没有熊德的大树先知&lt;br /&gt;
-  当你凑不到整10吃利息的时候，看心情卖且最好不卖的卡：&lt;br /&gt;
-   ① 除了谜团外的橙卡（谜团真惨）&lt;br /&gt;
-   ② 电棍、SF、NEC单卡，你阵容的单卡key牌&lt;br /&gt;
-  总的来说优质卡听牌&amp;gt;优质单卡&amp;gt;利息&amp;gt;=前期废物卡听牌&amp;gt;废物单卡&lt;br /&gt;
-  &lt;strong&gt;合成2费以上的卡时需要慎重，2费以上卡在合成2星以上后出售是亏经济的，卡的费用和星级越高亏的越多。&lt;/strong&gt;&lt;br /&gt;
-  &lt;strong&gt;当你有两个以上德鲁伊的时候，你合成一个2星小鹿需要两只小鹿（2经济），卖掉2星小鹿得到3经济，所以有卡位的时候无论如何记得拿一只小鹿，即使你已经10本。&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;4关于空城流和大招流&quot;&gt;4.关于空城流和大招流&lt;/h1&gt;
-&lt;p&gt;  两者比较特殊单独拿出来说说。&lt;br /&gt;
-  &lt;code&gt;空城流&lt;/code&gt;：前期没有2星，也没有优质听牌可以考虑空城。贪的可以一直什么都不拿利息+连败奖励一起吃，吃到round 13~14时候7本40经济以上搜卡逐渐止血，成功止血在30~40点。不贪的吃连败奖励利息能吃就吃，吃到round 13~14时候7本30经济以上搜卡逐渐止血，成功止血在40~50点。&lt;br /&gt;
-  &lt;strong&gt;不推荐大家玩空城流，止血时候遇到太强的根本止不住，特别在国服环境打工仔特别多，动不动就有人8本0经济。&lt;/strong&gt;&lt;br /&gt;
-  &lt;code&gt;大招流&lt;/code&gt;：9本前没有搜卡键，有什么用什么，什么强用什么，能连胜可以升本保连胜，连败就攒经济拿强力单卡尽量减少被入，升本和经济大于一切。当血量大于60血时候可以攒钱在25~26回合左右升10本，在10本后的4回合留剩下20~30左右经济搜橙卡，稳住血线后慢慢更新。&lt;br /&gt;
-  &lt;strong&gt;这个游戏关键不在于你是输还是赢，而在于你能不能一直输或者一直赢。&lt;/strong&gt;&lt;/p&gt;
-</description>
-        <pubDate>Fri, 22 Feb 2019 10:11:26 +0800</pubDate>
-        <link>http://localhost:4000/2019/02/22/%E6%A3%8B%E5%85%B8-%E6%94%BB%E7%95%A5-%E8%BF%9B%E9%98%B6%E7%AF%87%E4%B9%8B%E7%BB%8F%E6%B5%8E%E5%8F%91%E8%82%B2.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2019/02/22/%E6%A3%8B%E5%85%B8-%E6%94%BB%E7%95%A5-%E8%BF%9B%E9%98%B6%E7%AF%87%E4%B9%8B%E7%BB%8F%E6%B5%8E%E5%8F%91%E8%82%B2.html</guid>
-        
-        
-        <category>article</category>
-        
-      </item>
-    
-      <item>
-        <title>【棋典·攻略】进阶篇之站位布阵</title>
-        <description>&lt;blockquote&gt;
-  &lt;p&gt;自走棋中，站位布阵的重要性容易被很多人忽略，好的站位往往能令关键棋子打出恐怖的成效，低费低人口完美团战以弱胜强。这一期我们重点讲解一下如何合理布阵。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;center&gt;&lt;img src=&quot;/images/2019-02-22-12-19-54.jpg&quot; /&gt;&lt;/center&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;h1 id=&quot;1特殊棋子站位&quot;&gt;1.特殊棋子站位&lt;/h1&gt;
-&lt;p&gt;  在谈站位之前，先说几个特殊的棋子:&lt;br /&gt;
-  &lt;strong&gt;（以下举例均以5人口为例）&lt;/strong&gt;&lt;br /&gt;
-   &lt;code&gt;修补匠&lt;/code&gt;：包括1星和2星，因为修补匠是一个远程法师，很多人喜欢把修补匠放在后面，实际上这是一个很大的误区，修补匠拥有1费2费棋子中最高的10点初始护甲，虽然他的初始血量只有500点，但实际上配合前期圆盾，锁子甲，+5+10回复指环随便一到两件，配合地精工匠BUFF，修补匠血量的质量极高，3~5人口时即使是1星的修补匠也依然可以在3个输出的围攻下放出技能。反观修补匠的平A速度和平A回蓝都很低下，把修补匠放在后排的结果很可能是队友全死光了，修补匠也无力回天。&lt;br /&gt;
-  当然如果你一件防御装都没有，在没吃到地精BUFF的情况下修补匠还是有可能带技能去世的，可以和一个其他的前排棋子一起放在前面。
-&lt;img src=&quot;/images/2019-02-18-14-50-16.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;center&gt;典：有防御装的修补匠 &lt;/center&gt;
-&lt;p&gt;&lt;img src=&quot;/images/2019-02-18-14-53-18.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;center&gt;典：无防御装的修补匠&lt;/center&gt;
-&lt;p&gt;  &lt;code&gt;电棍&lt;/code&gt;：电棍的技能在敌人越靠外圈时伤害越高，1星电棍的技能范围大概横向3格，这个距离稍高于电棍的平A范围，不太可能威胁到对手的后排，所以一般来说1星电棍放在最后面技能打前排就可以了。2星电棍的技能范围大概是横向5格，在中期充当副T可以对对手的后排造成很高的伤害，当然如果你前排很肉缺后排输出，也可以把2星电棍放在最后打前排。
-&lt;img src=&quot;/images/2019-02-18-14-55-35.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;center&gt;典：1星电棍站位&lt;/center&gt;
-&lt;p&gt;&lt;img src=&quot;/images/2019-02-18-14-58-42.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;center&gt;典：2星电棍站位&lt;/center&gt;
-&lt;p&gt;  &lt;code&gt;SF(影魔)&lt;/code&gt;：由于SF平A回蓝和脆皮属性，SF在3~6人口的时候几乎是不怕除了TA外的任何同星刺客的，所以影魔不适合做一个后排，而适合放在中间的位置对对面前排打贴身AOE，当然如果你的SF是你的唯一输出或者他身上有疯脸，那可以摆在最后面。 
-&lt;img src=&quot;/images/2019-02-18-15-00-24.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;center&gt;典：普通站位&lt;/center&gt;
-&lt;p&gt;&lt;img src=&quot;/images/2019-02-18-15-02-42.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;center&gt;典：核心站位&lt;/center&gt;
-&lt;h2 id=&quot;2各人口常规站位&quot;&gt;2.各人口常规站位&lt;/h2&gt;
-&lt;p&gt;  &lt;strong&gt;如果你是战士或者刺客阵容，请随意发挥。&lt;/strong&gt; &lt;br /&gt;
-  一般来说,在非刺客体系下，我们会将&lt;code&gt;近战前排&lt;/code&gt;放置在外侧，&lt;code&gt;远程核心输出&lt;/code&gt;放在内侧。
-&lt;img src=&quot;/images/2019-02-18-15-10-55.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;center&gt;2.1 三人口站位&lt;/center&gt;
-&lt;p&gt;&lt;img src=&quot;/images/2019-02-18-15-12-59.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;center&gt;2.2 四人口站位&lt;/center&gt;
-&lt;p&gt;&lt;img src=&quot;/images/2019-02-18-15-13-40.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;center&gt;2.3 五人口站位&lt;/center&gt;
-&lt;p&gt;&lt;img src=&quot;/images/2019-02-18-15-14-34.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;center&gt;2.4 六人口站位&lt;/center&gt;
-&lt;p&gt;&lt;img src=&quot;/images/2019-02-18-15-15-38.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;center&gt;2.5 七人口站位&lt;/center&gt;
-&lt;p&gt;&lt;img src=&quot;/images/2019-02-18-15-16-15.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;center&gt;2.6 八人口普通站位&lt;/center&gt;
-&lt;p&gt;&lt;img src=&quot;/images/2019-02-18-15-17-06.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;center&gt;2.7 八人口站位针对刺客&lt;/center&gt;
-&lt;p&gt;&lt;img src=&quot;/images/2019-02-18-15-18-31.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;center&gt;2.8 八人口站位针对AOE&lt;/center&gt;
-&lt;p&gt;  &lt;strong&gt;九、十人口基本上也就进入决赛圈了，看看哪一家是你不好打的，针对那家调整站位。核心思路是保证前排能够放出技能，后排不要被秒以及打出尽量高的输出。&lt;/strong&gt;&lt;/p&gt;
-&lt;h2 id=&quot;3后期前排棋子摆放&quot;&gt;3.后期前排棋子摆放&lt;/h2&gt;
-&lt;p&gt;  主T：任何星敌法，2星萨尔，2星潮汐，2星谜团，缺前排阵容的2星TA。&lt;br /&gt;
-  副T：2星电棍，2星大娜迦，2星doom，2星船长，2星NEC，2星炼金，1星2星炸弹人，1星谜团。&lt;br /&gt;
-  之所以只说紫卡橙卡第一是因为前中期对手随机性太大，第二是蓝卡以下主副T区别并不是很大。&lt;br /&gt;
-  后排就不用说了，有刺客就抱团，AOE多就分开站。&lt;br /&gt;
-  &lt;strong&gt;任何阵容2星萨尔优先级大于天，除了现版本存在生命回复BUG的3星小鱼（那是神仙）。&lt;/strong&gt;&lt;br /&gt;
-  &lt;strong&gt;在2月15日版本更新后人类BUFF从3秒缴械变成4秒沉默，带人类的阵容把人类放在前排针对萨尔、潮汐、大娜迦等有奇效（龙骑史诗性加强）。&lt;/strong&gt;&lt;br /&gt;
-  &lt;strong&gt;棋子是死的，人是活的。时刻记的针对你的对手，合理的站位是完美团战的开始。&lt;/strong&gt;&lt;/p&gt;
-
-</description>
-        <pubDate>Mon, 18 Feb 2019 11:32:36 +0800</pubDate>
-        <link>http://localhost:4000/2019/02/18/%E6%A3%8B%E5%85%B8-%E6%94%BB%E7%95%A5-%E8%BF%9B%E9%98%B6%E7%AF%87%E4%B9%8B%E7%AB%99%E4%BD%8D%E5%B8%83%E9%98%B5.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2019/02/18/%E6%A3%8B%E5%85%B8-%E6%94%BB%E7%95%A5-%E8%BF%9B%E9%98%B6%E7%AF%87%E4%B9%8B%E7%AB%99%E4%BD%8D%E5%B8%83%E9%98%B5.html</guid>
-        
-        
-        <category>article</category>
-        
-      </item>
-    
-      <item>
-        <title>【棋典·攻略】入门篇之游戏简介 </title>
-        <description>&lt;blockquote&gt;
-  &lt;p&gt;刀塔自走棋是一款由游戏玩家自制地图的dota2衍生玩法&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;center&gt;&lt;img src=&quot;/images/2019-02-22-12-19-54.jpg&quot; /&gt;&lt;/center&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;1游戏介绍autochess&quot;&gt;1.游戏介绍：AUTOCHESS&lt;/h1&gt;
-&lt;p&gt;  DOTA自走旗是根据dota衍生而来的玩法，其中我们所选择的旗子是dota中各种各样的英雄，每个旗子的技能与dota英雄本身的技能也大致类似。不同的旗子对应不同的种族和职业，如人类、地精、巨魔、法师等等。&lt;br /&gt;
-  每一轮游戏中都可以免费获得一轮随机抽取旗子的机会，也可通过支付2金币来购买额外的抽旗子机会。玩家通过不断地抽旗子，搭配出自己想要的阵容，来与其他玩家的旗子阵容进行对战。相同种族和职业的旗子凑到一起会产生特殊的羁绊效果，发挥出更加强大的作用。&lt;br /&gt;
-  同一个旗子的数量凑到3个（德鲁伊有特殊效果），就会从1星升级到2星，旗子本身的能力大大增强；同理，同一个2星旗子凑到3个会升级到3星，3星是每个旗子的最强状态。因此，旗子的技能、星级高低、种族搭配都会对战局产生重要影响，也是我们在选择旗子时需要考虑的因素。每一轮中，我方棋盘上都会随机克隆一名对手的阵容来进行对战。如果自己的所有单位都被敌人消灭，每一个敌方单位存活都会扣除召唤师生命值，每轮战斗结束后棋盘都会重置。&lt;br /&gt;
-  在每一个回合期间，玩家都有30秒的“策略时间”来购买英雄、升级英雄和布置阵型。在策略时间玩家还需要观察其他7名玩家的进展情况，了解对手的阵容后，玩家可以选择某些组合进行克制。&lt;/p&gt;
-&lt;h1 id=&quot;2游戏思路经济至上&quot;&gt;2.游戏思路：经济至上&lt;/h1&gt;
-&lt;p&gt;  很多刚接触自走旗的新手玩家会陷入一个误区：爱问“这游戏什么阵容比较厉害”“哪几种旗子的组合可以吃鸡”“亡灵猎和地精后期谁强”等等诸如此类的问题或者上网查一些旗子组合的攻略，然后在自己玩的时候就生搬硬套。旗子间的组合当然重要,但我认为作为新手，应该首先有一个观念，并不是你觉得哪套阵容厉害就能玩哪套，毕竟大家不能保证把把天胡，发牌员很多时候就是会不如你的愿来给牌。生搬硬套阵容，可能当你好不容易找齐了自己需要的旗子，却发现因为经济崩了没钱升级人口而打不过别人，或者自己的血量已经见底。&lt;br /&gt;
-  并且我认为并没有所谓的最强阵容，每一个阵容都会根据前期所拿的牌而做出适当调整，而且随着版本的更迭，不同阵容的强度也有所变化。当然，这是新手玩家在入门后需要掌握的了。因此，新手玩家在刚接触的这个游戏时，我认为首先需要关注的点，是经济。有了经济，你的人口会比其他人更快，找到高阶旗子的概率更高，在阵容的选择上也更加灵活，一局游戏中最终吃鸡的玩家，往往也是经济领先于他人的。我们所谓的天胡开局，在前期就拿到强力的旗子组合，也是为了连胜从而早早的建立起经济优势，否则天胡毫无意义。最近很火的一种“空城流”打法，其原理也是通过连败卖血来早早的积累起经济优势。&lt;br /&gt;
-  所以新手玩家们首先关注的点，是如何确立起自己的经济优势或者保证自己的经济能跟上对手。（详情请看进阶篇之经济发育）&lt;/p&gt;
-&lt;h1 id=&quot;3阵容选择随机应变&quot;&gt;3.阵容选择：随机应变&lt;/h1&gt;
-&lt;p&gt;  我们在选择自己最终的阵容时，不能生搬硬套而要懂得变通，毕竟发牌员不可能每个回合都刚好给你阵容所需要的旗子。而且旗子的星级也不可忽视，有时候就算我们好不容易凑出了自己所需要的阵容，却发现旗子大部分都是一星的，那样战斗力也不会高。&lt;br /&gt;
-  因此我们不能死守着一个阵容，苦等发牌员的照顾来赐予自己阵容所需的关键旗子，而是要根据发牌员给的旗子来及时调整我们的阵容。这里给新手玩家们推荐一种简单又强力的阵容选择：兽人法。阵容的大致组合是斧王，剑圣，兽王与萨尔的4兽人以及另外的3法师。之所以说它简单又强力是因为兽人单个旗子前期本身大多就较为强力，而且比较好找，其肉坦的属性与脆皮的法师也是完美搭配，后期向大招流的转型也比较平滑。其它诸如亡灵猎、巨魔骑、龙骑等阵容，要么是关键旗子比较难找，要么对经济的要求太高，不太推荐新手使用。而前期同样强势的地精，也有着中期疲软过渡困难的缺点。因此推荐新手玩家们可以尝试兽人法这一套阵容。&lt;br /&gt;
-  当然，在你对这个游戏慢慢了解后，就可以根据自己对阵容的理解去尝试更多更有趣更强力的阵容啦，毕竟这个游戏的乐趣就在于使用各种各样的阵容取胜。（详情请看进阶篇之阵容选择&lt;a href=&quot;http://www.qidianautochess.com/2018/05/10/%E6%A3%8B%E5%85%B8-%E6%94%BB%E7%95%A5-%E8%BF%9B%E9%98%B6%E7%AF%87%E4%B9%8B%E9%98%B5%E5%AE%B9%E9%80%89%E6%8B%A9.html&quot;&gt;【棋典·攻略】进阶篇之阵容选择&lt;/a&gt;）&lt;/p&gt;
-</description>
-        <pubDate>Mon, 11 Feb 2019 10:11:26 +0800</pubDate>
-        <link>http://localhost:4000/2019/02/11/%E6%A3%8B%E5%85%B8-%E6%94%BB%E7%95%A5-%E5%85%A5%E9%97%A8%E7%AF%87%E4%B9%8B%E6%B8%B8%E6%88%8F%E7%AE%80%E4%BB%8B.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2019/02/11/%E6%A3%8B%E5%85%B8-%E6%94%BB%E7%95%A5-%E5%85%A5%E9%97%A8%E7%AF%87%E4%B9%8B%E6%B8%B8%E6%88%8F%E7%AE%80%E4%BB%8B.html</guid>
-        
-        
-        <category>article</category>
         
       </item>
     
