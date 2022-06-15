@@ -1,8 +1,0 @@
----
-layout: post
-title:  "「棋典」攻略进阶篇——布阵"
-date:   2019-02-18 11:32:36  +0800
-categories: article
----
-> 自走棋中，站位布阵
-    

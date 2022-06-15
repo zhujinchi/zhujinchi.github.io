@@ -1,8 +1,0 @@
----
-layout: post
-title:  "示例"
-date:   2018-05-10 22:44:11 +0800
-categories: article
----
-> 正文
-    这是一个测试。
