@@ -152,7 +152,9 @@ pre {
   border-bottom: 1px solid #e8e8e8;
   min-height: 76px;
   background-color: #ffffff;
-  position: relative; }
+  position: relative;
+  padding-top: 20px;
+}
 
 .site-img {
   margin-top: 5px;
