@@ -8,6 +8,6 @@ url: "" # the base hostname & protocol for your site
 github_username:  zhujinchi
 
 # Build settings
-markdown: kramdown
+markdown: rdiscount
 highlighter: pygments
 permalink: /:year/:month/:day/:title.html
