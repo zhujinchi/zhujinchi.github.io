@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>棋典自走棋</title>
+    <description>出棋不懿，必自闭。
+</description>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sun, 10 Mar 2019 22:11:44 +0800</pubDate>
+    <lastBuildDate>Sun, 10 Mar 2019 22:11:44 +0800</lastBuildDate>
+    <generator>Jekyll v3.8.2</generator>
+    
+      <item>
+        <title>【棋典·攻略】入门篇之野怪及物品介绍</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;自走棋中前3波以及之后5的倍数关卡（第5波除外）玩家都要迎战一些野怪，野怪都有几率掉落一些装备，下面就为大家带来野怪及物品的介绍。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;center&gt;&lt;img src=&quot;/images/2019-02-22-12-19-54.jpg&quot; /&gt;&lt;/center&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;1野怪&quot;&gt;1.野怪：&lt;/h1&gt;
+&lt;p&gt;具体波数所对应的野怪：&lt;br /&gt;
+&lt;code&gt;Wave1&lt;/code&gt;  天辉小兵(LV1)&lt;em&gt;2&lt;br /&gt;
+&lt;code&gt;Wave2&lt;/code&gt;  天辉小兵(LV1)&lt;/em&gt;2，天辉大兵(LV2)&lt;em&gt;1&lt;br /&gt;
+&lt;code&gt;Wave3&lt;/code&gt;  天辉小兵(LV1)&lt;/em&gt;4，天辉大兵(LV2)&lt;em&gt;2&lt;br /&gt;
+&lt;code&gt;Wave10&lt;/code&gt;  小石头人(LV3)&lt;/em&gt;2，大石头人(LV4)&lt;em&gt;1&lt;br /&gt;
+&lt;code&gt;Wave15&lt;/code&gt;  小狼(LV3)&lt;/em&gt;4，大狼(LV5)&lt;em&gt;1&lt;br /&gt;
+&lt;code&gt;Wave20&lt;/code&gt;   夺命双熊(LV5)&lt;/em&gt;2&lt;br /&gt;
+&lt;code&gt;Wave25&lt;/code&gt;  愤怒的枭兽(LV6)&lt;em&gt;2&lt;br /&gt;
+&lt;code&gt;Wave30&lt;/code&gt;  小雷霆蜥蜴(LV6)&lt;/em&gt;2，大雷霆蜥蜴(LV7)&lt;em&gt;1&lt;br /&gt;
+&lt;code&gt;Wave35&lt;/code&gt;   黑龙王(LV8)&lt;/em&gt;1&lt;br /&gt;
+&lt;code&gt;Wave40&lt;/code&gt;  小巨魔(LV5)&lt;em&gt;4，大巨魔(LV7)&lt;/em&gt;2&lt;br /&gt;
+&lt;code&gt;Wave45&lt;/code&gt;  年兽(LV9)&lt;em&gt;1&lt;br /&gt;
+&lt;code&gt;Wave50&lt;/code&gt;   肉山(LV9)&lt;/em&gt;1&lt;/p&gt;
+
+&lt;h1 id=&quot;2物品&quot;&gt;2.物品：&lt;/h1&gt;
+&lt;p&gt;野怪掉落的物品共分为4级：&lt;br /&gt;
+&lt;code&gt;LV1&lt;/code&gt;  锁子甲，圆盾，回复戒指，攻击之爪，枯萎之石，短棍，吸血面具，恢复指环，抗魔斗篷，虚无宝石，法师长袍，王冠&lt;br /&gt;
+&lt;code&gt;LV2&lt;/code&gt;   板甲，活力之球，阔剑，秘银锤，标枪，魔力法杖&lt;br /&gt;
+&lt;code&gt;LV3&lt;/code&gt;  恶魔刀锋，振奋宝石，极限法球&lt;br /&gt;
+&lt;code&gt;LV4&lt;/code&gt;  圣者遗物，掠夺者之斧，神秘法杖&lt;/p&gt;
+
+&lt;h1 id=&quot;3野怪等级对应的物品爆率&quot;&gt;3.野怪等级对应的物品爆率：&lt;/h1&gt;
+&lt;p&gt;&lt;code&gt;LV1野怪（天辉小兵）&lt;/code&gt;  不掉物品80%，1级物品20%&lt;br /&gt;
+&lt;code&gt;LV2野怪（天辉大兵）&lt;/code&gt;  不掉物品60%，1级物品40%&lt;br /&gt;
+&lt;code&gt;LV3野怪（小石头人，小狼）&lt;/code&gt;  不掉物品50%，1级物品50%&lt;br /&gt;
+&lt;code&gt;LV4野怪（大石头人）&lt;/code&gt;  不掉物品40%，1级物品40%，2级物品20%&lt;br /&gt;
+&lt;code&gt;LV5野怪（大狼，夺命双熊，小巨魔）&lt;/code&gt;  不掉物品40%，1级物品20%，2级物品40%&lt;br /&gt;
+&lt;code&gt;LV6野怪（愤怒的枭兽，小雷霆蜥蜴）&lt;/code&gt;  不掉物品30%，1级物品30%，2级物品30%，3级物品10%&lt;br /&gt;
+&lt;code&gt;LV7野怪（大雷霆蜥蜴，大巨魔）&lt;/code&gt;  不掉物品20%，1级物品30%，2级物品30%，3级物品20%&lt;br /&gt;
+&lt;code&gt;LV8野怪（黑龙王）&lt;/code&gt;  不掉物品0%，1级物品20%，2级物品40%，3级物品30%，4级物品10%&lt;br /&gt;
+&lt;code&gt;LV9野怪（年兽，肉山）&lt;/code&gt;  不掉物品0%，1级物品10%，2级物品40%，3级物品30%，4级物品20%&lt;/p&gt;
+
+&lt;h1 id=&quot;4物品合成装备&quot;&gt;4.物品合成装备：&lt;/h1&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2019-03-10-22-05-42.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sun, 10 Mar 2019 10:11:26 +0800</pubDate>
+        <link>http://localhost:4000/2019/03/10/%E6%A3%8B%E5%85%B8-%E6%94%BB%E7%95%A5-%E5%85%A5%E9%97%A8%E7%AF%87%E4%B9%8B%E9%87%8E%E6%80%AA%E5%8F%8A%E7%89%A9%E5%93%81%E4%BB%8B%E7%BB%8D.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2019/03/10/%E6%A3%8B%E5%85%B8-%E6%94%BB%E7%95%A5-%E5%85%A5%E9%97%A8%E7%AF%87%E4%B9%8B%E9%87%8E%E6%80%AA%E5%8F%8A%E7%89%A9%E5%93%81%E4%BB%8B%E7%BB%8D.html</guid>
+        
+        
+        <category>article</category>
+        
+      </item>
+    
+      <item>
+        <title>【棋典·攻略】入门篇之各阵容关键棋子介绍(上）</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;我们在每局游戏中，想要取得最后的胜利都要去构建各种成型的阵容，但是每局游戏开头我们并不能确定最后所选择的阵容是什么，这个时候我们就要根据发牌员所给的关键棋子来决定我们的最终阵容。相反如果你一直没法获得这些关键棋子，那就需要考虑尽快转型了。并且该关键棋子在多少人口时出现的概率大，也决定了该阵容的节奏快慢。例如地精的关键棋子是橙卡炸弹人，在高人口时才出现的几率大，就决定了地精阵容的玩家需要尽快提升人口。因此了解各阵容成型的关键棋子对你使用该阵容取得胜利就至关重要。下面为大家带来各阵容成型的关键棋子介绍：&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;center&gt;&lt;img src=&quot;/images/2019-02-22-12-19-54.jpg&quot; /&gt;&lt;/center&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;1地精地精工程师&quot;&gt;1.地精—地精工程师：&lt;/h1&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2019-03-10-22-00-10.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;  地精工程师，也就是我们俗称的炸弹人，是最终6地精成型的关键棋子。它的技能是自爆炸药桶，一个超大范围超高伤害的aoe技能。地精阵容本身就缺乏伤害，地精工程师的技能就能有效的弥补这一点，甚至其它阵容后期也爱拿这一个棋子去补充伤害。有非常多的前期天胡地精，却在8—9人口时无法找到这个棋子导致最终无法成型而遗憾落败。 
+   如开头所说，它是一张橙卡，只有在8人口以上时才有可能出现，并且人口越高出现的概率越大。因此决定使用地精阵容的玩家，前期应该尽量避免花过多的经济在搜索棋子上，而应该把经济用在人口的提升上。快速提升至8人口甚至9人口能让我们有更大概率去获得这个关键棋子。地精阵容前期强势，中期乏力，如何在找到地精工程师凑到6地精前尽量避免掉血过多就是各玩家需要思考的问题了。&lt;/p&gt;
+
+&lt;h1 id=&quot;2巨魔巨魔战将&quot;&gt;2.巨魔—巨魔战将：&lt;/h1&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2019-03-10-22-00-19.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;  巨魔战将是4巨魔成型的关键棋子。它的技能是热血战魂，当巨魔战将攻击同一个目标时，会攻击的越来越快。与其它紫卡相比技能不算强力，但拿这个棋子就是为了能凑齐4巨魔的羁绊，棋子本身的技能效果只是附带。巨魔阵容的其他棋子，蝙蝠、暗影萨满和巫医并不具备什么输出能力，而且身板较脆，这3个棋子本身也比较好获得。巨魔战将本身是一张紫卡，前期获得不太容易，在5人口以上有几率出现。只有在获得巨魔战将这个关键棋子凑齐4巨魔后，才能触发巨魔的最终羁绊—为所有棋子提供攻速加成。这个羁绊效果配合着其它物理输出的阵容，就非常强力了，而且暗影萨满和巫医也能提供不错的控制效果。如何围绕4巨魔去搭配其它的阵容就是各玩家需要思考的问题。&lt;/p&gt;
+
+&lt;h1 id=&quot;3骑士龙骑士&quot;&gt;3.骑士—龙骑士：&lt;/h1&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2019-03-10-22-00-26.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;  骑士阵容比较特殊，分为不拿龙骑士的4骑士阵容和拿龙骑士的6骑士阵容。因为4骑士还要搭配其它的棋子组合阵容并不算完全的骑士阵容，在此就不予讨论。龙骑士的技能是古龙形态，变身成为一条龙，同时将龙骑士变为远程攻击，在2星龙骑时攻击还附带aoe效果，输出非常高。骑士阵容因为本身的羁绊效果就非常肉，而输出只有月骑一个点是远远不足的，因此龙骑士的输出至关重要。不变身的龙骑是没有输出的，因此在选择龙骑士这个棋子的同时，我们往往还要选择精灵龙和冥界亚龙从而凑齐3龙羁绊，让龙骑士在开局时就能变身发挥出它的最大效果。龙骑士和巨魔战将一样也是紫卡，前期获得比较难，而且1星的龙骑攻击并没有aoe效果，输出很低，只有在龙骑士升为2星时上场才比较强力，而升级到2星龙骑就需要很多的经济支撑。在此建议如果实在没法获得龙骑时，可以往4骑士转去搭配其它棋子，同样也能取得不错的效果。&lt;/p&gt;
+
+&lt;h1 id=&quot;4德鲁伊利爪德鲁伊&quot;&gt;4.德鲁伊—利爪德鲁伊：&lt;/h1&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2019-03-10-22-00-33.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;  利爪德鲁伊就是我们俗称的熊德。利爪德鲁伊的技能是召唤一只熊，熊本身比利爪德鲁伊更加厉害，攻击高而且很肉。因为德鲁伊的特殊羁绊野性成长—需要己方场上至少有2/4个不同的德鲁伊来触发效果，而其它3个德鲁伊大树、先知、小鹿都比较好获得，因此能否找到利爪德鲁伊就是德鲁伊们快速利用羁绊升到3星棋子的关键。德鲁伊的棋子大多都是精灵，因此许多成型的德鲁伊后期都是与精灵搭配。玩家也可以利用德鲁伊棋子升星较快的特点，来使用2星德鲁伊棋子作为其它阵容过度前中期的配件。&lt;/p&gt;
+
+&lt;h1 id=&quot;5战士海军上将末日使者&quot;&gt;5.战士—海军上将、末日使者：&lt;/h1&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2019-03-10-22-00-40.jpg&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;/images/2019-03-10-22-00-44.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;  船长和末日是战士阵容中非常强力的2个棋子，它们技能本身在紫卡中都属于很强的那一类，因此其它阵容也往往喜欢拿这2个棋子去搭配。海军上将就是我们俗称的船长，它的技能是放出一条幽灵船，能提供大范围的控制和不少的伤害效果。末日使者的技能是对一个敌方棋子施加末日，使其无法使用技能同时造成持续的高伤害，该技能CD也短，在一个回合中甚至能放出2次末日。战士阵容本身就比较肉，这2个棋子能为6战士阵容提供很高的伤害和控制效果，因此也是战士阵容成型的关键棋子。&lt;/p&gt;
+</description>
+        <pubDate>Sat, 09 Mar 2019 10:11:26 +0800</pubDate>
+        <link>http://localhost:4000/2019/03/09/%E6%A3%8B%E5%85%B8-%E6%94%BB%E7%95%A5-%E5%85%A5%E9%97%A8%E7%AF%87%E4%B9%8B%E5%90%84%E9%98%B5%E5%AE%B9%E5%85%B3%E9%94%AE%E6%A3%8B%E5%AD%90%E4%BB%8B%E7%BB%8D(%E4%B8%8A.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2019/03/09/%E6%A3%8B%E5%85%B8-%E6%94%BB%E7%95%A5-%E5%85%A5%E9%97%A8%E7%AF%87%E4%B9%8B%E5%90%84%E9%98%B5%E5%AE%B9%E5%85%B3%E9%94%AE%E6%A3%8B%E5%AD%90%E4%BB%8B%E7%BB%8D(%E4%B8%8A.html</guid>
+        
+        
+        <category>article</category>
+        
+      </item>
+    
+      <item>
+        <title>【棋典·资讯】自走棋赛事预告</title>
+        <description>&lt;center&gt;&lt;img src=&quot;/images/2019-02-22-12-19-54.jpg&quot; /&gt;&lt;/center&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;  相信细心的朋友们已经发现了，在自走棋游戏读取界面已经发布了新的比赛讯息。《2019斗鱼自走棋大师赛》将于3月8日开始接受报名，比赛方式如下图，希望有兴趣的小伙伴们踊跃参加这次比赛！&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2019-03-10-21-57-26.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+</description>
+        <pubDate>Thu, 07 Mar 2019 10:11:26 +0800</pubDate>
+        <link>http://localhost:4000/2019/03/07/%E6%A3%8B%E5%85%B8-%E8%B5%84%E8%AE%AF-%E8%87%AA%E8%B5%B0%E6%A3%8B%E8%B5%9B%E4%BA%8B%E9%A2%84%E5%91%8A.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2019/03/07/%E6%A3%8B%E5%85%B8-%E8%B5%84%E8%AE%AF-%E8%87%AA%E8%B5%B0%E6%A3%8B%E8%B5%9B%E4%BA%8B%E9%A2%84%E5%91%8A.html</guid>
+        
+        
+        <category>news</category>
+        
+      </item>
+    
+      <item>
+        <title>【棋典·资讯】3日自走棋全明星邀请赛决赛结果</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;由IMBA联合斗鱼、自走棋官方的IMBA自走棋全明星邀请赛比赛已经全部结束了。决赛最终成绩如下：&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;center&gt;&lt;img src=&quot;/images/2019-02-28-16-08-46.jpg&quot; /&gt;&lt;/center&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2019-03-10-21-54-28.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;  最终孙博文（悠云叶月）以18分的成绩夺得本次比赛的冠军，将会获得3万元的奖金以及极限量自走棋信使和冠军称号；谢彬DD则以17分排在第二，夺得亚军，获得1万元奖金、极限量自走棋信使以及亚军称号；不二和小黑同为16分，根据赛事规则，同分的情况下计算胜场，所以不二排在第三，为本次比赛的季军，获得季军称号、5000元奖金以及极限量自走棋信使，小黑则是第四；秋日排在第五，易老师第六，瓦莉拉第七，棋待诏第八。&lt;br /&gt;
+  本次比赛的奖品如下：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2019-03-10-21-54-45.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;  本次决赛的比赛可谓是非常精彩，选手都实力强劲，没把各位选手的血量差距都不太大。在第一局中，谢彬DD用战士流搭配大娜迦炸弹人的阵容，以一血成功击败秋日，夺得第一局比赛的第一；在第二局中，易老师则使用上版本的强势阵容兽人法，成功击败孙博文的亡灵猎，拿下第二局比赛的第一；在第三局中，秋日则使用了巨魔骑阵容，击败了不二的精灵三刺，拿下了第三局比赛的第一；而在最后一局中，决赛圈中，谢彬的兽人法，不二的精灵德鲁伊刺客以及孙博文的骑士三龙都有非常强的竞争力，最终是以孙博文第一，谢彬第二，不二第三的顺序结束了战斗。孙博文夺得整场比赛的冠军。&lt;br /&gt;
+  本次比赛也已经圆满结束了，相信这次都是明星选手前来参赛，虽然水平可能参差不齐，但是总体而言实力都还是不错的，打出了非常精彩的比赛，相信大家看的也很过瘾。相信在以后的比赛中，会出现更多高手，比赛也会更加精彩！&lt;/p&gt;
+</description>
+        <pubDate>Tue, 05 Mar 2019 10:11:26 +0800</pubDate>
+        <link>http://localhost:4000/2019/03/05/%E6%A3%8B%E5%85%B8-%E8%B5%84%E8%AE%AF-3%E6%97%A5%E8%87%AA%E8%B5%B0%E6%A3%8B%E5%85%A8%E6%98%8E%E6%98%9F%E9%82%80%E8%AF%B7%E8%B5%9B%E5%86%B3%E8%B5%9B%E7%BB%93%E6%9E%9C.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2019/03/05/%E6%A3%8B%E5%85%B8-%E8%B5%84%E8%AE%AF-3%E6%97%A5%E8%87%AA%E8%B5%B0%E6%A3%8B%E5%85%A8%E6%98%8E%E6%98%9F%E9%82%80%E8%AF%B7%E8%B5%9B%E5%86%B3%E8%B5%9B%E7%BB%93%E6%9E%9C.html</guid>
+        
+        
+        <category>news</category>
+        
+      </item>
+    
+      <item>
+        <title>【棋典·资讯】2日自走棋全明星邀请赛D组结果</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;由IMBA联合斗鱼、自走棋官方的IMBA自走棋全明星邀请赛比赛已经接近尾声了。D组的比赛也于昨晚结束，各选手排名如下：&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;center&gt;&lt;img src=&quot;/images/2019-02-28-16-08-46.jpg&quot; /&gt;&lt;/center&gt;
+&lt;p&gt;&lt;br /&gt;
+&lt;img src=&quot;/images/2019-03-10-21-51-47.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;  小黑以27分的绝对优势，成功晋级了今天下午将会举办的决赛；而秋日则是以21分的成绩成为小组第二，晋级决赛；Mu神在最后一把吃鸡，但是由于第一局的成绩不理想，导致以一分的差距成为小组第三，未能晋级。&lt;br /&gt;
+  目前晋级决赛的名单如下：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2019-03-10-21-51-55.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;  在昨日的比赛十分的精彩，相较于前几天的比赛，今天的比赛中选手们的表现几乎都是势均力敌的，血量和阵容的差距并不大。其中小黑以两把第一、一把第二的成绩成功卫冕小组第一。在第三局中以八人口的战士流，成功打败了秋日十人口的亡灵骑士流派，成功拿下第一，是一位实力非常强的选手；秋日则是一把第一、一把第二、一把第三的成绩位于小组第二。而第三名的Mu神，虽然在最后一把拿下第一，但是由于第一把发挥不佳，位于第七，所以最终以一分的差距未能晋级决赛。&lt;br /&gt;
+  今日决赛最终名单如下：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2019-03-10-21-52-08.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;  截止昨晚，本次明星邀请赛的小组赛已经进行完毕了。通过四天紧张精彩的角逐，八位明星选手将于今天下午四点进行本次《IMBA自走棋全明星邀请赛》的决赛，各位选手都是实力强劲的选手，绝对是一场高质量的比赛，希望大家不要错过这个精彩的对决。&lt;/p&gt;
+</description>
+        <pubDate>Mon, 04 Mar 2019 10:11:26 +0800</pubDate>
+        <link>http://localhost:4000/2019/03/04/%E6%A3%8B%E5%85%B8-%E8%B5%84%E8%AE%AF-2%E6%97%A5%E8%87%AA%E8%B5%B0%E6%A3%8B%E5%85%A8%E6%98%8E%E6%98%9F%E9%82%80%E8%AF%B7%E8%B5%9BD%E7%BB%84%E7%BB%93%E6%9E%9C.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2019/03/04/%E6%A3%8B%E5%85%B8-%E8%B5%84%E8%AE%AF-2%E6%97%A5%E8%87%AA%E8%B5%B0%E6%A3%8B%E5%85%A8%E6%98%8E%E6%98%9F%E9%82%80%E8%AF%B7%E8%B5%9BD%E7%BB%84%E7%BB%93%E6%9E%9C.html</guid>
+        
+        
+        <category>news</category>
+        
+      </item>
+    
+      <item>
+        <title>【棋典·资讯】1日自走棋全明星邀请赛C组结果</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;由IMBA联合斗鱼、自走棋官方的《IMBA自走棋全明星邀请赛》比赛已经进行三天了。C组的比赛也于昨晚结束，昨晚备受瞩目的王校长也参加了比赛：&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;center&gt;&lt;img src=&quot;/images/2019-02-28-16-08-46.jpg&quot; /&gt;&lt;/center&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2019-03-10-21-45-58.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;  本组明星选手实力都十分强劲，悠云叶月和易老师分别以小组第一、第二的成绩进入决赛；海涛以一分的差距排在第三，未能晋级决赛；王校长则排与小组最后，实力还是与其他明星选手有一些差距，但是王校长虽然输了比赛，但是在段位上却是处于领先地位的。&lt;br /&gt;
+  目前的决赛名单如下：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2019-03-10-21-46-17.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;  昨天的比赛中，悠云叶月以两把第一的成绩稳坐小组第一；而易老师虽然没有拿到第一，但是没把成绩都十分不错，最终位于小组第二，晋级决赛。&lt;br /&gt;
+  而在今日会举行D组的比赛，D组成员名单如下：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2019-03-10-21-46-28.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;  D组中有炉石大佬秋日和熊大，并且还有RNG职业选手白泽，以及MU神同台竞技，希望喜欢这些明星选手以及自走棋游戏的玩家不要错过！&lt;/p&gt;
+
+</description>
+        <pubDate>Sun, 03 Mar 2019 10:11:26 +0800</pubDate>
+        <link>http://localhost:4000/2019/03/03/%E6%A3%8B%E5%85%B8-%E8%B5%84%E8%AE%AF-1%E6%97%A5%E8%87%AA%E8%B5%B0%E6%A3%8B%E5%85%A8%E6%98%8E%E6%98%9F%E9%82%80%E8%AF%B7%E8%B5%9BC%E7%BB%84%E7%BB%93%E6%9E%9C.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2019/03/03/%E6%A3%8B%E5%85%B8-%E8%B5%84%E8%AE%AF-1%E6%97%A5%E8%87%AA%E8%B5%B0%E6%A3%8B%E5%85%A8%E6%98%8E%E6%98%9F%E9%82%80%E8%AF%B7%E8%B5%9BC%E7%BB%84%E7%BB%93%E6%9E%9C.html</guid>
+        
+        
+        <category>news</category>
+        
+      </item>
+    
+      <item>
+        <title>【棋典·攻略】进阶篇之前期抓牌技巧</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;前期抓牌技巧主要讨论的是5级前，也就是round 8之前，卡池出现的是白卡和蓝卡，极少数紫卡的时期。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;center&gt;&lt;img src=&quot;/images/2019-02-22-12-19-54.jpg&quot; /&gt;&lt;/center&gt;
+&lt;p&gt;&lt;br /&gt;
+  &lt;strong&gt;以下所有讨论均不涉及巨魔三弟弟。&lt;/strong&gt;&lt;br /&gt;
+  在前几回合中，我们的主要目的是为了合成更多的2星卡，增加更多的高质单卡听牌，并且尽量的保持连胜（或低成本的连败）。由于低费卡主要是兽人，战士，地精工匠，刺客，恶魔，在合成不了2星卡的时候，我们在round 4之前应该去凑更多的以上羁绊来争取赢下战斗。&lt;br /&gt;
+  在前期羁绊中，排序是地精工匠&amp;gt;2星德鲁伊»刺客&amp;gt;恶魔&amp;gt;兽人&amp;gt;野兽&amp;gt;战士。地精工匠自不必说，2星德鲁伊自然是合到了就上。在此之后刺客的技能大部分是魔法伤害，相对于没有爆发的兽人战士，刺客在战斗时跳后排和暴击的机制很容易让对手先行减员，恶魔自带的真伤也能够无视战士的护甲，兽人前期单卡兽王和剑圣质量高，并且兽人加血算是变相增加了护甲和魔抗，且羁绊只需要两个单位就能触发，在前期也算是一种不错的附加羁绊。由于前期棋子攻击力比较低，野兽羁绊攻击力加成相对鸡肋，但是野兽卡中有狼人，2星小鹿的存在，也使得他们的单体作战能力较强。&lt;br /&gt;
+  战士单卡小小斧王海民都很弱势，在大多数技能都是魔法甚至纯粹伤害的时候，别人能打死你，你打不动别人，那护甲又有什么用呢？（何况还被削弱了）战士也就沦为了当前版本的下水道羁绊。有人可能会觉得前期三战士随便搭配一些其他羁绊经常能够连胜，那我只能说是你的2星卡多，你的狼人剑圣兽王强，高质单卡能提供的作用远大于战士羁绊。&lt;br /&gt;
+  &lt;strong&gt;没有说星级的都默认是1星，2星德鲁伊单独说是因为除非绝望，否则没人会上1星小鹿先知大树的吧。&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;1有了上面的铺垫可以来做一些前期的选择题&quot;&gt;1.有了上面的铺垫，可以来做一些前期的选择题：&lt;/h1&gt;
+&lt;p&gt;  ①Round 1：蓝胖+发条+蓝胖+海民+蝙蝠。&lt;br /&gt;
+  两种抓法：第一种是抓发条不锁，round 2抓双地精或者2星发条听牌。第二种是抓发条锁了round 2抓两蓝胖。根据上面的食物链关系，我觉得两种都能够理解，不太需要解释。&lt;br /&gt;
+  ②Round 1：小鹿+小鹿+赏金+斧王+小黑。&lt;br /&gt;
+  一种抓法：锁了抓两小鹿+赏金，因为两个小鹿相当于你听先知和大树两张牌，赏金可以凑地精，也是前期比较强的单卡。斧王和小黑就不做赘述。&lt;br /&gt;
+  ③Round 1：发条+修补匠+蝙蝠+小小+海民。&lt;br /&gt;
+  一种抓法：抓发条不锁。因为5张卡根据食物链和单卡强度，发条优先级最高，如果锁了第二轮只有一张修补匠值得抓，浪费了1块钱的价值，并且Round 2如果看到第二张发条，赏金，甚至伐木机都要比修补匠好，如果都看不到，可以卖了发条换阵容。&lt;br /&gt;
+  Round 1根据食物链抓牌，如果能有任意2星（三个相同），或高质量单卡2星听牌（发条，赏金，蓝胖）+高质单卡，那就锁了。&lt;/p&gt;
+
+&lt;h1 id=&quot;2round-2时候我们总共有3块钱round-2的核心思想是&quot;&gt;2.Round 2时候我们总共有3块钱，round 2的核心思想是：&lt;/h1&gt;
+&lt;p&gt;  卖一切凑3地精&amp;gt;（卖一切凑2地精+2星地精听牌）&amp;gt;卖一切凑双德鲁伊&amp;gt;高质单卡听牌&amp;gt;凑双地精&amp;gt;凑双兽人&amp;gt;女王混沌&amp;gt;战士单卡听牌&amp;gt;3战士，例如：&lt;br /&gt;
+   ①Round 1拿了蓝胖，Round 2 发条修补匠赏金：卖了蓝胖拿三地精。&lt;br /&gt;
+   ②Round 1拿了海民，Round 2 剑圣斧王：卖了海民拿剑圣斧王。&lt;br /&gt;
+   ③Round 1拿了发条，Round 2 没有任何地精，兽王+海民+蝙蝠+小小+混沌：拿混沌。&lt;br /&gt;
+实在没办法再拿3战士。因为前期拿战士你可能一直都是战士。除非你很顺否则注定打工。&lt;/p&gt;
+
+&lt;h1 id=&quot;3关于卡的费用&quot;&gt;3.关于卡的费用：&lt;/h1&gt;
+&lt;p&gt;Q：当前期抓完想要抓的牌，我剩下两块钱，应该抓一张2费卡，还是应该抓两张1费卡？&lt;br /&gt;
+A：严格来说 两张质量还可以的1费卡&amp;gt;恶魔&amp;gt;质量还可以的2费卡&amp;gt;质量垃圾的两张1费卡&amp;gt;质量垃圾的二费卡。&lt;br /&gt;
+  解释：&lt;br /&gt;
+   质量还可以的1费卡：小鹿，1费地精，蓝胖，海民。&lt;br /&gt;
+   质量还可以的2费卡：剑圣，兽王，大小鱼人。&lt;br /&gt;
+   质量垃圾的1费卡：小黑，斧王，小小。&lt;br /&gt;
+   质量垃圾的2费卡：水人，大树，puck等。&lt;br /&gt;
+  为什么这样排序？因为两张1费卡能让你下回合有两张听牌能够形成2星1费卡听牌（简称听听牌），而2费卡就少了一张听听牌，但是某些实在弟弟的1费卡即使后面做成了2星提升也不大，还不如拿一张2费的卡。&lt;br /&gt;
+  &lt;strong&gt;这个道理在后面抓卡也是通用的，比如我买完东西还有33块钱，我还可以花3块钱，剩下的几张卡我应该拿什么。不要觉得很浪费时间和听牌区，因为你下回合不需要可以卖掉的也不影响你吃利息，这是一个好的习惯。&lt;/strong&gt;&lt;br /&gt;
+  &lt;strong&gt;你前期3地精，你3块钱吃不到利息你抓了一张狼人，下回合直接再给你两张狼人呢？是不是有别的说法？&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;4蓝卡&quot;&gt;4．蓝卡：&lt;/h1&gt;
+&lt;p&gt;  蓝卡的单卡质量都比较高，前期看阵容搭配拿，有一些比较优质的蓝卡是见到就可以抓拿来过度的，有一些就要看阵容抓，有一些基本不抓。&lt;br /&gt;
+  前者包括：SF，电棍，风行，狼人，死骑。&lt;br /&gt;
+  中间包括：火枪，亚龙，沙王，PA，全能。&lt;br /&gt;
+  后者包括：火女，沙王，剧毒（除非你真的太强了想带毒入人）。  &lt;br /&gt;
+  &lt;strong&gt;风行是这个游戏中基础攻速最高的棋子。1星风行输出高于1费2星战士前排（海民小小斧王）。&lt;/strong&gt;&lt;br /&gt;
+  &lt;strong&gt;这个版本单卡优先级风行高于电棍。&lt;/strong&gt;    &lt;br /&gt;
+  &lt;strong&gt;1星火枪和没有疯脸的2星火枪都是猎人的挂件。&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;  &lt;strong&gt;提一句紫卡，由于round 7之前几乎没有，紫卡技能普遍都强，看到几乎就拿，来巨魔转型凑巨魔，来龙骑尽量凑三龙。4巨魔和3龙都是远大于地精工匠羁绊以上的质的飞跃。&lt;/strong&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sat, 02 Mar 2019 09:46:10 +0800</pubDate>
+        <link>http://localhost:4000/2019/03/02/%E6%A3%8B%E5%85%B8-%E6%94%BB%E7%95%A5-%E8%BF%9B%E9%98%B6%E7%AF%87%E4%B9%8B%E5%89%8D%E6%9C%9F%E6%8A%93%E7%89%8C%E6%8A%80%E5%B7%A7.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2019/03/02/%E6%A3%8B%E5%85%B8-%E6%94%BB%E7%95%A5-%E8%BF%9B%E9%98%B6%E7%AF%87%E4%B9%8B%E5%89%8D%E6%9C%9F%E6%8A%93%E7%89%8C%E6%8A%80%E5%B7%A7.html</guid>
+        
+        
+        <category>article</category>
+        
+      </item>
+    
+      <item>
+        <title>【棋典·资讯】28日自走棋全明星邀请赛赛事汇报 </title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;由IMBA联合斗鱼、自走棋官方的《IMBA自走棋全明星邀请赛》比赛已经进行两天了。B组的比赛也于昨晚结束，各选手排名如下：&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;center&gt;&lt;img src=&quot;/images/2019-02-28-16-08-46.jpg&quot; /&gt;&lt;/center&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2019-03-02-09-38-32.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;  昨天的比赛中谢彬DD和瓦莉拉分别以小组第一、第二的成绩，成功晋级之后的决赛。而820则因为最后一把成绩不佳，位居第三，很遗憾没能晋级。&lt;br /&gt;
+  目前的决赛名单如下：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2019-03-02-09-38-51.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;  在昨天的比赛中，谢彬DD以两把第一，一把第二的成绩成为小组第一，而瓦莉拉则是一局第一、一局第二、一局第三，成为小组第二。而820在第一把拿下第一后，在后面几局比赛中运气不佳，最后一局只拿到第五，未能超过瓦莉拉，只能排在小组第三，未能晋级决赛。&lt;br /&gt;
+  今晚将进行C组的比赛。而在C组中，将会有大家所期待的王校长上场参加比赛，并且还有酒神（2009），以及囚徒、啦啦啦同台竞技，相信今晚的比赛会十分精彩。&lt;br /&gt;
+  C组比赛成员如下：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2019-03-02-09-39-03.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;  希望想要看王校长的观众们一定不要错过。当然，我们也会录制好赛事视频，错过的观众也可以到b站观看我们的赛事视频。&lt;/p&gt;
+</description>
+        <pubDate>Fri, 01 Mar 2019 10:11:26 +0800</pubDate>
+        <link>http://localhost:4000/2019/03/01/%E6%A3%8B%E5%85%B8-%E8%B5%84%E8%AE%AF-28%E6%97%A5%E8%87%AA%E8%B5%B0%E6%A3%8B%E5%85%A8%E6%98%8E%E6%98%9F%E9%82%80%E8%AF%B7%E8%B5%9B%E8%B5%9B%E4%BA%8B%E6%B1%87%E6%8A%A5.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2019/03/01/%E6%A3%8B%E5%85%B8-%E8%B5%84%E8%AE%AF-28%E6%97%A5%E8%87%AA%E8%B5%B0%E6%A3%8B%E5%85%A8%E6%98%8E%E6%98%9F%E9%82%80%E8%AF%B7%E8%B5%9B%E8%B5%9B%E4%BA%8B%E6%B1%87%E6%8A%A5.html</guid>
+        
+        
+        <category>news</category>
+        
+      </item>
+    
+      <item>
+        <title>【棋典·资讯】27日自走棋全明星邀请赛赛事汇报</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;由IMBA联合斗鱼、自走棋官方的《IMBA自走棋全明星邀请赛》已由昨天正式开始。截止今天中午，A组的比赛已经结束，各选手排名以及积分如下：&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;center&gt;&lt;img src=&quot;/images/2019-02-28-16-08-46.jpg&quot; /&gt;&lt;/center&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2019-02-28-16-14-11.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;  棋待诏和不二分别以小组第一、第二的成绩进入3月3日的决赛，YYF位居小组第三，而小刘以一分的差距位居第四。&lt;br /&gt;
+  目前的决赛名单：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2019-02-28-16-14-23.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;  昨天的比赛中，棋待诏发挥稳定，以两胜场拿到小组第一；而不二在第一局最后一名的情况下，在第二、三局拿到两连鸡，以及最后一把第三的成绩成为小组第二；而YYF最后一局运气不佳，位居第三，很遗憾未能晋级决赛。&lt;br /&gt;
+  在今晚七点将会继续进行《IMBA自走棋全明星邀请赛》B组的比赛，有兴趣的观众可以去斗鱼  IMBATV的官方直播间收看。以下是今晚的明星选手：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2019-02-28-16-14-35.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;  本来预定今天参加比赛的王校长，由于一些原因改为后天参加，王校长B组的名额将有原来C组的选手驴鸽替代，喜欢王校长的朋友不要错过明晚的比赛哟~&lt;/p&gt;
+</description>
+        <pubDate>Thu, 28 Feb 2019 16:13:38 +0800</pubDate>
+        <link>http://localhost:4000/2019/02/28/%E6%A3%8B%E5%85%B8-%E8%B5%84%E8%AE%AF-27%E6%97%A5%E8%87%AA%E8%B5%B0%E6%A3%8B%E5%85%A8%E6%98%8E%E6%98%9F%E9%82%80%E8%AF%B7%E8%B5%9B%E8%B5%9B%E4%BA%8B%E6%B1%87%E6%8A%A5.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2019/02/28/%E6%A3%8B%E5%85%B8-%E8%B5%84%E8%AE%AF-27%E6%97%A5%E8%87%AA%E8%B5%B0%E6%A3%8B%E5%85%A8%E6%98%8E%E6%98%9F%E9%82%80%E8%AF%B7%E8%B5%9B%E8%B5%9B%E4%BA%8B%E6%B1%87%E6%8A%A5.html</guid>
+        
+        
+        <category>news</category>
+        
+      </item>
+    
+      <item>
+        <title>【棋典·资讯】斗鱼自走棋全明星邀请赛 </title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;由IMBATV联合斗鱼、AUTOCHESS官方举办的《IMBA自走棋全明星邀请赛》将于2月27日正式开始，直接邀请了32位各个直播平台的明星选手前来参加，有你喜欢的明星一定不要错过！&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;center&gt;&lt;img src=&quot;/images/2019-02-28-16-08-46.jpg&quot; /&gt;&lt;/center&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;  本次比赛共分为A、B、C、D四组，采用小组淘汰制，每个小组8人，比赛四场，每天进行一个小组的比赛，各小组积分排行第一、第二的选手将进入3月3日的决赛。&lt;br /&gt;
+  本次比赛的冠军将获得30000元的现金奖励、极限量自走棋信使以及冠军称号；亚军将获得10000元的现金奖励、极限量自走棋信使以及亚军称号；季军将获得5000元的现金奖励、极限量自走棋信使以及季军称号。而剩下进入决赛的选手将获得珍稀自走棋信使以及IMBA全明星惜败王的称号。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2019-02-28-16-09-45.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;比赛各小组成员如下：&lt;br /&gt;
+  A组：YYF、小刘、XBG、狗贼、不二、DC、棋待诏、小圆&lt;br /&gt;
+  比赛时间：2月27日 19:00-22:00&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2019-02-28-16-09-57.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;  B组：王思聪、820、谢彬DD、sol君、瓦莉拉、衣锦夜行、鼠大王、小谷芷&lt;br /&gt;
+  比赛时间：2月28日 19:00-22:00&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2019-02-28-16-10-09.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;  C组：2009、悠云叶月、宝哥、囚徒、啦啦啦、驴鸽、海涛、易老师&lt;br /&gt;
+  比赛时间：3月1日 19:00-22:00&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2019-02-28-16-10-19.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;  D组：MU、小黑、逍遥、熊大、秋日、白泽、风行云、灭神&lt;br /&gt;
+  比赛时间：3月2日 19:00-22:00&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2019-02-28-16-10-42.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;  决赛&lt;br /&gt;
+  比赛时间：3月3日 19：00-22:00&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2019-02-28-16-10-57.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+</description>
+        <pubDate>Wed, 27 Feb 2019 16:13:31 +0800</pubDate>
+        <link>http://localhost:4000/2019/02/27/%E6%A3%8B%E5%85%B8-%E8%B5%84%E8%AE%AF-%E6%96%97%E9%B1%BC%E8%87%AA%E8%B5%B0%E6%A3%8B%E5%85%A8%E6%98%8E%E6%98%9F%E9%82%80%E8%AF%B7%E8%B5%9B.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2019/02/27/%E6%A3%8B%E5%85%B8-%E8%B5%84%E8%AE%AF-%E6%96%97%E9%B1%BC%E8%87%AA%E8%B5%B0%E6%A3%8B%E5%85%A8%E6%98%8E%E6%98%9F%E9%82%80%E8%AF%B7%E8%B5%9B.html</guid>
+        
+        
+        <category>news</category>
+        
+      </item>
+    
+  </channel>
+</rss>

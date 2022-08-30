@@ -1,0 +1,16 @@
+---
+layout: post
+title:  "标题"
+date:   2018-05-11 10:11:26 +0800
+categories: jekyll update
+---
+>markdown说明。    
+    
+加粗 - 快捷键：command + B
+斜体 - 快捷键：command + I
+删除线 - 快捷键：command + U
+底纹 - 快捷键：command + K
+`底纹`
+~~~~
+
+

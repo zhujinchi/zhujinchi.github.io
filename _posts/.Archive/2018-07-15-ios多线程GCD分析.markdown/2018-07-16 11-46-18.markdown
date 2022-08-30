@@ -1,0 +1,10 @@
+---
+layout: post
+title:  "ios多线程GCD分析 "
+date:  2018-05-10 10:11:26 +0800
+categories: none
+---
+> 多线程是oc的基础，近来有空，我便在此总结一下。
+
+#1、GCD简介
+#2、GCD任务和dui'lie

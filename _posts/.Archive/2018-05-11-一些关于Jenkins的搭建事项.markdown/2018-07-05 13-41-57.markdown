@@ -1,0 +1,24 @@
+---
+layout: post
+title:  "一些关于Jenkins的搭建事项"
+date:   2018-05-11 10:11:26 +0800
+categories: jenkins
+---
+>适来，为项目打包构建了jenkins脚本。于此处写下为大家避坑。    
+
+在说明之前，这有一篇比较好的介绍作为背景：[jenkins+Xcode+蒲公英实现ipa自动打包发布全攻略](https://www.jianshu.com/p/ed124917d6c6)  
+
+1. **安装jenkins**  
+ 首先，安装过程如上文所述没有问题 。值得注意的是，在安装过程中由于不同的方式或者是版本。往往会出现两种安装情况。  
+* jenkins安装到了`/User/${你的电脑名}`目录下,`command+shift+.`可以看到`_jenkins`文件夹。那么恭喜你，之后会避开很多坑。
+* jenkins安装到了`/User/Shared`目录下，（我认为是由于jenkins版本原因，在安装pkg包的时候不能选择安装的目录。），因此jenkins在使用时会有诸多限制。主要的是很多文件夹无法访问到（比如`/Users/${你的电脑名}/Library/MobileDevice/Provisioning Profiles`文件夹提供的发布证书无法被jenkins访问，再比如/`Users/${你的电脑名}/Library/Keychains`文件夹提供的`login.keychain-db`用以用户密钥，在jenkins脚本打包过程中会报错，你必须手动复制上述两个文件到`/User/Shared`中），大坑一个。  
+
+2. **从gitlab/github获取源代码**  
+    一般而言，从git中获取源代码有两种方式。  
+* 一种是输入用户名和密码登录仓库。
+    ![](/images/2018-07-05-11-57-19.png)
+* 另一种是配置SSH公钥认证与Jenkins远程登录。
+    这里注意：1、你的目录的位置，要和你jenkins安装的位置匹配，安装的时候jenkins的位置决定了你配置SSH时的文件路径。2、使用命令行创建SSH公钥的时候，填写密码步骤回车跳过。
+
+
+

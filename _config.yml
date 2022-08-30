@@ -1,0 +1,13 @@
+# Site settings
+title: 棋典自走棋
+email: https://space.bilibili.com/403226217
+description: > # this means to ignore newlines until "baseurl:"
+  出棋不懿，必自闭。
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "" # the base hostname & protocol for your site
+github_username:  zhujinchi
+
+# Build settings
+markdown: kramdown
+highlighter: pygments
+permalink: /:year/:month/:day/:title.html
