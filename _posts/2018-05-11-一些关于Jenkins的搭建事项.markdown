@@ -16,7 +16,9 @@ categories: jenkins
 
 * jenkins安装到了`/User/Shared`目录下，（我认为是由于jenkins版本原因，在安装pkg包的时候不能选择安装的目录。），因此jenkins在使用时会有诸多限制。主要的是很多文件夹无法访问到（比如`/Users/${你的电脑名}/Library/MobileDevice/Provisioning Profiles`文件夹提供的发布证书无法被jenkins访问，再比如/`Users/${你的电脑名}/Library/Keychains`文件夹提供的`login.keychain-db`用以用户密钥，在jenkins脚本打包过程中会报错，你必须手动复制上述两个文件到`/User/Shared`中），大坑一个。  
 
-  ![zairito](/images/zairito.png)
+  ![zairito](../images/zairito-1825743.png)
+
+  
 
 # 2、从gitlab/github获取源代码
 
