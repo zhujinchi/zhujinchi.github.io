@@ -151,9 +151,9 @@ pre {
 .site-header {
   border-bottom: 1px solid #e8e8e8;
   min-height: 76px;
+  padding-top: 20px;
   background-color: #ffffff;
   position: relative;
-  padding-top: 20px;
 }
 
 .site-img {
