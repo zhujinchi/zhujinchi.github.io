@@ -73,9 +73,9 @@ categories: Machine learning
 
 # 反向传播
 
+![20181105140730857](../images/20181105140730857.jpg)
 
-
-
+关于backpropogation 我认为目前就是这几个算法中的核心算法，也是损失函数能对神经网络起作用的本质原因。我例举了上述的优化方程，来梳理一下backforward的优化原理
 
 
 
