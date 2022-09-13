@@ -13,7 +13,7 @@ categories: Machine learning
 
 二分类和多分类：
 
-![sigmoid](../images/sigmoid.jpg)
+![sigmoid](/images/sigmoid.jpg)
 
 
 
@@ -21,7 +21,7 @@ categories: Machine learning
 
 梯度下降，首先究其本质，梯度下降本身离不开损失函数，损失函数就是样本初始值经过模型预测得到一个预测值，预测值和真实值之间的差距就是损失函数，究其本质就是**计算预测值和真实值差距的一类函数泛指**，例举L1Loss和CrossEntropyLoss
 
-![loss](../images/loss.jpg)
+![loss](/images/loss.jpg)
 
 
 
@@ -60,7 +60,7 @@ categories: Machine learning
 
 关于正则化，我参考了[正则化(regularization)总结](https://zhuanlan.zhihu.com/p/128129015)以及[L1、L2正则化总结](https://blog.csdn.net/Yasin0/article/details/89682616)，常见的正则化方法有lasso回归（l1），岭回归（l2）。
 
-![](../images/regression.jpg)
+![](/images/regression.jpg)
 
 
 
@@ -73,9 +73,11 @@ categories: Machine learning
 
 # 反向传播
 
-![regression](images/regression.jpg)
 
-![sigmoid](./images/sigmoid.jpg)
+
+
+
+
 
 # SVM
 
