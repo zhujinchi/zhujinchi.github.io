@@ -12,28 +12,20 @@ categories: Machine learning
 其实本质上，我觉得和线性回归是一致的，套用了一个激活函数。形式上大概就是 **sigmoid(线性回归)=逻辑回归**。因为借助了sigmoid的映射关系，可以对数据降敏，排除极端值的影响，对结果定性。但是受限于使用场景，**非线形分布**的事务决策结果也不理想。
 
 二分类和多分类：
-$$
-P\left(\mathbf{x}_{i}\right)=\operatorname{sigmoid}\left(\mathbf{x}_{i} \mathbf{w}\right)=g\left(\mathbf{x}_{i} \mathbf{w}\right)=\frac{1}{1+e^{-\mathbf{x}_{i} \mathbf{w}}}\quad 二分类的正项
-$$
 
-$$
-p(\mathbf{Y} \mid \mathbf{X}, \mathbf{w})=\prod_{i=1}^{m} p\left(y_{i} \mid \mathbf{x}_{i}, \mathbf{w}\right)\quad 多分类
-$$
+![sigmoid](../images/sigmoid.jpg)
+
+
 
 # 梯度下降
 
 梯度下降，首先究其本质，梯度下降本身离不开损失函数，损失函数就是样本初始值经过模型预测得到一个预测值，预测值和真实值之间的差距就是损失函数，究其本质就是**计算预测值和真实值差距的一类函数泛指**，例举L1Loss和CrossEntropyLoss
-$$
-L_{1}(\hat{y}, y)=\sum_{i=0}^{m}\left|y^{(i)}-\hat{y}^{(i)}\right|\quad L1Loss
-$$
 
-$$
-\operatorname{Loss}=-\frac{1}{n} \sum_{x}[y \ln a+(1-y) \ln (1-a)]\quad CrossEntropyLoss(二分类)
-$$
+![loss](../images/loss.jpg)
 
-$$
-\operatorname{Loss}=-\frac{1}{n} \sum_{i} y_{i} \ln a_{i}\quad CrossEntropyLoss(多分类)
-$$
+
+
+
 
  CrossEntropyLoss被应用于逻辑回归中，同上一节。
 
@@ -67,13 +59,10 @@ $$
 2. 正则化：**保留所有的变量，将一些不重要的特征的权值置为0或权值变小使得特征的参数矩阵变得稀疏，使每一个变量都对预测产生一点影响。**
 
 关于正则化，我参考了[正则化(regularization)总结](https://zhuanlan.zhihu.com/p/128129015)以及[L1、L2正则化总结](https://blog.csdn.net/Yasin0/article/details/89682616)，常见的正则化方法有lasso回归（l1），岭回归（l2）。
-$$
-LASSO Regression:  J(\theta)=M S E(y, \hat{y} ; \theta)+\alpha \sum_{i=1}^{n}\left|\theta_{i}\right|\quad L1正则
-$$
 
-$$
-Ridge Regression:  J(\theta)=M S E(y, \hat{y} ; \theta)+\alpha \frac{1}{2} \sum_{i=1}^{n} \theta_{i}^{2}\quad L2正则
-$$
+![](../images/regression.jpg)
+
+
 
 通过添加正则项，可以使模型的部分参数值都较小甚至趋于0，对应的特征对模型的影响就比较小，相当于对无关特征做了一个惩罚，即使它们的值波动比较大，受限于参数值很小，也不会对模型的输出结果造成太大影响。简而言之，**正则化是将模型参数加入到损失函数中，能避免权值过大，模型过于陡峭**，从而降低过拟合。
 
@@ -84,7 +73,9 @@ $$
 
 # 反向传播
 
+![regression](/images/regression.jpg)
 
+![sigmoid](./images/sigmoid.jpg)
 
 # SVM
 
