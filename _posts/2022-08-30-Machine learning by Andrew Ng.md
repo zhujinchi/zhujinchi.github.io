@@ -73,7 +73,7 @@ categories: Machine learning
 
 # 反向传播
 
-![regression](/images/regression.jpg)
+![regression](images/regression.jpg)
 
 ![sigmoid](./images/sigmoid.jpg)
 
