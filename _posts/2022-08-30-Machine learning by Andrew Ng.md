@@ -51,7 +51,7 @@ categories: Machine learning
 
 # 正则化
 
-![img](https://img-blog.csdn.net/20170313180022523?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQveWlueXUxOTk1MDgxMQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center)
+![20220913](/images/20220913.jpg)
 
 正则化在Andrew课程里面讲的不深，正则化的出现，是因为过拟合的问题。**在早期用多项式函数去拟合训练样本的时候，多分的贴合训练数据会导致loss function趋近于0，这会导致拟合曲线没有泛用性**，因此我们设置一些去敏的策略：
 
