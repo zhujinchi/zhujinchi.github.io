@@ -149,12 +149,12 @@ SVM支持向量机，早期的经典无监督分类算法。使用超平面将�
 
 不同于SVM的变换维度，PCA的核心思想是变换坐标系，
 
-<div align=center><img src="https://pica.zhimg.com/50/v2-6ab374c896b3829f1a488aafe60eb591_720w.webp?source=1940ef5c"></div
+<div align=center><img src="https://pica.zhimg.com/50/v2-6ab374c896b3829f1a488aafe60eb591_720w.webp?source=1940ef5c"></div>
 
 举个例子，如上图所示，假如横纵坐标表示了西瓜的质量和颜色深度，我们并不需分别通过两种属性来对西瓜做判断，我们通过PCA做一个特征组合，也就是在红线最终定格处，重新指定坐标系，测定出新的横纵坐标，借此作出新的组合特性。
 
 关于新的坐标轴如何生成，我看到很经典的解释。
 
-**顺便，你可以把黑线想象成硬质杆，然后把红线想象成弹簧。弹簧的势能和它的长度平方成正比（物理学上这称为[胡克定律](https://www.zhihu.com/search?q=胡克定律&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra={"sourceType"%3A"answer"%2C"sourceId"%3A474222214})），所以杆将调整自己的朝向以最小化这些平方距离的总和。我做了一个关于它大概是什么样的模拟，加上了一点摩擦力。**
+> 顺便，你可以把黑线想象成硬质杆，然后把红线想象成弹簧。弹簧的势能和它的长度平方成正比（物理学上这称为[胡克定律](https://www.zhihu.com/search?q=胡克定律&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra={"sourceType"%3A"answer"%2C"sourceId"%3A474222214})），所以杆将调整自己的朝向以最小化这些平方距离的总和。我做了一个关于它大概是什么样的模拟，加上了一点摩擦力。
 
 结。
