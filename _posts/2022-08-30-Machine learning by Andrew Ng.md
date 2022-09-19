@@ -81,7 +81,7 @@ categories: Machine learning
 
 ## 4.1 链式法则
 
-![v2-4ba4a655a2587cb80255301f021fd094_720w](../images/v2-4ba4a655a2587cb80255301f021fd094_720w.jpg)
+![v2-4ba4a655a2587cb80255301f021fd094_720w](/images/v2-4ba4a655a2587cb80255301f021fd094_720w.jpg)
 
 上例场景，一辆汽车20万，购置两辆，到达一节点。购买需支付购置税1.1，到达二节点，共计44万。
 
@@ -99,7 +99,7 @@ categories: Machine learning
 
 回到反向传播。我们聚焦于乘法节点。
 
-![v2-4e469fa4277fa7d805bf3401eeb039f1_720w](../images/v2-4e469fa4277fa7d805bf3401eeb039f1_720w.jpg)
+![v2-4e469fa4277fa7d805bf3401eeb039f1_720w](/images/v2-4e469fa4277fa7d805bf3401eeb039f1_720w.jpg)
 
 很容易知道z对x求导就是y，z对y求导就是x，所以在反向传播的时候，输入值的交叉相乘流入下一个节点。
 
@@ -109,8 +109,52 @@ categories: Machine learning
 
 ## 4.2 参数更新
 
+基于上述描述的链式法则，我们需要更新的参数对象就是wight和bias，即神经网络中真正起到作用的两个参数数据，根据乘法法则，dw的乘法的另一个输入值，db就是原本输入值。
 
+第二步，如何去更新weight和bias。如果从最基本的无脑递减W = W - dW，b = b - db，效果可能并不太好，我们需要引入上述两个概念，**正则化惩罚项**和**学习率**。
+
+正如本节开头所示的公式结尾 1/2W^2，正则化惩罚项的作用是防止模型过拟合，筛选出有效特征。1/2W^2是为了衡量分散度所设定的项，对1/2W^2求导就是W。修正后dW = dW + reg*W (reg是系数)。
+
+另一方面，为了降低从峰到谷的过程中跨步过大导致迟迟不能收敛的情况，我们设置小的学习率epsilon来避免错过梯度下降中的谷值，参考梯度下降。
+
+因此最终更新后的W和b写作：
+
+W = W - epsilon*dW
+
+b = b - epsilon*db
+
+至此，一次反向传播的流程就走完了。
 
 # SVM
 
+<div align=center><img src="https://img-blog.csdnimg.cn/2020070817290352.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMzYzMDMy,size_16,color_FFFFFF,t_70"></div>
+
+SVM支持向量机，早期的经典无监督分类算法。使用超平面将空间中的元素分类了，上图展示了在二位平面中的分类情形。该算法当然也可以应用在高维度空间中，通过映射将低空间中的元素分层，在高空间种用平面分类。
+
+<div align=center><img src="https://img-blog.csdnimg.cn/20200708173011580.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMzYzMDMy,size_16,color_FFFFFF,t_70"></div>
+
+而低空间如何将元素映射到高维空间就是我们需要关注的点，这里我们引入[核函数概念](https://blog.csdn.net/qq_42363032/article/details/107210881)。
+
+简单地说，核函数是计算两个向量在隐式映射后空间中的内积的函数。核函数通过先对特征向量做内积，然后用函数 K 进行变换，这有利于避开直接在高维空间中计算，大大简化问题求解。并且这等价于先对向量做核映射然后再做内积。
+
+<div align=center><img src="https://img-blog.csdnimg.cn/20200708173052343.png"></div>
+
+高斯核函数，可根据实际需要灵活选取参数σ，甚至还可以将原始维度空间映射到无穷维度空间。不过，如果σ取值很大，会导致高次特征上的权重衰减快；如果σ取值很小，其好处是可以将任意的数据映射成为线性可分，但容易造成过拟合现象。
+
+<div align=center><img src="https://img-blog.csdnimg.cn/20200708173134747.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyMzYzMDMy,size_16,color_FFFFFF,t_70"></div>
+
+
+
 # PCA
+
+不同于SVM的变换维度，PCA的核心思想是变换坐标系，
+
+<div align=center><img src="https://pica.zhimg.com/50/v2-6ab374c896b3829f1a488aafe60eb591_720w.webp?source=1940ef5c"></div
+
+举个例子，如上图所示，假如横纵坐标表示了西瓜的质量和颜色深度，我们并不需分别通过两种属性来对西瓜做判断，我们通过PCA做一个特征组合，也就是在红线最终定格处，重新指定坐标系，测定出新的横纵坐标，借此作出新的组合特性。
+
+关于新的坐标轴如何生成，我看到很经典的解释。
+
+> 顺便，你可以把黑线想象成硬质杆，然后把红线想象成弹簧。弹簧的势能和它的长度平方成正比（物理学上这称为[胡克定律](https://www.zhihu.com/search?q=胡克定律&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra={"sourceType"%3A"answer"%2C"sourceId"%3A474222214})），所以杆将调整自己的朝向以最小化这些平方距离的总和。我做了一个关于它大概是什么样的模拟，加上了一点摩擦力。
+
+结。
