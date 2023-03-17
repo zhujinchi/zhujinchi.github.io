@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "一些关于缀合网络的研究记录"
+title:  "一些关于缀合网络(Defagmented Net)的研究记录"
 date:   2023-03-16 22:44:11 +0800
 categories: article
 ---
